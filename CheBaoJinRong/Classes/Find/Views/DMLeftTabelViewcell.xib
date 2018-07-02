@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="208" id="KGk-i7-Jjw" customClass="DMLeftTabelViewcell">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="208"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="207.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcC-mb-sKB">
+                        <rect key="frame" x="10" y="0.0" width="458" height="207.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hff-Rb-fUE">
+                                <rect key="frame" x="0.0" y="0.0" width="458" height="207.5"/>
+                            </imageView>
+                            <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrf-db-o18">
+                                <rect key="frame" x="0.0" y="0.0" width="458" height="207.5"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjw-le-Di6">
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vjw-le-Di6" secondAttribute="height" multiplier="74:17" id="7Np-KU-3aI"/>
+                                    <constraint firstAttribute="width" constant="148" id="X9D-Jc-Y1A"/>
+                                </constraints>
+                                <state key="normal" title="测试UI" backgroundImage="title_shouye"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hff-Rb-fUE" firstAttribute="leading" secondItem="DcC-mb-sKB" secondAttribute="leading" id="HmK-fT-5UX"/>
+                            <constraint firstItem="Hff-Rb-fUE" firstAttribute="top" secondItem="DcC-mb-sKB" secondAttribute="top" id="LjY-wL-TtY"/>
+                            <constraint firstItem="Nrf-db-o18" firstAttribute="leading" secondItem="Hff-Rb-fUE" secondAttribute="leading" id="Uwn-aV-6Lx"/>
+                            <constraint firstItem="Nrf-db-o18" firstAttribute="top" secondItem="Hff-Rb-fUE" secondAttribute="top" id="XLE-7G-OFc"/>
+                            <constraint firstItem="Nrf-db-o18" firstAttribute="bottom" secondItem="Hff-Rb-fUE" secondAttribute="bottom" id="cvc-AW-ba0"/>
+                            <constraint firstAttribute="trailing" secondItem="Hff-Rb-fUE" secondAttribute="trailing" id="hcm-ym-Gm5"/>
+                            <constraint firstAttribute="bottom" secondItem="Hff-Rb-fUE" secondAttribute="bottom" id="iFM-g1-Hpk"/>
+                            <constraint firstItem="Nrf-db-o18" firstAttribute="trailing" secondItem="Hff-Rb-fUE" secondAttribute="trailing" id="tLk-Ac-nih"/>
+                            <constraint firstItem="Vjw-le-Di6" firstAttribute="top" secondItem="DcC-mb-sKB" secondAttribute="top" id="xCc-rR-m6b"/>
+                            <constraint firstItem="Vjw-le-Di6" firstAttribute="leading" secondItem="DcC-mb-sKB" secondAttribute="leading" id="xW7-zu-o1d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="DcC-mb-sKB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6Pq-0c-ntn"/>
+                    <constraint firstAttribute="bottom" secondItem="DcC-mb-sKB" secondAttribute="bottom" id="CdI-PT-goy"/>
+                    <constraint firstAttribute="trailing" secondItem="DcC-mb-sKB" secondAttribute="trailing" constant="10" id="JaZ-e9-Hnv"/>
+                    <constraint firstItem="DcC-mb-sKB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Lte-nX-OnN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bkView" destination="DcC-mb-sKB" id="DGz-Jv-wEa"/>
+                <outlet property="endView" destination="Nrf-db-o18" id="WkU-xL-660"/>
+                <outlet property="imgView" destination="Hff-Rb-fUE" id="bcF-vo-U6p"/>
+                <outlet property="nameBtn" destination="Vjw-le-Di6" id="pjS-1w-bMe"/>
+            </connections>
+            <point key="canvasLocation" x="-180" y="-65"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="title_shouye" width="70" height="20"/>
+    </resources>
+</document>

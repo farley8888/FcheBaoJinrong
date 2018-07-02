@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" focusStyle="custom" id="KGk-i7-Jjw" customClass="DMHomePageCell">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="229.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FP8-6a-T6v">
+                        <rect key="frame" x="10" y="0.0" width="399" height="229.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="didibao_shouye" translatesAutoresizingMaskIntoConstraints="NO" id="vsv-m6-UoF">
+                                <rect key="frame" x="0.0" y="0.0" width="399" height="229.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJQ-Qr-2pD">
+                                <rect key="frame" x="2" y="0.0" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="A86-G2-neK"/>
+                                    <constraint firstAttribute="height" constant="34" id="OuV-Pu-fen"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="滴滴宝" backgroundImage="title_shouye"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="限时加息2%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-Ku-chS">
+                                <rect key="frame" x="291" y="15" width="100" height="25"/>
+                                <color key="backgroundColor" red="0.61965372199474644" green="0.85081210499570903" blue="0.99193829298019409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="g9D-I1-MRT"/>
+                                    <constraint firstAttribute="width" constant="100" id="pGm-kE-Zsz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="7.8%+2%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-ef-cgt">
+                                <rect key="frame" x="147" y="55" width="104.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="年化利率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt8-PH-7h3">
+                                <rect key="frame" x="169" y="100" width="61.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="灵活存取   |  当日计息  |  高效回报" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73F-xa-uv0">
+                                <rect key="frame" x="84" y="136" width="230" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-th-gBF">
+                                <rect key="frame" x="110" y="174" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OJ4-th-gBF" secondAttribute="height" multiplier="135:30" id="K0b-yt-v7y"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vs4-Lz-YGm"/>
+                                </constraints>
+                                <state key="normal" title="立即抢购" backgroundImage="btn_lijiqianggou"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MJQ-Qr-2pD" firstAttribute="top" secondItem="FP8-6a-T6v" secondAttribute="top" id="1Bj-V1-6dE"/>
+                            <constraint firstItem="vsv-m6-UoF" firstAttribute="top" secondItem="FP8-6a-T6v" secondAttribute="top" id="2ec-NZ-bst"/>
+                            <constraint firstItem="73F-xa-uv0" firstAttribute="centerX" secondItem="FP8-6a-T6v" secondAttribute="centerX" id="906-4A-zar"/>
+                            <constraint firstItem="MJQ-Qr-2pD" firstAttribute="leading" secondItem="FP8-6a-T6v" secondAttribute="leading" constant="2" id="BOZ-i8-YQz"/>
+                            <constraint firstItem="TfN-ef-cgt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FP8-6a-T6v" secondAttribute="top" constant="40" id="DaN-NE-t5J"/>
+                            <constraint firstItem="jt8-PH-7h3" firstAttribute="top" secondItem="TfN-ef-cgt" secondAttribute="bottom" constant="15" id="FS4-d6-egN"/>
+                            <constraint firstItem="vsv-m6-UoF" firstAttribute="leading" secondItem="FP8-6a-T6v" secondAttribute="leading" id="QqW-QY-a3A"/>
+                            <constraint firstItem="gQB-Ku-chS" firstAttribute="top" secondItem="FP8-6a-T6v" secondAttribute="top" constant="15" id="Z8Q-1Z-4YH"/>
+                            <constraint firstAttribute="bottom" secondItem="OJ4-th-gBF" secondAttribute="bottom" constant="15" id="cdc-wS-WZ4"/>
+                            <constraint firstItem="jt8-PH-7h3" firstAttribute="centerX" secondItem="TfN-ef-cgt" secondAttribute="centerX" id="dp1-8L-nO6"/>
+                            <constraint firstAttribute="trailing" secondItem="vsv-m6-UoF" secondAttribute="trailing" id="hlw-YQ-Fa2"/>
+                            <constraint firstItem="OJ4-th-gBF" firstAttribute="top" secondItem="73F-xa-uv0" secondAttribute="bottom" constant="20" id="kmy-hI-xrC"/>
+                            <constraint firstAttribute="bottom" secondItem="vsv-m6-UoF" secondAttribute="bottom" id="l90-Qs-aoM"/>
+                            <constraint firstItem="73F-xa-uv0" firstAttribute="top" secondItem="jt8-PH-7h3" secondAttribute="bottom" constant="18" id="lgT-12-x7a"/>
+                            <constraint firstItem="OJ4-th-gBF" firstAttribute="centerX" secondItem="FP8-6a-T6v" secondAttribute="centerX" id="r4q-wF-M9O"/>
+                            <constraint firstItem="TfN-ef-cgt" firstAttribute="centerX" secondItem="FP8-6a-T6v" secondAttribute="centerX" id="rKd-EQ-PXg"/>
+                            <constraint firstAttribute="trailing" secondItem="gQB-Ku-chS" secondAttribute="trailing" constant="8" id="wNF-vL-zEY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FP8-6a-T6v" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="As3-TS-Ojz"/>
+                    <constraint firstItem="FP8-6a-T6v" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DDI-WU-ape"/>
+                    <constraint firstAttribute="trailing" secondItem="FP8-6a-T6v" secondAttribute="trailing" constant="10" id="c9i-Nq-6AK"/>
+                    <constraint firstAttribute="bottom" secondItem="FP8-6a-T6v" secondAttribute="bottom" id="hma-up-7i6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="goumaiButton" destination="OJ4-th-gBF" id="dyZ-eC-lLo"/>
+                <outlet property="increaseLabel" destination="gQB-Ku-chS" id="z01-KB-SE1"/>
+                <outlet property="interestRateLabel" destination="TfN-ef-cgt" id="Rky-hz-VeH"/>
+                <outlet property="leftButton" destination="MJQ-Qr-2pD" id="ml1-Sl-tb0"/>
+                <outlet property="scareLab" destination="TfN-ef-cgt" id="dWA-eg-GN9"/>
+            </connections>
+            <point key="canvasLocation" x="-1154" y="55"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="btn_lijiqianggou" width="135" height="30"/>
+        <image name="didibao_shouye" width="350" height="155"/>
+        <image name="title_shouye" width="70" height="20"/>
+    </resources>
+</document>

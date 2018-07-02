@@ -1,0 +1,59 @@
+//
+//  CBJRPrefixHeader.pch
+//  CheBaoJinRong
+//
+//  Created by apple on 2018/6/5.
+//  Copyright © 2018年 apple. All rights reserved.
+//
+
+#ifndef CBJRPrefixHeader_pch
+#define CBJRPrefixHeader_pch
+
+#import "Define.h"
+#import "DMStateModel.h"
+#import "DMPageModel.h"
+#import "UserManager.h"
+#import "MBProgressHUD+MJ.h"
+#import "NSUserDefaults+Extension.h"
+
+#import "UIAlertView+Block.h"
+#import "UIImage+DMIconFont.h"
+#import "ResultCodeState.h"
+#import "YBHttpTool.h"
+
+
+#import <MJExtension/MJExtension.h>
+#import <MJRefresh/MJRefresh.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <SDWebImage/SDImageCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <Masonry/Masonry.h>
+
+//FTool
+#import "Macros.h"              // 宏定义类
+#import "AJExtension.h"
+#import "SVProgressHUD.h"
+#import "AJCustomUI.h"
+#import "MJExtension.h"         //字典和模型工具类
+#import "FUserModel.h"           //用户基类
+#import "FAppDelegate.h"
+#import "MJRefresh.h"
+#import "FAccountCategaries.h"
+#import "FTabBarController.h"
+#import "FBaseViewController.h"
+#import "FNavigationController.h"
+#import "FAccountRecord.h"
+#import "NSDate+BRAdd.h"
+#import "FAccountRecordSaveTool.h"
+#import "Masonry.h"
+#import "UIButton+KK.h"
+#import "AppDefaultUtil.h"
+#import "ColorTools.h"
+#import "NetWorkConfig.h"
+#import "NSString+Shove.h"
+#import "NSString+encryptDES.h"
+#import "FUsersTool.h"
+
+#define CLIENT_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+#endif /* CBJRPrefixHeader_pch */

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="DMMyDidiCell">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="1301" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-7H-Fmg">
+                        <rect key="frame" x="206" y="15" width="106" height="31.5"/>
+                        <color key="backgroundColor" red="1" green="0.66278667899999999" blue="0.225939944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="存入">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WSj-73-55N"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="1300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERw-tj-hpn">
+                        <rect key="frame" x="50" y="15" width="106" height="31.5"/>
+                        <state key="normal" title="赎回">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="99g-R8-XTk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1bf-7H-Fmg" secondAttribute="trailing" constant="50" id="4cM-ZI-PBJ"/>
+                    <constraint firstItem="1bf-7H-Fmg" firstAttribute="width" secondItem="ERw-tj-hpn" secondAttribute="width" id="7wg-WI-jRB"/>
+                    <constraint firstItem="ERw-tj-hpn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="QnN-sD-ATn"/>
+                    <constraint firstItem="ERw-tj-hpn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="Ubb-ed-aEF"/>
+                    <constraint firstItem="1bf-7H-Fmg" firstAttribute="leading" secondItem="ERw-tj-hpn" secondAttribute="trailing" constant="50" id="u9q-ZF-fOr"/>
+                    <constraint firstItem="1bf-7H-Fmg" firstAttribute="bottom" secondItem="ERw-tj-hpn" secondAttribute="bottom" id="uCN-cI-2h5"/>
+                    <constraint firstAttribute="bottom" secondItem="ERw-tj-hpn" secondAttribute="bottom" constant="15" id="vnV-Dx-OfL"/>
+                    <constraint firstItem="1bf-7H-Fmg" firstAttribute="top" secondItem="ERw-tj-hpn" secondAttribute="top" id="yFC-1R-bvF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="depositButton" destination="1bf-7H-Fmg" id="CKa-Wb-aQl"/>
+                <outlet property="redeemButton" destination="ERw-tj-hpn" id="Fk0-Lo-xpt"/>
+            </connections>
+            <point key="canvasLocation" x="-618" y="-96"/>
+        </tableViewCell>
+    </objects>
+</document>

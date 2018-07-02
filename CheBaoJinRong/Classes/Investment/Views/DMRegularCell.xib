@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="KGk-i7-Jjw" customClass="DMRegularCell">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="62.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7C-qN-5k4">
+                        <rect key="frame" x="108" y="10.5" width="300" height="45"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiaozhuan_chanpinxiangqing" translatesAutoresizingMaskIntoConstraints="NO" id="a0q-KM-zKh">
+                                <rect key="frame" x="265" y="10" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="CYU-7Y-RLl"/>
+                                    <constraint firstAttribute="width" constant="25" id="YDG-Sd-y85"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看产品介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i7-0y-NSu">
+                                <rect key="frame" x="15" y="14" width="86" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.66278667899999999" blue="0.225939944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="a0q-KM-zKh" firstAttribute="top" secondItem="B7C-qN-5k4" secondAttribute="top" constant="10" id="7TB-B4-RM0"/>
+                            <constraint firstAttribute="trailing" secondItem="a0q-KM-zKh" secondAttribute="trailing" constant="10" id="kLw-T4-9Za"/>
+                            <constraint firstItem="9i7-0y-NSu" firstAttribute="leading" secondItem="B7C-qN-5k4" secondAttribute="leading" constant="15" id="qkT-Pj-BVv"/>
+                            <constraint firstItem="a0q-KM-zKh" firstAttribute="centerY" secondItem="B7C-qN-5k4" secondAttribute="centerY" id="qkd-JS-5sh"/>
+                            <constraint firstAttribute="bottom" secondItem="a0q-KM-zKh" secondAttribute="bottom" constant="10" id="uUU-21-0wS"/>
+                            <constraint firstItem="9i7-0y-NSu" firstAttribute="centerY" secondItem="B7C-qN-5k4" secondAttribute="centerY" id="w0P-fx-IgQ"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvT-hY-Wre">
+                        <rect key="frame" x="15" y="16" width="83" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title=" 产品介绍" image="dian">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="B7C-qN-5k4" firstAttribute="leading" secondItem="bvT-hY-Wre" secondAttribute="trailing" constant="10" id="2Nk-TQ-85V"/>
+                    <constraint firstAttribute="trailing" secondItem="B7C-qN-5k4" secondAttribute="trailing" constant="5" id="72g-fJ-DqT"/>
+                    <constraint firstItem="B7C-qN-5k4" firstAttribute="centerY" secondItem="bvT-hY-Wre" secondAttribute="centerY" id="Xdr-HX-mDP"/>
+                    <constraint firstItem="bvT-hY-Wre" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="cHR-7J-xch"/>
+                    <constraint firstItem="bvT-hY-Wre" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="g1s-hM-Vz9"/>
+                    <constraint firstItem="bvT-hY-Wre" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kVe-HL-jdC"/>
+                    <constraint firstAttribute="bottom" secondItem="B7C-qN-5k4" secondAttribute="bottom" constant="10" id="ku1-ml-SKW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="detialBKView" destination="B7C-qN-5k4" id="TKI-Nn-JrW"/>
+            </connections>
+            <point key="canvasLocation" x="-95.5" y="67.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dian" width="13" height="13"/>
+        <image name="tiaozhuan_chanpinxiangqing" width="25" height="25"/>
+    </resources>
+</document>

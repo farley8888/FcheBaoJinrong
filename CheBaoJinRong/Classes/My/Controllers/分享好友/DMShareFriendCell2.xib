@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="357" id="KGk-i7-Jjw" customClass="DMShareFriendCell2">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="357"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="356.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请链接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWq-2g-m7V">
+                        <rect key="frame" x="180.5" y="15" width="69.5" height="37.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.66278667899999999" blue="0.225939944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1v-7c-Yec">
+                        <rect key="frame" x="30" y="122" width="370.5" height="82.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="K1v-7c-Yec" secondAttribute="height" multiplier="9:2" id="D1K-Px-11F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="分享邀请二维码" backgroundImage="btn_lijiqianggou"/>
+                        <connections>
+                            <action selector="shareCodeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bpG-zq-JLq"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ef-dr-irF">
+                        <rect key="frame" x="30" y="219.5" width="370.5" height="82.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="8Ef-dr-irF" secondAttribute="height" multiplier="9:2" id="EWy-Hj-wc7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="分享邀请链接" backgroundImage="btn_lijiqianggou"/>
+                        <connections>
+                            <action selector="shareURLButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yQf-mH-3DW"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动规则" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt2-XV-zJ0">
+                        <rect key="frame" x="186.5" y="322" width="57.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6iP-Mh-VsQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFX-xD-4TQ">
+                        <rect key="frame" x="30" y="67.5" width="371" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRN-pX-6LK">
+                                <rect key="frame" x="5" y="0.0" width="361" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.30588235294117649" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.45098039220000002" alpha="0.52041416949999997" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="MwD-Q6-Q4c"/>
+                            <constraint firstAttribute="trailing" secondItem="LRN-pX-6LK" secondAttribute="trailing" constant="5" id="NZd-Yg-jWG"/>
+                            <constraint firstItem="LRN-pX-6LK" firstAttribute="top" secondItem="mFX-xD-4TQ" secondAttribute="top" id="V2Y-fL-kJM"/>
+                            <constraint firstItem="LRN-pX-6LK" firstAttribute="leading" secondItem="mFX-xD-4TQ" secondAttribute="leading" constant="5" id="h4F-lw-eTF"/>
+                            <constraint firstAttribute="bottom" secondItem="LRN-pX-6LK" secondAttribute="bottom" id="oUe-SC-nUC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8Ef-dr-irF" firstAttribute="leading" secondItem="K1v-7c-Yec" secondAttribute="leading" id="Eht-Ov-iJF"/>
+                    <constraint firstItem="vt2-XV-zJ0" firstAttribute="top" secondItem="8Ef-dr-irF" secondAttribute="bottom" constant="20" id="LhE-sc-KTx"/>
+                    <constraint firstItem="mFX-xD-4TQ" firstAttribute="top" secondItem="jWq-2g-m7V" secondAttribute="bottom" constant="15" id="Man-D3-cS8"/>
+                    <constraint firstItem="jWq-2g-m7V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="c3U-GG-xuy"/>
+                    <constraint firstItem="8Ef-dr-irF" firstAttribute="top" secondItem="K1v-7c-Yec" secondAttribute="bottom" constant="15" id="hIk-q7-epJ"/>
+                    <constraint firstItem="jWq-2g-m7V" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kpF-2T-fkc"/>
+                    <constraint firstItem="mFX-xD-4TQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="n3e-t6-lTV"/>
+                    <constraint firstItem="mFX-xD-4TQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nBu-It-QlA"/>
+                    <constraint firstItem="K1v-7c-Yec" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ny7-7O-wwE"/>
+                    <constraint firstItem="vt2-XV-zJ0" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pDw-X1-aER"/>
+                    <constraint firstAttribute="bottom" secondItem="vt2-XV-zJ0" secondAttribute="bottom" constant="13.5" id="pJZ-nR-lOk"/>
+                    <constraint firstItem="K1v-7c-Yec" firstAttribute="leading" secondItem="mFX-xD-4TQ" secondAttribute="leading" id="qGD-FJ-akG"/>
+                    <constraint firstItem="K1v-7c-Yec" firstAttribute="top" secondItem="mFX-xD-4TQ" secondAttribute="bottom" constant="15" id="rWm-XJ-8Nw"/>
+                    <constraint firstItem="8Ef-dr-irF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xJr-ye-cUf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="labBK" destination="mFX-xD-4TQ" id="kAa-wL-jsB"/>
+                <outlet property="shareCode" destination="K1v-7c-Yec" id="zRt-Gm-wCT"/>
+                <outlet property="shareURL" destination="8Ef-dr-irF" id="nLg-Ga-Caw"/>
+                <outlet property="urlLabel" destination="LRN-pX-6LK" id="5ll-3I-Lgc"/>
+            </connections>
+            <point key="canvasLocation" x="-938.5" y="-79.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="btn_lijiqianggou" width="135" height="30"/>
+    </resources>
+</document>
