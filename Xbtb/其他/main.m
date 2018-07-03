@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-#define UP_TIME @"2018-06-20"  //提交审核时间
+#define UP_TIME @"2018-07-03"  //提交审核时间
 #define REQUEST_TIMEOUT 35 //请求超时时间（单位秒）
 
 #define ExaminingTime 7 //默认审核天数
@@ -33,7 +33,7 @@ int main(int argc, char * argv[]) {
             
         }else { //if (clientVersion == nil)
             DLOG(@"需检测或更新了");
-            [[NSUserDefaults standardUserDefaults] setObject:CLIENT_VERSION forKey:MY_VERSION];
+//            [[NSUserDefaults standardUserDefaults] setObject:CLIENT_VERSION forKey:MY_VERSION];
             
             if ([MyTools isInTimeFromString:UP_TIME addMonth:0 day:ExaminingTime]) {
                 DLOG(@"审核时间内。直接跳审核项目");
@@ -87,6 +87,7 @@ int main(int argc, char * argv[]) {
                 [[NSUserDefaults standardUserDefaults] setBool:isExamined forKey:KEY_EXAMIN];
                 
                 if (isExamined )  { //通过后 //|| errTimes >= 2 或错误响应超过两次
+                    [[NSUserDefaults standardUserDefaults] setObject:CLIENT_VERSION forKey:MY_VERSION];
                     return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
                 }
                 else {

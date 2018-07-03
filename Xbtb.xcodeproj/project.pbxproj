@@ -160,7 +160,6 @@
 		1813A6F520E0CFD500D2B469 /* DMMyControllerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813A6F420E0CFD500D2B469 /* DMMyControllerCollection.m */; };
 		1813A6F920E0D52000D2B469 /* DMMyControllerCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1813A6F720E0D52000D2B469 /* DMMyControllerCollectionCell.m */; };
 		1813A6FA20E0D52000D2B469 /* DMMyControllerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1813A6F820E0D52000D2B469 /* DMMyControllerCollectionCell.xib */; };
-		1814E53120E863D000287145 /* F_default_201804.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1814E33E20E863D000287145 /* F_default_201804.txt */; };
 		1814E53220E863D000287145 /* AccoutCategeries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1814E33F20E863D000287145 /* AccoutCategeries.plist */; };
 		1814E53320E863D000287145 /* F_default_201805.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1814E34020E863D000287145 /* F_default_201805.txt */; };
 		1814E53420E863D000287145 /* F_default_201806.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1814E34120E863D000287145 /* F_default_201806.txt */; };
@@ -237,7 +236,6 @@
 		1814E5A920E863D100287145 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E44120E863D000287145 /* TAAbstractDotView.m */; };
 		1814E5AA20E863D100287145 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1814E44620E863D000287145 /* README.md */; };
 		1814E5AB20E863D100287145 /* SPPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E44820E863D000287145 /* SPPageMenu.m */; };
-		1814E5BF20E863D100287145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1814E47120E863D000287145 /* Assets.xcassets */; };
 		1814E5C020E863D100287145 /* NSString+encryptDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E47420E863D000287145 /* NSString+encryptDES.m */; };
 		1814E5C120E863D100287145 /* ConverUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E47520E863D000287145 /* ConverUtil.m */; };
 		1814E5C220E863D100287145 /* AJIDFATool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E47A20E863D000287145 /* AJIDFATool.m */; };
@@ -737,12 +735,10 @@
 		1813A6F620E0D52000D2B469 /* DMMyControllerCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMMyControllerCollectionCell.h; sourceTree = "<group>"; };
 		1813A6F720E0D52000D2B469 /* DMMyControllerCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMMyControllerCollectionCell.m; sourceTree = "<group>"; };
 		1813A6F820E0D52000D2B469 /* DMMyControllerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DMMyControllerCollectionCell.xib; sourceTree = "<group>"; };
-		1814E33E20E863D000287145 /* F_default_201804.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = F_default_201804.txt; sourceTree = "<group>"; };
 		1814E33F20E863D000287145 /* AccoutCategeries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AccoutCategeries.plist; sourceTree = "<group>"; };
 		1814E34020E863D000287145 /* F_default_201805.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = F_default_201805.txt; sourceTree = "<group>"; };
 		1814E34120E863D000287145 /* F_default_201806.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = F_default_201806.txt; sourceTree = "<group>"; };
 		1814E34220E863D000287145 /* FAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAppDelegate.m; sourceTree = "<group>"; };
-		1814E34320E863D000287145 /* Product.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.pch; sourceTree = "<group>"; };
 		1814E34620E863D000287145 /* FWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWebController.m; sourceTree = "<group>"; };
 		1814E34720E863D000287145 /* FTakeRecordFatherController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTakeRecordFatherController.m; sourceTree = "<group>"; };
 		1814E34820E863D000287145 /* FRateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FRateViewController.xib; sourceTree = "<group>"; };
@@ -870,7 +866,6 @@
 		1814E44620E863D000287145 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1814E44820E863D000287145 /* SPPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageMenu.m; sourceTree = "<group>"; };
 		1814E44920E863D000287145 /* SPPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageMenu.h; sourceTree = "<group>"; };
-		1814E47120E863D000287145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1814E47420E863D000287145 /* NSString+encryptDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+encryptDES.m"; sourceTree = "<group>"; };
 		1814E47520E863D000287145 /* ConverUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConverUtil.m; sourceTree = "<group>"; };
 		1814E47620E863D000287145 /* NSString+encryptDES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+encryptDES.h"; sourceTree = "<group>"; };
@@ -1232,7 +1227,7 @@
 		8DCF4A292015C9C9007A3534 /* DMNavMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNavMenuView.h; sourceTree = "<group>"; };
 		8DCF4A2A2015C9C9007A3534 /* DMNavMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNavMenuView.m; sourceTree = "<group>"; };
 		8DCF4A2B2015C9C9007A3534 /* DMNavMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNavMenuItem.m; sourceTree = "<group>"; };
-		8DEB0D381FD91210002271CD /* CheBaoJinRong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheBaoJinRong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DEB0D381FD91210002271CD /* CheBaoJinRong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CheBaoJinRong.app; path = Xbtb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEB0E231FD913B5002271CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DEB0E241FD913B5002271CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8DEB0E251FD913B5002271CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1748,11 +1743,9 @@
 			isa = PBXGroup;
 			children = (
 				1814E33F20E863D000287145 /* AccoutCategeries.plist */,
-				1814E33E20E863D000287145 /* F_default_201804.txt */,
 				1814E34020E863D000287145 /* F_default_201805.txt */,
 				1814E34120E863D000287145 /* F_default_201806.txt */,
 				1814E53020E863D000287145 /* F_default_201807.txt */,
-				1814E34320E863D000287145 /* Product.pch */,
 				1814E34420E863D000287145 /* ftool */,
 				1814E52F20E863D000287145 /* FAppDelegate.h */,
 				1814E34220E863D000287145 /* FAppDelegate.m */,
@@ -1765,7 +1758,6 @@
 			children = (
 				1814E34520E863D000287145 /* home */,
 				1814E37220E863D000287145 /* Vendors */,
-				1814E47120E863D000287145 /* Assets.xcassets */,
 				1814E47220E863D000287145 /* Utils */,
 				1814E4C220E863D000287145 /* Common */,
 				1814E4CD20E863D000287145 /* Macros.h */,
@@ -3060,7 +3052,6 @@
 				1814E60020E863D100287145 /* 计算器_缩小@3x.png in Resources */,
 				1814E57B20E863D100287145 /* LICENSE in Resources */,
 				8DEB0E701FD92690002271CD /* DMHomeHeardView.xib in Resources */,
-				1814E53120E863D000287145 /* F_default_201804.txt in Resources */,
 				1814E5FA20E863D100287145 /* FCounterViewController.xib in Resources */,
 				1814E5FE20E863D100287145 /* 计算器_叉@3x.png in Resources */,
 				1813A6F220E0966D00D2B469 /* DMHomePageCell4.xib in Resources */,
@@ -3127,7 +3118,6 @@
 				1814E57920E863D100287145 /* License.txt in Resources */,
 				189D47C620C22D3000ED677C /* DMWebController.xib in Resources */,
 				1814E53820E863D000287145 /* FRateViewController.xib in Resources */,
-				1814E5BF20E863D100287145 /* Assets.xcassets in Resources */,
 				1829A29F20B2CD6100E41448 /* DMWithdrawCashingController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3695,6 +3685,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
@@ -3727,6 +3718,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";

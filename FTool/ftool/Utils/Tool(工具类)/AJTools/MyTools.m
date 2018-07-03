@@ -19,7 +19,7 @@ singletonM(Tools)
 //当前时间 是否在这个时间内
 +(BOOL)isInTimeFromString:(NSString*)formString addMonth:(NSInteger) addMonths  day:(NSInteger) days {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
+//    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
     
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSDate *formDate = [formatter dateFromString:formString];
