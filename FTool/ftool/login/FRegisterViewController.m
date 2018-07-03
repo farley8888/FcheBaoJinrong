@@ -77,7 +77,7 @@
 	
 	//文本标题
 	UILabel *titleLabel = [UILabel new];
-	titleLabel.text = @"会理财, 懂生活";
+	titleLabel.text = @"欢迎注册";
 	titleLabel.textColor = baseNavColor;
 	titleLabel.font = [UIFont fontWithName:@"Arial" size:13];
 	titleLabel.textAlignment = NSTextAlignmentCenter;

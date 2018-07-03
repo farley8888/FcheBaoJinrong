@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8DEB0D371FD91210002271CD"
-               BuildableName = "CheBaoJinRong.app"
-               BlueprintName = "CheBaoJinRong"
-               ReferencedContainer = "container:CheBaoJinRong.xcodeproj">
+               BuildableName = "Xbtb.app"
+               BlueprintName = "Xbtb"
+               ReferencedContainer = "container:Xbtb.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,16 +34,16 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DEB0D371FD91210002271CD"
-            BuildableName = "CheBaoJinRong.app"
-            BlueprintName = "CheBaoJinRong"
-            ReferencedContainer = "container:CheBaoJinRong.xcodeproj">
+            BuildableName = "Xbtb.app"
+            BlueprintName = "Xbtb"
+            ReferencedContainer = "container:Xbtb.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       language = ""
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DEB0D371FD91210002271CD"
-            BuildableName = "CheBaoJinRong.app"
-            BlueprintName = "CheBaoJinRong"
-            ReferencedContainer = "container:CheBaoJinRong.xcodeproj">
+            BuildableName = "Xbtb.app"
+            BlueprintName = "Xbtb"
+            ReferencedContainer = "container:Xbtb.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8DEB0D371FD91210002271CD"
-            BuildableName = "CheBaoJinRong.app"
-            BlueprintName = "CheBaoJinRong"
-            ReferencedContainer = "container:CheBaoJinRong.xcodeproj">
+            BuildableName = "Xbtb.app"
+            BlueprintName = "Xbtb"
+            ReferencedContainer = "container:Xbtb.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

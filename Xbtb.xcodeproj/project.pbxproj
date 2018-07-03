@@ -2631,7 +2631,7 @@
 			isa = PBXGroup;
 			children = (
 				1814E33D20E863D000287145 /* FTool */,
-				8DEB0D3A1FD91210002271CD /* CheBaoJinRong */,
+				8DEB0D3A1FD91210002271CD /* Xbtb */,
 				8DEB0D391FD91210002271CD /* Products */,
 				8DEB0E1F1FD912EC002271CD /* Frameworks */,
 				EC973BE021EEBD3646BDACFE /* Pods */,
@@ -2646,7 +2646,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8DEB0D3A1FD91210002271CD /* CheBaoJinRong */ = {
+		8DEB0D3A1FD91210002271CD /* Xbtb */ = {
 			isa = PBXGroup;
 			children = (
 				180AB50B20C6424100C60992 /* MyLib */,
@@ -2657,7 +2657,7 @@
 				8DEB0E351FD91419002271CD /* View */,
 				8DEB0E221FD913B5002271CD /* 其他 */,
 			);
-			path = CheBaoJinRong;
+			path = Xbtb;
 			sourceTree = "<group>";
 		};
 		8DEB0E1F1FD912EC002271CD /* Frameworks */ = {
@@ -2963,9 +2963,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8DEB0D371FD91210002271CD /* CheBaoJinRong */ = {
+		8DEB0D371FD91210002271CD /* Xbtb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8DEB0D4E1FD91210002271CD /* Build configuration list for PBXNativeTarget "CheBaoJinRong" */;
+			buildConfigurationList = 8DEB0D4E1FD91210002271CD /* Build configuration list for PBXNativeTarget "Xbtb" */;
 			buildPhases = (
 				D7C14ED92E0C855D811BE285 /* [CP] Check Pods Manifest.lock */,
 				8DEB0D341FD91210002271CD /* Sources */,
@@ -2978,7 +2978,7 @@
 			);
 			dependencies = (
 			);
-			name = CheBaoJinRong;
+			name = Xbtb;
 			productName = LanHUaJi;
 			productReference = 8DEB0D381FD91210002271CD /* CheBaoJinRong.app */;
 			productType = "com.apple.product-type.application";
@@ -3005,7 +3005,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8DEB0D331FD91210002271CD /* Build configuration list for PBXProject "CheBaoJinRong" */;
+			buildConfigurationList = 8DEB0D331FD91210002271CD /* Build configuration list for PBXProject "Xbtb" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -3018,7 +3018,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DEB0D371FD91210002271CD /* CheBaoJinRong */,
+				8DEB0D371FD91210002271CD /* Xbtb */,
 			);
 		};
 /* End PBXProject section */
@@ -3696,9 +3696,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CheBaoJinRong/其他/CBJRPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/CheBaoJinRong/其他/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Xbtb/其他/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
@@ -3728,9 +3728,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CheBaoJinRong/其他/CBJRPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/CheBaoJinRong/其他/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Xbtb/其他/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
@@ -3750,7 +3750,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8DEB0D331FD91210002271CD /* Build configuration list for PBXProject "CheBaoJinRong" */ = {
+		8DEB0D331FD91210002271CD /* Build configuration list for PBXProject "Xbtb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DEB0D4C1FD91210002271CD /* Debug */,
@@ -3759,7 +3759,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8DEB0D4E1FD91210002271CD /* Build configuration list for PBXNativeTarget "CheBaoJinRong" */ = {
+		8DEB0D4E1FD91210002271CD /* Build configuration list for PBXNativeTarget "Xbtb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DEB0D4F1FD91210002271CD /* Debug */,
