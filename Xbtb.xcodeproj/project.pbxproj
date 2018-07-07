@@ -439,7 +439,6 @@
 		8DEB0E301FD913B6002271CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB0E261FD913B5002271CD /* LaunchScreen.storyboard */; };
 		8DEB0E311FD913B6002271CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB0E281FD913B5002271CD /* Main.storyboard */; };
 		8DEB0E331FD913B6002271CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E2B1FD913B5002271CD /* main.m */; };
-		8DEB0E341FD913B6002271CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E2D1FD913B5002271CD /* ViewController.m */; };
 		8DEB0E3B1FD91448002271CD /* SelectVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E3A1FD91448002271CD /* SelectVCTool.m */; };
 		8DEB0E591FD918C4002271CD /* HomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E581FD918C4002271CD /* HomePageController.m */; };
 		8DEB0E5F1FD918E6002271CD /* MyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E5E1FD918E6002271CD /* MyController.m */; };
@@ -504,7 +503,7 @@
 		180AB42D20C511C000C60992 /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		180AB42E20C511C000C60992 /* WKDelegateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKDelegateController.m; sourceTree = "<group>"; };
 		180AB43120C512C500C60992 /* DMLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLeftView.m; sourceTree = "<group>"; };
-		180AB50C20C6443200C60992 /* CBJRPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBJRPrefixHeader.pch; sourceTree = "<group>"; };
+		180AB50C20C6443200C60992 /* XBTBPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBTBPrefixHeader.pch; sourceTree = "<group>"; };
 		180AB50E20C644E200C60992 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		180AB50F20C644E200C60992 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		180AB51120C644E200C60992 /* DMBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMBaseAlertView.h; sourceTree = "<group>"; };
@@ -1227,7 +1226,7 @@
 		8DCF4A292015C9C9007A3534 /* DMNavMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMNavMenuView.h; sourceTree = "<group>"; };
 		8DCF4A2A2015C9C9007A3534 /* DMNavMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNavMenuView.m; sourceTree = "<group>"; };
 		8DCF4A2B2015C9C9007A3534 /* DMNavMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMNavMenuItem.m; sourceTree = "<group>"; };
-		8DEB0D381FD91210002271CD /* CheBaoJinRong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = CheBaoJinRong.app; path = Xbtb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DEB0D381FD91210002271CD /* Xbtb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xbtb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEB0E231FD913B5002271CD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DEB0E241FD913B5002271CD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8DEB0E251FD913B5002271CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1235,8 +1234,6 @@
 		8DEB0E291FD913B5002271CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DEB0E2A1FD913B5002271CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEB0E2B1FD913B5002271CD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8DEB0E2C1FD913B5002271CD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8DEB0E2D1FD913B5002271CD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8DEB0E391FD91448002271CD /* SelectVCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectVCTool.h; sourceTree = "<group>"; };
 		8DEB0E3A1FD91448002271CD /* SelectVCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectVCTool.m; sourceTree = "<group>"; };
 		8DEB0E571FD918C4002271CD /* HomePageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageController.h; sourceTree = "<group>"; };
@@ -2448,6 +2445,21 @@
 			path = "邀请记录";
 			sourceTree = "<group>";
 		};
+		189C5A2B20F0C9580021BFF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8DEB0E231FD913B5002271CD /* AppDelegate.h */,
+				8DEB0E241FD913B5002271CD /* AppDelegate.m */,
+				8DEB0E251FD913B5002271CD /* Assets.xcassets */,
+				8DEB0E261FD913B5002271CD /* LaunchScreen.storyboard */,
+				8DEB0E281FD913B5002271CD /* Main.storyboard */,
+				8DEB0E2A1FD913B5002271CD /* Info.plist */,
+				8DEB0E2B1FD913B5002271CD /* main.m */,
+				180AB50C20C6443200C60992 /* XBTBPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		18CBE13020A972B00061A5B1 /* Find */ = {
 			isa = PBXGroup;
 			children = (
@@ -2623,6 +2635,7 @@
 			isa = PBXGroup;
 			children = (
 				1814E33D20E863D000287145 /* FTool */,
+				189C5A2B20F0C9580021BFF2 /* Supporting Files */,
 				8DEB0D3A1FD91210002271CD /* Xbtb */,
 				8DEB0D391FD91210002271CD /* Products */,
 				8DEB0E1F1FD912EC002271CD /* Frameworks */,
@@ -2633,7 +2646,7 @@
 		8DEB0D391FD91210002271CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DEB0D381FD91210002271CD /* CheBaoJinRong.app */,
+				8DEB0D381FD91210002271CD /* Xbtb.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2647,7 +2660,6 @@
 				8DEB0E371FD91419002271CD /* Controller */,
 				8DEB0E361FD91419002271CD /* Tool */,
 				8DEB0E351FD91419002271CD /* View */,
-				8DEB0E221FD913B5002271CD /* 其他 */,
 			);
 			path = Xbtb;
 			sourceTree = "<group>";
@@ -2666,23 +2678,6 @@
 				6150FEBAC46599AA770160AF /* Pods_CheBaoJinRong.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8DEB0E221FD913B5002271CD /* 其他 */ = {
-			isa = PBXGroup;
-			children = (
-				8DEB0E231FD913B5002271CD /* AppDelegate.h */,
-				8DEB0E241FD913B5002271CD /* AppDelegate.m */,
-				8DEB0E251FD913B5002271CD /* Assets.xcassets */,
-				8DEB0E261FD913B5002271CD /* LaunchScreen.storyboard */,
-				8DEB0E281FD913B5002271CD /* Main.storyboard */,
-				8DEB0E2A1FD913B5002271CD /* Info.plist */,
-				8DEB0E2B1FD913B5002271CD /* main.m */,
-				8DEB0E2C1FD913B5002271CD /* ViewController.h */,
-				8DEB0E2D1FD913B5002271CD /* ViewController.m */,
-				180AB50C20C6443200C60992 /* CBJRPrefixHeader.pch */,
-			);
-			path = "其他";
 			sourceTree = "<group>";
 		};
 		8DEB0E351FD91419002271CD /* View */ = {
@@ -2972,7 +2967,7 @@
 			);
 			name = Xbtb;
 			productName = LanHUaJi;
-			productReference = 8DEB0D381FD91210002271CD /* CheBaoJinRong.app */;
+			productReference = 8DEB0D381FD91210002271CD /* Xbtb.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -3410,7 +3405,6 @@
 				1814E59C20E863D100287145 /* IQUIWindow+Hierarchy.m in Sources */,
 				180AB5B020C644E300C60992 /* UIView+DMLoading.m in Sources */,
 				1814E61120E863D100287145 /* UIButton+KK.m in Sources */,
-				8DEB0E341FD913B6002271CD /* ViewController.m in Sources */,
 				1814E5C520E863D100287145 /* ReLogin.m in Sources */,
 				1814E5C920E863D100287145 /* NavBar.m in Sources */,
 				1814E53720E863D000287145 /* FTakeRecordFatherController.m in Sources */,
@@ -3687,9 +3681,9 @@
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XBTBPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Xbtb/其他/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
@@ -3720,9 +3714,9 @@
 				DEVELOPMENT_TEAM = RJW3H58HAZ;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Xbtb/其他/CBJRPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XBTBPrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Xbtb/其他/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
