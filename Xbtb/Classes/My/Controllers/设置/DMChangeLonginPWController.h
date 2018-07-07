@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
-@interface DMChangeLonginPWController : DMBaseController
+@interface DMChangeLonginPWController : XBTBaseController
 
 @property (nonatomic, assign) NSInteger type;   //1:修改登录密码  2：修改交易密码
 

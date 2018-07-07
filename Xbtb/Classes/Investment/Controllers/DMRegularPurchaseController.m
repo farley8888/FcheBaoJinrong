@@ -8,9 +8,9 @@
 
 #import "DMRegularPurchaseController.h"
 #import "DMMyCouponController.h"        //我的优惠券
-#import "DMMatch.h"
+#import "XBTMatch.h"
 #import "DMInputPSWController.h"
-#import "DMJSController.h"
+#import "XBTJSController.h"
 #import "DMRechargeController.h"        //充值
 
 @interface DMRegularPurchaseController ()
@@ -114,7 +114,7 @@
 }
 - (IBAction)agreeXieyiButtonClick:(id)sender {
     
-    DMJSController  *jsVC = [DMJSController  new];
+    XBTJSController  *jsVC = [XBTJSController  new];
     jsVC.url = [NSString stringWithFormat:@"%@/wechat/showAgreementAPP.html",kAPI_URL];
     jsVC.title = @"鑫贝通宝点对点借款合同";
     [self.navigationController pushViewController:jsVC animated:YES];
@@ -128,7 +128,7 @@
 
 - (BOOL)canPost
 {
-    if (![DMMatch isMoney:self.moneyTF.text]) {[MBProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
+    if (![XBTMatch isMoney:self.moneyTF.text]) {[MBProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
     if ([self.moneyTF.text floatValue] < 100) {[MBProgressHUD showSuccess:@"最小投资金额为100元"]; return NO;};
     if (self.agreeButton.selected == NO) {[MBProgressHUD showSuccess:@"请勾选服务协议"]; return NO;}
     return YES;
@@ -169,7 +169,7 @@
 #pragma mark - 选择优惠券
 - (IBAction)selectCouponButtonclick:(id)sender {
     
-    if (![DMMatch isMoney:self.moneyTF.text]) {
+    if (![XBTMatch isMoney:self.moneyTF.text]) {
         [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
@@ -237,7 +237,7 @@
 
 - (void)textFieldEditing:(UITextField *)tf
 {
-    if (![DMMatch isMoney:tf.text] && tf.text.length > 0) {
+    if (![XBTMatch isMoney:tf.text] && tf.text.length > 0) {
         [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }

@@ -7,7 +7,7 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
 typedef NS_ENUM(NSInteger, RealAndTransactionType) {
     
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, RealAndTransactionType) {
     
 };
 
-@interface DMRealNameAuthenticationVController : DMBaseController
+@interface DMRealNameAuthenticationVController : XBTBaseController
 
 @property (nonatomic, assign)RealAndTransactionType  type;
 

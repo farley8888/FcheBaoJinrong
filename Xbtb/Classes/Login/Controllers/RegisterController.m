@@ -7,10 +7,10 @@
 //
 
 #import "RegisterController.h"
-#import "DMMatch.h"
-#import "DMCountdownButton.h"
+#import "XBTMatch.h"
+#import "XBTCountdownButton.h"
 #import "MQVerCodeImageView.h"
-#import "DMJSController.h"
+#import "XBTJSController.h"
 
 
 @interface RegisterController ()<UITextFieldDelegate>
@@ -24,7 +24,7 @@
 /**短信验证码TF**/
 @property (weak, nonatomic) IBOutlet UITextField *messageVerificationCodeTF;
 /**获取短信验证码Button**/
-@property (weak, nonatomic) IBOutlet DMCountdownButton *getMessageCodeButton;
+@property (weak, nonatomic) IBOutlet XBTCountdownButton *getMessageCodeButton;
 /**等录密码TF**/
 @property (weak, nonatomic) IBOutlet UITextField *loginTF;
 /**推荐码TF**/
@@ -91,9 +91,9 @@
     
 }
 
-- (IBAction)getButtonClick:(DMCountdownButton *)sender {
+- (IBAction)getButtonClick:(XBTCountdownButton *)sender {
     
-    if (![DMMatch isPhoneNum:self.phoneNumberTF.text]) {
+    if (![XBTMatch isPhoneNum:self.phoneNumberTF.text]) {
         [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
@@ -107,7 +107,7 @@
 /** 发送短信验证码 **/
 - (void)sendVerifCode
 {
-    DMCountdownButton  *btn = self.getMessageCodeButton;
+    XBTCountdownButton  *btn = self.getMessageCodeButton;
     btn.enabled = NO;
     NSString *noncestr = [Device stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSDictionary *dict = @{@"cellPhone":self.phoneNumberTF.text,
@@ -133,7 +133,7 @@
 /**  验证手机号码是否可以注册  **/
 - (void)verificationPhoneCanUse:(NSString *)phoneNum
 {
-    if (![DMMatch isPhoneNum:phoneNum]) {
+    if (![XBTMatch isPhoneNum:phoneNum]) {
         [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
@@ -191,7 +191,7 @@
     
     BOOL canPost = YES;
     NSString *title = @"";
-    if (![DMMatch isPhoneNum:self.recommendCode.text] && self.recommendCode.text.length !=0) {
+    if (![XBTMatch isPhoneNum:self.recommendCode.text] && self.recommendCode.text.length !=0) {
         title = @"请输入正确的推荐码";
         canPost = NO;
     }
@@ -207,7 +207,7 @@
         title = @"请输入短信验证码";
         canPost = NO;
     }
-    if (![DMMatch isPhoneNum:self.phoneNumberTF.text]) {
+    if (![XBTMatch isPhoneNum:self.phoneNumberTF.text]) {
         title = @"请输入手机号码";
         canPost = NO;
     }
@@ -223,7 +223,7 @@
     }
 }
 - (IBAction)xieyiButtonClick:(id)sender {
-    DMJSController  *jsVC = [DMJSController  new];
+    XBTJSController  *jsVC = [XBTJSController  new];
     jsVC.title = @"注册协议";
     jsVC.url = [NSString stringWithFormat:@"%@/wechat/regagreement.html",kAPI_URL];
     [self.navigationController pushViewController:jsVC animated:YES];

@@ -7,7 +7,7 @@
 //
 
 #import "DMMainController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "HomePageController.h"      //首页
 #import "DMInvestmentController.h"  //出借
 #import "DMFindController.h"        //发现
@@ -67,7 +67,7 @@
     childVc.tabBarItem.selectedImage = selectedImage;
     
     // 添加为tabbar控制器的子控制器
-    DMNavigationController *nav = [[DMNavigationController alloc] init];
+    XBTNavigationController *nav = [[XBTNavigationController alloc] init];
     [nav pushViewController:childVc animated:NO];
     [self addChildViewController:nav];
 }

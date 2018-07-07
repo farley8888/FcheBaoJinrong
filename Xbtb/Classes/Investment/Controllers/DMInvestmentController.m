@@ -13,7 +13,7 @@
 #import "DMSellOutController.h"
 #import "DMDidiDetialController.h"
 #import "DMRegularController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 #import "WKWebViewController.h"
 

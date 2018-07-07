@@ -12,7 +12,7 @@
 #import "DMPurchaseRecordController.h"          //购买记录
 #import "DMRegularPurchaseController.h"         //购买非滴滴宝
 #import "DMLotOfViewScrollerTopView.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 
 @interface DMProductDetailsController ()<UIScrollViewDelegate>
@@ -147,7 +147,7 @@
     if ([UserManager sharedManager].user.token.length) {
         [self pushVC];
     }else{
-        DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
+        XBTNavigationController *nav = [[XBTNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
 }

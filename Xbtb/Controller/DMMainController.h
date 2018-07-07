@@ -7,8 +7,8 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMTabBarController.h"
+#import "XBTTabBarController.h"
 
-@interface DMMainController : DMTabBarController
+@interface DMMainController : XBTTabBarController
 
 @end

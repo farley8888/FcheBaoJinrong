@@ -8,8 +8,8 @@
 
 //#import "DMCustomNavVC.h"
 #import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
-@interface RegisterController : DMBaseController
+@interface RegisterController : XBTBaseController
 
 @end

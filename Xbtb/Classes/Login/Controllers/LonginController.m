@@ -9,7 +9,7 @@
 #import "LonginController.h"
 #import "NSUserDefaults+Extension.h"
 #import "DMUserTool.h"
-#import "DMMatch.h"
+#import "XBTMatch.h"
 #import "SelectVCTool.h"
 #import "RegisterController.h"
 #import "PasswordRetrievalController.h"
@@ -70,7 +70,7 @@
     
     [self.phoneTF addTarget:self action:@selector(phoneTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
     [self.passwordTF addTarget:self action:@selector(phoneTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
-    DMUser *userDisk = [DMUserTool getCurrentLoginUser];
+    XBTUser *userDisk = [DMUserTool getCurrentLoginUser];
     if (userDisk.userName != 0) {
         self.phoneTF.text = userDisk.userName;
     }
@@ -98,7 +98,7 @@
     [self.view endEditing:YES];
     NSString *phone = self.phoneTF.text;
     NSString *password = self.passwordTF.text;
-    if (![DMMatch isPhoneNum:phone]) {
+    if (![XBTMatch isPhoneNum:phone]) {
         [MBProgressHUD showError:@"请输入正确的手机号码"];
         return;
     }
@@ -119,7 +119,7 @@
             
             if (model.status == ResultStatusSuccess) {
                 [MBProgressHUD showSuccess:@"登录成功"];
-                DMUser *user = [DMUser mj_objectWithKeyValues:obj];
+                XBTUser *user = [XBTUser mj_objectWithKeyValues:obj];
                 user.password = password;
                 UserManager *userManager = [UserManager sharedManager];
                 userManager.user = user;

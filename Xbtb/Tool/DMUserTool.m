@@ -19,7 +19,7 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
 @implementation DMUserTool
 
 
-+ (void)login:(DMUser *)user
++ (void)login:(XBTUser *)user
 {
     if (user.password.length==0||user.userName.length==0||user.token.length==0) return;
     NSString *password =  user.password;
@@ -34,7 +34,7 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
             
             if (model.status == ResultStatusSuccess) {
                 [MBProgressHUD showSuccess:@"登录成功"];
-                DMUser *userModel = [DMUser mj_objectWithKeyValues:obj];
+                XBTUser *userModel = [XBTUser mj_objectWithKeyValues:obj];
                 UserManager *userManager = [UserManager sharedManager];
                 userManager.user = userModel;
                 userManager.user.password = password;
@@ -68,7 +68,7 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
 }
 
 
-+ (void)saveUser:(DMUser *)user
++ (void)saveUser:(XBTUser *)user
 {
     [self encryptUser:user];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:user];
@@ -76,11 +76,11 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
     [NSUserDefaults saveObject:data key:CurrentLoginUser];
 }
 
-+ (DMUser *)getCurrentLoginUser
++ (XBTUser *)getCurrentLoginUser
 {
     NSData *data = [NSUserDefaults getObjectForKey:CurrentLoginUser];
     if (!data) return nil;
-    DMUser *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    XBTUser *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [self decryptUser:user];
     return user;
 }
@@ -89,7 +89,7 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
 + (void)logoutCurrentUser
 {
     NSData *data = [NSUserDefaults getObjectForKey:CurrentLoginUser];
-    DMUser *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    XBTUser *user = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     user.password = @"";
     user.token = @"";
     NSData *data2 = [NSKeyedArchiver archivedDataWithRootObject:user];
@@ -98,13 +98,13 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
 }
 
 //对user加密
-+ (void)encryptUser:(DMUser *)user
++ (void)encryptUser:(XBTUser *)user
 {
     user.password = [DMAES encrypt:user.password password:PASSWORD];
 }
 
 //对user解密
-+ (void)decryptUser:(DMUser *)user
++ (void)decryptUser:(XBTUser *)user
 {
     user.password = [DMAES decrypt:user.password password:PASSWORD];
 }

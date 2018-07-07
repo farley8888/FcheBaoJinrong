@@ -15,20 +15,20 @@ static char *UIViewNetErrorViewKey = "DMUIViewNetErrorViewKey";
 
 @interface UIView ()
 
-@property (nonatomic, strong) DMLoadingView *loadingView;
+@property (nonatomic, strong) XBTLoadingView *loadingView;
 @property (nonatomic, strong) DMNotDataView *notDataView;
-@property (nonatomic, strong) DMNetErrorView *netErrorView;
+@property (nonatomic, strong) XBTNetErrorView *netErrorView;
 
 @end
 
 @implementation UIView (DMLoading)
 
-- (void)setLoadingView:(DMLoadingView *)loadingView
+- (void)setLoadingView:(XBTLoadingView *)loadingView
 {
     objc_setAssociatedObject(self, UIViewLoadingViewKey, loadingView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (DMLoadingView *)loadingView
+- (XBTLoadingView *)loadingView
 {
     return objc_getAssociatedObject(self, UIViewLoadingViewKey);
 }
@@ -43,19 +43,19 @@ static char *UIViewNetErrorViewKey = "DMUIViewNetErrorViewKey";
     return objc_getAssociatedObject(self, UIViewNotDataViewKey);
 }
 
-- (void)setNetErrorView:(DMNetErrorView *)netErrorView
+- (void)setNetErrorView:(XBTNetErrorView *)netErrorView
 {
     objc_setAssociatedObject(self, UIViewNetErrorViewKey, netErrorView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (DMNetErrorView *)netErrorView
+- (XBTNetErrorView *)netErrorView
 {
     return objc_getAssociatedObject(self, UIViewNetErrorViewKey);
 }
 
 - (void)loading:(CGRect)frame
 {
-    DMLoadingView *loadingView = [[DMLoadingView alloc] initWithFrame:frame];
+    XBTLoadingView *loadingView = [[XBTLoadingView alloc] initWithFrame:frame];
     self.loadingView = loadingView;
     [self addSubview:self.loadingView];
 }
@@ -69,7 +69,7 @@ static char *UIViewNetErrorViewKey = "DMUIViewNetErrorViewKey";
 
 - (void)netError:(CGRect)frame againBlock:(void (^)())againBlock
 {
-    DMNetErrorView *netErrorView = [[DMNetErrorView alloc] initWithFrame:frame againBlock:againBlock];
+    XBTNetErrorView *netErrorView = [[XBTNetErrorView alloc] initWithFrame:frame againBlock:againBlock];
     self.netErrorView = netErrorView;
     [self addSubview:self.netErrorView];
 }

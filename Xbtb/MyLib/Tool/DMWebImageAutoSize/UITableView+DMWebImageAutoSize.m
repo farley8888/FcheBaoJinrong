@@ -7,15 +7,15 @@
 
 #import "UITableView+DMWebImageAutoSize.h"
 #import "DMWebImageAutoSizeConst.h"
-#import "DMWebImageAutoSize.h"
+#import "XBTWebImageAutoSize.h"
 
 @implementation UITableView (DMWebImageAutoSize)
 
 -(void)dm_reloadDataForURL:(NSURL *)url{
-    BOOL reloadState = [DMWebImageAutoSize reloadStateFromCacheForURL:url];
+    BOOL reloadState = [XBTWebImageAutoSize reloadStateFromCacheForURL:url];
     if(!reloadState){
         [self reloadData];
-        [DMWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
+        [XBTWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
     }
 }
 
@@ -25,10 +25,10 @@
 }
 
 -(void)dm_reloadRowAtIndexPath:(NSIndexPath *)indexPath withRowAnimation:(UITableViewRowAnimation)animation forURL:(NSURL *)url{
-    BOOL reloadState = [DMWebImageAutoSize reloadStateFromCacheForURL:url];
+    BOOL reloadState = [XBTWebImageAutoSize reloadStateFromCacheForURL:url];
     if(!reloadState){
         [self reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:animation];
-        [DMWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
+        [XBTWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
     }
 }
 
@@ -37,10 +37,10 @@
 }
 
 -(void)dm_reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withRowAnimation:(UITableViewRowAnimation)animation forURL:(NSURL *)url{
-    BOOL reloadState = [DMWebImageAutoSize reloadStateFromCacheForURL:url];
+    BOOL reloadState = [XBTWebImageAutoSize reloadStateFromCacheForURL:url];
     if(!reloadState){
         [self reloadRowsAtIndexPaths:indexPaths withRowAnimation:animation];
-        [DMWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
+        [XBTWebImageAutoSize storeReloadState:YES forURL:url completed:nil];
     }
 }
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "DMUser.h"
+#import "XBTUser.h"
 
 extern NSString* const PASSWORD;
 
@@ -17,12 +17,12 @@ extern NSString* const PASSWORD;
 //注销当前用户
 + (void)logoutCurrentUser;
 
-+ (DMUser *)getCurrentLoginUser;
++ (XBTUser *)getCurrentLoginUser;
 
-+ (void)encryptUser:(DMUser *)user;
-+ (void)decryptUser:(DMUser *)user;
++ (void)encryptUser:(XBTUser *)user;
++ (void)decryptUser:(XBTUser *)user;
 
-+ (void)login:(DMUser *)user;
-+ (void)saveUser:(DMUser *)user;
++ (void)login:(XBTUser *)user;
++ (void)saveUser:(XBTUser *)user;
 
 @end

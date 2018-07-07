@@ -7,8 +7,8 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMBaseTableViewController.h"
+#import "XBTBaseTableViewController.h"
 
-@interface DMInvestmentRecordsController : DMBaseTableViewController
+@interface DMInvestmentRecordsController : XBTBaseTableViewController
 
 @end

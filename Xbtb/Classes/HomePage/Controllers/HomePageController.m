@@ -10,7 +10,7 @@
 #import "DMHomePageCell3.h"
 #import "DMHomePageCell2.h"
 #import "DMHomePageCell4.h"
-#import "DMHomeHeardView.h"
+#import "XBTHomeHeardView.h"
 #import "DMHomePageModel.h"
 #import "DMDidiDetialController.h"
 #import "DMRegularController.h"
@@ -18,7 +18,7 @@
 #import "DMJSViewController.h"
 #import "WKWebViewController.h"
 #import "DMWebRechargeController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 
 #import "UIImage+DMIconFont.h"
@@ -61,7 +61,7 @@
 - (void)setTabHeader
 {
     CGFloat headView_H = kScreenW/(670.0/330.0) + 132;
-    DMHomeHeardView *heardView = [DMHomeHeardView homeHeardView];
+    XBTHomeHeardView *heardView = [XBTHomeHeardView homeHeardView];
     heardView.frame = CGRectMake(0, 0, kScreenW, headView_H);
     WeakSelf
     [heardView setBanerClickBlock:^(NSInteger index) {
@@ -89,7 +89,7 @@
             if (model.state.status == ResultStatusSuccess) {
 
                 weakSelf.dataModel = model;
-                DMHomeHeardView *headView = (DMHomeHeardView *)weakSelf.tableView.tableHeaderView;
+                XBTHomeHeardView *headView = (XBTHomeHeardView *)weakSelf.tableView.tableHeaderView;
                 headView.imageArray = model.banners;
                 headView.loopViewArray = model.data4;
                 [weakSelf.tableView reloadData];

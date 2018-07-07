@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        DMUser *user = [DMUser new];
+        XBTUser *user = [XBTUser new];
         self.user = user;
     }
     return self;

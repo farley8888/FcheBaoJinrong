@@ -7,7 +7,7 @@
 //
 
 #import "DMBankCardController.h"
-#import "DMMatch.h"
+#import "XBTMatch.h"
 #import "DMUserTool.h"
 
 @interface DMBankCardController ()
@@ -48,7 +48,7 @@
         [MBProgressHUD showSuccess:@"请输入正确的银行卡号"];
         return;
     }
-    if (![DMMatch isPhoneNum:self.phoneTextF.text]) {
+    if (![XBTMatch isPhoneNum:self.phoneTextF.text]) {
         [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }

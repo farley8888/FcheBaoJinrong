@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
-@interface DMBuyDidiBaoController : DMBaseController
+@interface DMBuyDidiBaoController : XBTBaseController
 
 @end

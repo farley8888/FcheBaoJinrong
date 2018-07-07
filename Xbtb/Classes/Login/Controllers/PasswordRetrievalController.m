@@ -7,8 +7,8 @@
 //
 
 #import "PasswordRetrievalController.h"
-#import "DMMatch.h"
-#import "DMCountdownButton.h"
+#import "XBTMatch.h"
+#import "XBTCountdownButton.h"
 
 @interface PasswordRetrievalController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewTopLayout;
@@ -29,8 +29,8 @@
     [self.phoneTF addTarget:self action:@selector(phoneTFChangeText:) forControlEvents:UIControlEventEditingChanged];
     [self.nPWTextF addTarget:self action:@selector(phoneTFChangeText:) forControlEvents:UIControlEventEditingChanged];
 }
-- (IBAction)sendCodeButtonClick:(DMCountdownButton *)sender {
-    if (![DMMatch isPhoneNum:self.phoneTF.text]) {
+- (IBAction)sendCodeButtonClick:(XBTCountdownButton *)sender {
+    if (![XBTMatch isPhoneNum:self.phoneTF.text]) {
         [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
@@ -63,7 +63,7 @@
         title = @"请输入短信验证码";
         canPost = NO;
     }
-    if (![DMMatch isPhoneNum:self.phoneTF.text]) {
+    if (![XBTMatch isPhoneNum:self.phoneTF.text]) {
         title = @"请输入手机号码";
         canPost = NO;
     }
@@ -99,7 +99,7 @@
 /**  验证手机号码是否注册  **/
 - (void)verificationPhoneNumber:(NSString *)phoneNumber
 {
-    if (![DMMatch isPhoneNum:phoneNumber]) {
+    if (![XBTMatch isPhoneNum:phoneNumber]) {
         [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }

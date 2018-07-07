@@ -14,7 +14,7 @@
 #import "DMLogOutView.h"                         //退出登录view
 #import "DMMyBankCardController.h"               //我的银行卡
 #import "DMGestureLockViewController.h"          //手势密码
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 #import "UIAlertView+Block.h"
 

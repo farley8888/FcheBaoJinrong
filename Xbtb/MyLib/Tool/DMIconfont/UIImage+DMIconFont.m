@@ -11,7 +11,7 @@
 
 @implementation UIImage (DMIconFont)
 
-+ (UIImage *)imageWithInfo:(DMIconInfo *)info {
++ (UIImage *)imageWithInfo:(XBTIconInfo *)info {
     CGFloat size = info.size;
     CGFloat scale = [UIScreen mainScreen].scale;
     CGFloat realSize = size * scale;

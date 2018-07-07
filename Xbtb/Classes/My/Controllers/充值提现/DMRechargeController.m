@@ -7,8 +7,8 @@
 //
 
 #import "DMRechargeController.h"
-#import "DMMatch.h"
-#import "DMJSController.h"
+#import "XBTMatch.h"
+#import "XBTJSController.h"
 #import "DMWebRechargeController.h"
 #import "UIAlertView+Block.h"
 #import "DMRealNameAuthenticationVController.h"
@@ -90,7 +90,7 @@
 
 - (IBAction)rechargeVuttonClick:(UIButton *)sender {
     
-    if (![DMMatch isMoney:self.rechargeTF.text]) {
+    if (![XBTMatch isMoney:self.rechargeTF.text]) {
         [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }

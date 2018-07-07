@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
 typedef NS_ENUM(NSInteger, CashOrRedeem){
     WithdrawCash,   //提现
     Redeem          //赎回
 };
 
-@interface DMWithdrawCashController : DMBaseController
+@interface DMWithdrawCashController : XBTBaseController
 
 @property (nonatomic, assign) CashOrRedeem type;
 

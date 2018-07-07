@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMIconInfo.h"
+#import "XBTIconInfo.h"
 
 @interface UIImage (DMIconFont)
 
-+ (UIImage *)imageWithInfo:(DMIconInfo *)inFfo;
++ (UIImage *)imageWithInfo:(XBTIconInfo *)inFfo;
 + (UIImage *)imageWithText:(NSString *)text color:(UIColor *)color size:(CGSize)size;
 @end

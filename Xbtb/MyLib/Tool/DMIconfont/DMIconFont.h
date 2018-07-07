@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMIconInfo.h"
+#import "XBTIconInfo.h"
 
-#define DMIconInfoMake(text, imageSize, imageColor) [DMIconInfo iconInfoWithText:text size:imageSize color:imageColor]
+#define DMIconInfoMake(text, imageSize, imageColor) [XBTIconInfo iconInfoWithText:text size:imageSize color:imageColor]
 
 @interface DMIconFont : NSObject
 

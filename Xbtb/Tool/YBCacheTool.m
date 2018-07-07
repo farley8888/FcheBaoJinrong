@@ -8,14 +8,14 @@
 
 #import "YBCacheTool.h"
 #import "Define.h"
-#import "DMMD5.h"
+#import "XBTMD5.h"
 
 
 @implementation YBCacheTool
 
 + (void)cacheForData:(NSData *)data fileName:(NSString *)fileName
 {
-    NSString *path = [kCachePath stringByAppendingPathComponent:[DMMD5 md5:fileName]];
+    NSString *path = [kCachePath stringByAppendingPathComponent:[XBTMD5 md5:fileName]];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [data writeToFile:path atomically:YES];
@@ -24,7 +24,7 @@
 
 + (NSData *)getCacheFileName:(NSString *)fileName
 {
-    NSString *path = [kCachePath stringByAppendingPathComponent:[DMMD5 md5:fileName]];
+    NSString *path = [kCachePath stringByAppendingPathComponent:[XBTMD5 md5:fileName]];
     return [[NSData alloc] initWithContentsOfFile:path];
 }
 
@@ -73,7 +73,7 @@
 
 + (BOOL)isExpire:(NSString *)fileName
 {
-    NSString *path = [kCachePath stringByAppendingPathComponent:[DMMD5 md5:fileName]];
+    NSString *path = [kCachePath stringByAppendingPathComponent:[XBTMD5 md5:fileName]];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     NSDictionary *attributesDict = [fm attributesOfItemAtPath:path error:nil];

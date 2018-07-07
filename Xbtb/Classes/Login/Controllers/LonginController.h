@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMBaseController.h"
+#import "XBTBaseController.h"
 
-@interface LonginController : DMBaseController
+@interface LonginController : XBTBaseController
 
 @property (nonatomic, assign) BOOL isGesLockGetin; //1 从手势密码进入
 

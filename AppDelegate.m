@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SelectVCTool.h"
-#import "DMGesturePasswordController.h"
-#import "DMNavigationController.h"
+#import "XBTGesturePasswordController.h"
+#import "XBTNavigationController.h"
 #import "DMUserTool.h"
 #import <UMCommon/UMCommon.h> //友盟
 #import <UMShare/UMShare.h>
@@ -85,7 +85,7 @@
     [self getGesStringAndOpen];
     if (self.isGes) {//
         
-        DMNavigationController *nav = [[DMNavigationController alloc]initWithRootViewController:[DMGesturePasswordController new]];
+        XBTNavigationController *nav = [[XBTNavigationController alloc]initWithRootViewController:[XBTGesturePasswordController new]];
         self.window.rootViewController = nav;
     }else{
         self.window.rootViewController = [[UIViewController alloc]init];

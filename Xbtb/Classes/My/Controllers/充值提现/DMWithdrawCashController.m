@@ -8,7 +8,7 @@
 
 #import "DMWithdrawCashController.h"
 #import "DMWithdrawCashModel.h"
-#import "DMMatch.h"
+#import "XBTMatch.h"
 #import "UINavigationController+DM.h"
 #import "DMWithdrawCashingController.h"  //提现中
 
@@ -91,11 +91,11 @@
 
 - (IBAction)applyWithdrawCash:(UIButton *)sender {
 
-    if (![DMMatch isMoney:self.amoutTF.text] ) {
+    if (![XBTMatch isMoney:self.amoutTF.text] ) {
         [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
-    if (![DMMatch isInteger:self.pwTF.text]) {
+    if (![XBTMatch isInteger:self.pwTF.text]) {
         [MBProgressHUD showSuccess:@"请检查交易密码"];
         return;
     }

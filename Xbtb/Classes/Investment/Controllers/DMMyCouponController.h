@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMBaseTableViewController.h"
+#import "XBTBaseTableViewController.h"
 
-@interface DMMyCouponController : DMBaseTableViewController
+@interface DMMyCouponController : XBTBaseTableViewController
 
 @property (nonatomic, copy) void(^selsctCouponBlock)(NSInteger coupID, NSInteger coupType, NSString *coupAmout);
 

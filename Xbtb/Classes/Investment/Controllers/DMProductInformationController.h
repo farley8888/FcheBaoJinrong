@@ -7,9 +7,9 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMBaseTableViewController.h"
+#import "XBTBaseTableViewController.h"
 
-@interface DMProductInformationController : DMBaseTableViewController
+@interface DMProductInformationController : XBTBaseTableViewController
 
 @property (nonatomic, copy) NSString *prdID;
 @property (nonatomic, assign) BOOL isLoadData;

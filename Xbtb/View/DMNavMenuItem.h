@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, DMNavMenuItemType) {//状态
     
 };
 
-@interface DMNavMenuItem : DMArchive
+@interface DMNavMenuItem : XBTArchive
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *cls;

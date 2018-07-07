@@ -14,7 +14,7 @@
 #import "DMRegularSectionHeadView.h"
 #import "DMProductDetailsController.h"          //产品详情
 #import "DMRegularPurchaseController.h"         //立即购买
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 
 @interface DMRegularController ()<UITableViewDelegate,UITableViewDataSource>
@@ -92,7 +92,7 @@
     if ([UserManager sharedManager].user.token.length) {
         [self pushBuyDidiBaoVC];
     }else{
-        DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
+        XBTNavigationController *nav = [[XBTNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
 }

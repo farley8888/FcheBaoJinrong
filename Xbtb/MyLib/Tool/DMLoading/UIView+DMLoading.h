@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMLoadingView.h"
+#import "XBTLoadingView.h"
 #import "DMNotDataView.h"
-#import "DMNetErrorView.h"
+#import "XBTNetErrorView.h"
 
 @interface UIView (DMLoading)
 

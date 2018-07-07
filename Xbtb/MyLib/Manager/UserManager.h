@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DMUser.h"
+#import "XBTUser.h"
 
 @interface UserManager : NSObject
 
-@property (nonatomic, strong) DMUser *user;
+@property (nonatomic, strong) XBTUser *user;
 
 @property (nonatomic, assign, class, readonly) BOOL isLogin;
 @property (nonatomic, assign, class, readonly) BOOL giveUpLongin;

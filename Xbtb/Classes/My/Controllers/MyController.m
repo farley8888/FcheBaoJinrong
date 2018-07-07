@@ -28,7 +28,7 @@
 #import "DMMessageController.h"             //消息
 #import "DMShareFriendController.h"         //分享好友
 #import "LonginController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 
 
 @interface MyController ()<UITableViewDelegate,UITableViewDataSource>
@@ -163,7 +163,7 @@
 #pragma mark - 事件
 - (void)loginViewPresend
 {
-    DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
+    XBTNavigationController *nav = [[XBTNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 

@@ -7,9 +7,9 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMBaseTableViewPlainController.h"
+#import "XBTBaseTableViewPlainController.h"
 
-@interface DMInvestmentController : DMBaseTableViewPlainController
+@interface DMInvestmentController : XBTBaseTableViewPlainController
 
 @property (nonatomic, assign) NSInteger isHongbaoJoin;  //1:红包进入
 

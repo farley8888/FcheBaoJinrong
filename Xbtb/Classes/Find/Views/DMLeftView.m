@@ -11,7 +11,7 @@
 #import "DMDindModel.h"
 #import "DMWebRechargeController.h"
 #import "WKWebViewController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 
 @interface DMLeftView ()<UITableViewDelegate,UITableViewDataSource>

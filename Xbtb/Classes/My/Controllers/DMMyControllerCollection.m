@@ -14,7 +14,7 @@
 #import "DMNavigationBar.h"
 
 #import "LonginController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "DMReturnMoneyController.h"         //回款查询
 #import "DMTransactionRecordController.h"   //交易记录
 #import "DMInvestmentRecordsController.h"   //出借记录
@@ -156,7 +156,7 @@
 #pragma mark - 事件
 - (void)loginViewPresend
 {
-    DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
+    XBTNavigationController *nav = [[XBTNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
     [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 

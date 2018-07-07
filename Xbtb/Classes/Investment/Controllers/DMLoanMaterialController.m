@@ -10,7 +10,7 @@
 #import "DMLoanMaterialCell.h"
 #import "DMLoanMateriaModel.h"
 
-#import "DMWebImageAutoSize.h"
+#import "XBTWebImageAutoSize.h"
 
 @interface DMLoanMaterialController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -96,7 +96,7 @@
     [cell.imgView sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     
         /** 缓存image size */
-        [DMWebImageAutoSize storeImageSize:image forURL:imageURL completed:^(BOOL result) {
+        [XBTWebImageAutoSize storeImageSize:image forURL:imageURL completed:^(BOOL result) {
             /** reload  */
             if(result)  [tableView  dm_reloadDataForURL:imageURL];
         }];
@@ -109,7 +109,7 @@
 {
     DMLoanMateriaModel *model = self.dataArray[indexPath.row];
     NSString *url = [NSString stringWithFormat:@"%@%@",kAPI_URL,model.attrPath];
-     return [DMWebImageAutoSize imageHeightForURL:[NSURL URLWithString:url] layoutWidth:kScreenW -30 estimateHeight:200];
+     return [XBTWebImageAutoSize imageHeightForURL:[NSURL URLWithString:url] layoutWidth:kScreenW -30 estimateHeight:200];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

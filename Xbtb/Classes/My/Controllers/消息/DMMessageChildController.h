@@ -6,9 +6,9 @@
 //  Copyright © 2018年 apple. All rights reserved.
 //
 
-#import "DMBaseTableViewController.h"
+#import "XBTBaseTableViewController.h"
 
-@interface DMMessageChildController : DMBaseTableViewController
+@interface DMMessageChildController : XBTBaseTableViewController
 
 
 @property (nonatomic, assign) BOOL isLoadData;

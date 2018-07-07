@@ -7,8 +7,8 @@
 //
 
 #import "DMBuyDidiBaoController.h"
-#import "DMMatch.h"
-#import "DMJSController.h"
+#import "XBTMatch.h"
+#import "XBTJSController.h"
 #import "UIAlertView+Block.h"
 #import "DMRechargeController.h"
 
@@ -42,7 +42,7 @@
 
 - (void)textFieldEditing:(UITextField *)tf
 {
-    if (![DMMatch isMoney:tf.text]) {
+    if (![XBTMatch isMoney:tf.text]) {
         [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }
@@ -70,7 +70,7 @@
 
 - (IBAction)agreementButtonClick:(id)sender {
     
-    DMJSController  *jsVC = [DMJSController  new];
+    XBTJSController  *jsVC = [XBTJSController  new];
     jsVC.title = @"鑫贝通宝点对点借款合同";
     jsVC.url = [NSString stringWithFormat:@"%@/wechat/showAgreementAPP.html",kAPI_URL];
     [self.navigationController pushViewController:jsVC animated:YES];
@@ -78,7 +78,7 @@
 
 - (IBAction)sureInvestmentClick:(UIButton *)sender {
     
-    if (![DMMatch isMoney:self.moneyTF.text]) {
+    if (![XBTMatch isMoney:self.moneyTF.text]) {
         [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }

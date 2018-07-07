@@ -9,7 +9,7 @@
 #import "SelectVCTool.h"
 #import "NSUserDefaults+Extension.h"
 #import "LonginController.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "DMMainController.h"
 #import "DMFirstTimeController.h"
 
@@ -49,7 +49,7 @@
 + (BOOL)isLogin
 {
     UserManager *manager = [UserManager sharedManager];
-    DMUser *user = manager.user;
+    XBTUser *user = manager.user;
     return user.token.length;
 //    return 1;
 }

@@ -6,8 +6,8 @@
 //  Copyright © 2018年 apple. All rights reserved.
 //
 
-#import "DMJSController.h"
+#import "XBTJSController.h"
 
-@interface DMJSViewController : DMJSController
+@interface DMJSViewController : XBTJSController
 
 @end

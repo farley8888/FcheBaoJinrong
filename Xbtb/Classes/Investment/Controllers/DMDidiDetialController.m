@@ -11,7 +11,7 @@
 #import "DMDetialCell.h"
 #import "DMBuyDidiBaoController.h"
 #import "DMDidiDetialHeadView.h"
-#import "DMNavigationController.h"
+#import "XBTNavigationController.h"
 #import "LonginController.h"
 
 @interface DMDidiDetialController ()<UITableViewDelegate, UITableViewDataSource>
@@ -78,7 +78,7 @@
     if ([UserManager sharedManager].user.token.length) {
         [self pushBuyDidiBaoVC];
     }else{
-        DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
+        XBTNavigationController *nav = [[XBTNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     }
 }

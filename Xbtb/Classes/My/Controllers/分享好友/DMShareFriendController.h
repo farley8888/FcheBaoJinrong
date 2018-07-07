@@ -7,8 +7,8 @@
 //
 
 //#import <UIKit/UIKit.h>
-#import "DMBaseTableViewController.h"
+#import "XBTBaseTableViewController.h"
 
-@interface DMShareFriendController : DMBaseTableViewController
+@interface DMShareFriendController : XBTBaseTableViewController
 
 @end
