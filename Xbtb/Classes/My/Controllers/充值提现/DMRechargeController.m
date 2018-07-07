@@ -9,7 +9,7 @@
 #import "DMRechargeController.h"
 #import "XBTMatch.h"
 #import "XBTJSController.h"
-#import "DMWebRechargeController.h"
+#import "XBTWebRechargeController.h"
 #import "UIAlertView+Block.h"
 #import "DMRealNameAuthenticationVController.h"
 #import "DMBankCardController.h"
@@ -121,7 +121,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         if (connectionError == nil) {
 
-            DMWebRechargeController *rcVC = [DMWebRechargeController new];
+            XBTWebRechargeController *rcVC = [XBTWebRechargeController new];
             rcVC.titleString = @"充值";
             rcVC.htmlData = data;
             [weakSelf pushVC:rcVC];

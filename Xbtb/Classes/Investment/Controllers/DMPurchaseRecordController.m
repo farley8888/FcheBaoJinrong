@@ -7,14 +7,14 @@
 //
 
 #import "DMPurchaseRecordController.h"
-#import "DMPurchaseRecordCell.h"
-#import "DMPurchaseRecordModel.h"
+#import "XBTPurchaseRecordCell.h"
+#import "XBTPurchaseRecordModel.h"
 
 
 
 @interface DMPurchaseRecordController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray<DMPurchaseRecordModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<XBTPurchaseRecordModel *> *dataArray;
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -62,7 +62,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMPurchaseRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTPurchaseRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadData(loadMoreData)
             }else if (stateModel.status == ResultStatusNoData){
@@ -89,7 +89,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMPurchaseRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTPurchaseRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 [weakSelf.dataArray addObjectsFromArray: arr];
                 kSetupMJ_footer_loadMoreData
             }
@@ -111,7 +111,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMPurchaseRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMPurchaseRecordCell" forIndexPath:indexPath];
+    XBTPurchaseRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMPurchaseRecordCell" forIndexPath:indexPath];
     cell.cellModel = self.dataArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

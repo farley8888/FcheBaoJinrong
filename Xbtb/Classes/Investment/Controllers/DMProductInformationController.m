@@ -7,8 +7,8 @@
 //
 
 #import "DMProductInformationController.h"
-#import "DMProductInformationCell.h"
-#import "DMProductInformationModel.h"
+#import "XBTProductInformationCell.h"
+#import "XBTProductInformationModel.h"
 
 @interface DMProductInformationController ()
 
@@ -57,7 +57,7 @@
         if (obj!= nil) {
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                DMProductInformationModel *model = [DMProductInformationModel mj_objectWithKeyValues:obj[@"data"]];
+                XBTProductInformationModel *model = [XBTProductInformationModel mj_objectWithKeyValues:obj[@"data"]];
                 weakSelf.detialArray = @[model.introductionInfos,model.riskControlInfos,model.collateralInfos,model.guaranteetype];
                 [weakSelf.tableView reloadData];
             }
@@ -80,7 +80,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMProductInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMProductInformationCell" forIndexPath:indexPath];
+    XBTProductInformationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMProductInformationCell" forIndexPath:indexPath];
     cell.titleStrig = self.titleArray[indexPath.row];
     cell.detialString = self.detialArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

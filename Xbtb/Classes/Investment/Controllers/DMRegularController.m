@@ -7,12 +7,12 @@
 //
 
 #import "DMRegularController.h"
-#import "DMDetialCell.h"
-#import "DMRegularCell.h"
+#import "XBTDetialCell.h"
+#import "XBTRegularCell.h"
 #import "DMRegularModel.h"
-#import "DMDidiDetialHeadView.h"
-#import "DMRegularSectionHeadView.h"
-#import "DMProductDetailsController.h"          //产品详情
+#import "XBTDidiDetialHeadView.h"
+#import "XBTRegularSectionHeadView.h"
+#import "XBTProductDetailsController.h"          //产品详情
 #import "DMRegularPurchaseController.h"         //立即购买
 #import "XBTNavigationController.h"
 #import "LonginController.h"
@@ -23,7 +23,7 @@
 @property (nonatomic, strong) DMRegularModel *dataModel;
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *deltialArray;
-@property (nonatomic, strong) DMDidiDetialHeadView *headView;
+@property (nonatomic, strong) XBTDidiDetialHeadView *headView;
 @property (nonatomic, strong) UIButton *bottomButton;
 
 
@@ -74,7 +74,7 @@
     self.bottomButton = button;
     [self.view addSubview:button];
     
-    DMDidiDetialHeadView *headView = [DMDidiDetialHeadView headView];
+    XBTDidiDetialHeadView *headView = [XBTDidiDetialHeadView headView];
     headView.frame = CGRectMake(0, 0, kScreenW, 290);
     headView.type = RegularHeadView;
     WeakSelf
@@ -179,14 +179,14 @@
 {
     UITableViewCell *cell = nil;
     if (indexPath.row != 5) {
-        DMDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
+        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
         detialCell.detialBKView.backgroundColor = kColor(254, 251, 247);
         detialCell.titleStrig = self.titleArray[indexPath.row];
         detialCell.detialString = self.deltialArray[indexPath.row];
         cell = detialCell;
         
     }else{
-        DMRegularCell *regCell = [tableView dequeueReusableCellWithIdentifier:@"DMRegularCell" forIndexPath:indexPath];
+        XBTRegularCell *regCell = [tableView dequeueReusableCellWithIdentifier:@"DMRegularCell" forIndexPath:indexPath];
         cell = regCell;
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -197,7 +197,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 5) {
-        DMProductDetailsController  *vc = [DMProductDetailsController new];
+        XBTProductDetailsController  *vc = [XBTProductDetailsController new];
         vc.prdID = self.prdID;
         vc.regModel = self.dataModel;
         [self.navigationController pushViewController:vc animated:YES];
@@ -206,7 +206,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return [DMRegularSectionHeadView headview];
+    return [XBTRegularSectionHeadView headview];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section

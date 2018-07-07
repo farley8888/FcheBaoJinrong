@@ -25,7 +25,7 @@
     // Initialization code
 }
 
-- (void)setCellModel:(DMMyHongBaoModel *)cellModel
+- (void)setCellModel:(XBTMyHongBaoModel *)cellModel
 {
     _cellModel = cellModel;
     

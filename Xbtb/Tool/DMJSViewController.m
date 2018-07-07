@@ -7,7 +7,7 @@
 //
 
 #import "DMJSViewController.h"
-#import "DMInvestmentController.h"
+#import "XBTInvestmentController.h"
 #import "UIAlertView+Block.h"
 
 @interface DMJSViewController ()
@@ -39,7 +39,7 @@
 
 - (void)gotoInvestment
 {
-    DMInvestmentController *itVC = [DMInvestmentController new];
+    XBTInvestmentController *itVC = [XBTInvestmentController new];
     [self.navigationController pushViewController:itVC animated:YES];
 }
 

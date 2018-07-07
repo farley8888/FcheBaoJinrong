@@ -8,7 +8,7 @@
 
 #import "DMMessageController.h"
 #import "DMLotOfViewScrollerTopView.h"
-#import "DMMessageChildController.h"
+#import "XBTMessageChildController.h"
 
 @interface DMMessageController ()<UIScrollViewDelegate>
 
@@ -62,7 +62,7 @@
     NSArray *urlArr = @[@"noticeList",@"consultationPageApp"];
     for (int i = 0; i < 2; i++) {
         
-        DMMessageChildController *mcVC = [DMMessageChildController new];
+        XBTMessageChildController *mcVC = [XBTMessageChildController new];
         mcVC.url = urlArr[i];
         mcVC.type = i+1;
         [self addChildViewController:mcVC];
@@ -101,7 +101,7 @@
 
 - (void)scrolleAndLoadData:(NSInteger)tag
 {
-    __kindof DMMessageChildController *vc = self.childViewControllers[tag];
+    __kindof XBTMessageChildController *vc = self.childViewControllers[tag];
     if (!vc.isLoadData) {
         [vc loadData];
     }

@@ -7,14 +7,14 @@
 //
 
 #import "DMLoanMaterialController.h"
-#import "DMLoanMaterialCell.h"
-#import "DMLoanMateriaModel.h"
+#import "XBTLoanMaterialCell.h"
+#import "XBTLoanMateriaModel.h"
 
 #import "XBTWebImageAutoSize.h"
 
 @interface DMLoanMaterialController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray<DMLoanMateriaModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<XBTLoanMateriaModel *> *dataArray;
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
@@ -57,7 +57,7 @@
         if (obj!=nil) {
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMLoanMateriaModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTLoanMateriaModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
 //                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 
@@ -88,8 +88,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMLoanMaterialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMLoanMaterialCell" forIndexPath:indexPath];
-    DMLoanMateriaModel *model = self.dataArray[indexPath.row];
+    XBTLoanMaterialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMLoanMaterialCell" forIndexPath:indexPath];
+    XBTLoanMateriaModel *model = self.dataArray[indexPath.row];
     NSString *url = [NSString stringWithFormat:@"%@%@",kAPI_URL,model.attrPath];
     DMLog(@"%@",url);
     [cell.leftConterButton setTitle:model.attrName forState:UIControlStateNormal];
@@ -107,7 +107,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMLoanMateriaModel *model = self.dataArray[indexPath.row];
+    XBTLoanMateriaModel *model = self.dataArray[indexPath.row];
     NSString *url = [NSString stringWithFormat:@"%@%@",kAPI_URL,model.attrPath];
      return [XBTWebImageAutoSize imageHeightForURL:[NSURL URLWithString:url] layoutWidth:kScreenW -30 estimateHeight:200];
 }

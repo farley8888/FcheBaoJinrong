@@ -7,13 +7,13 @@
 //
 
 #import "DMInvestmentRecordsController.h"
-#import "DMSubstitutePaymentCell.h"
-#import "DMInvestmentRecordsModel.h"
-#import "DMScreenRecordController.h"
+#import "XBTSubstitutePaymentCell.h"
+#import "XBTInvestmentRecordsModel.h"
+#import "XBTScreenRecordController.h"
 
 @interface DMInvestmentRecordsController ()
 
-@property (nonatomic, strong) NSMutableArray<DMInvestmentRecordsModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<XBTInvestmentRecordsModel *> *dataArray;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, assign) NSInteger page;
 
@@ -52,7 +52,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMInvestmentRecordsModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTInvestmentRecordsModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadData(loadMoreData)
 
@@ -83,7 +83,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMInvestmentRecordsModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTInvestmentRecordsModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadMoreData
                 
@@ -101,7 +101,7 @@
 
 - (void)rightBarButtonClick
 {
-    DMScreenRecordController *srVC = [DMScreenRecordController new];
+    XBTScreenRecordController *srVC = [XBTScreenRecordController new];
     srVC.type = 2;
     WeakSelf
     [srVC setSelectBlock:^(NSString *type) {
@@ -124,7 +124,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMSubstitutePaymentCell" forIndexPath:indexPath];
+    XBTSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMSubstitutePaymentCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.cellInvestModel = self.dataArray[indexPath.row];
     return cell;

@@ -7,9 +7,9 @@
 //
 
 #import "HomePageController.h"
-#import "DMHomePageCell3.h"
-#import "DMHomePageCell2.h"
-#import "DMHomePageCell4.h"
+#import "XBTHomePageCell3.h"
+#import "XBTHomePageCell2.h"
+#import "XBTHomePageCell4.h"
 #import "XBTHomeHeardView.h"
 #import "DMHomePageModel.h"
 #import "DMDidiDetialController.h"
@@ -17,7 +17,7 @@
 #import "DMMessageController.h"
 #import "DMJSViewController.h"
 #import "WKWebViewController.h"
-#import "DMWebRechargeController.h"
+#import "XBTWebRechargeController.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 
@@ -187,7 +187,7 @@
 {
     WeakSelf
     if (indexPath.section == 0) {
-        DMHomePageCell3 *cell3 =[tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell3" forIndexPath:indexPath];
+        XBTHomePageCell3 *cell3 =[tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell3" forIndexPath:indexPath];
         [cell3 setMoreButtonClick:^{
             [weakSelf headViewPush];
         }];
@@ -199,7 +199,7 @@
 //        cell4.selectionStyle = UITableViewCellSelectionStyleNone;
 //        return cell4;
 //    }
-    DMHomePageCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell2" forIndexPath:indexPath];
+    XBTHomePageCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell2" forIndexPath:indexPath];
     cell2.cellData = self.dataModel.data2[indexPath.section-1];
     cell2.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell2;

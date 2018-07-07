@@ -16,7 +16,7 @@
 #import "UIAlertView+Block.h"
 #import "XBTNavigationController.h"
 #import "DMUserTool.h"
-#import "DMWebRechargeController.h"
+#import "XBTWebRechargeController.h"
 //#import <JPUSHService.h>
 
 #define kFileNameKey @"kFileNameKey"

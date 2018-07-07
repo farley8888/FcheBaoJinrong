@@ -6,7 +6,7 @@
 //  Copyright © 2018年 apple. All rights reserved.
 //
 
-#import "DMMyControllerCollection.h"
+#import "XBTMyControllerCollection.h"
 #import "MyModel.h"
 #import "MyHeadView.h"
 #import "DMSecionFooterView.h"
@@ -27,10 +27,10 @@
 #import "DMRealNameAuthenticationVController.h"  //实名认证
 #import "DMMessageController.h"             //消息
 #import "DMShareFriendController.h"         //分享好友
-#import "DMShareRecordController.h"         //邀请好友记录
+#import "XBTShareRecordController.h"         //邀请好友记录
 
 
-@interface DMMyControllerCollection ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface XBTMyControllerCollection ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic,strong) NSMutableArray<NSDictionary*> *titleArr;
 @property (nonatomic, strong) MyHeadView *headView;
@@ -40,7 +40,7 @@
 
 @end
 
-@implementation DMMyControllerCollection
+@implementation XBTMyControllerCollection
 
 - (void)dealloc
 {

@@ -7,12 +7,12 @@
 //
 
 #import "DMSettingController.h"
-#import "DMSettingCell.h"
+#import "XBTSettingCell.h"
 #import "DMRealNameAuthenticationVController.h"  //实名认证
 #import "DMBankCardController.h"                 //银行卡
-#import "DMChangeLonginPWController.h"           //修改登录密码
-#import "DMLogOutView.h"                         //退出登录view
-#import "DMMyBankCardController.h"               //我的银行卡
+#import "XBTChangeLonginPWController.h"           //修改登录密码
+#import "XBTLogOutView.h"                         //退出登录view
+#import "XBTMyBankCardController.h"               //我的银行卡
 #import "DMGestureLockViewController.h"          //手势密码
 #import "XBTNavigationController.h"
 #import "LonginController.h"
@@ -157,7 +157,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMSettingCell *setCell = [tableView dequeueReusableCellWithIdentifier:@"DMSettingCell" forIndexPath:indexPath];
+    XBTSettingCell *setCell = [tableView dequeueReusableCellWithIdentifier:@"DMSettingCell" forIndexPath:indexPath];
     setCell.nameLabel.text = self.titleArray[indexPath.section][indexPath.row][@"title"];
     setCell.imageViewTitel.image = [UIImage imageNamed:self.titleArray[indexPath.section][indexPath.row][@"img"]];
     setCell.index = indexPath.row;
@@ -212,18 +212,18 @@
                 DMBankCardController *bcVC = [DMBankCardController new];
                 vc = bcVC;
             }else{
-                DMMyBankCardController *mbVC = [DMMyBankCardController new];
+                XBTMyBankCardController *mbVC = [XBTMyBankCardController new];
                 vc = mbVC;
             }
             
         }else if (indexPath.row == 2){
-            DMChangeLonginPWController *clVC = [DMChangeLonginPWController new];
+            XBTChangeLonginPWController *clVC = [XBTChangeLonginPWController new];
             clVC.type = 1;
             vc = clVC;
         }else if (indexPath.row == 3){
             UserManager *manger = [UserManager sharedManager];
             if (manger.user.payPwd) {
-                DMChangeLonginPWController *ctVC = [DMChangeLonginPWController new];
+                XBTChangeLonginPWController *ctVC = [XBTChangeLonginPWController new];
                 ctVC.type = 2;
                 vc = ctVC;
             }else{
@@ -254,7 +254,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    DMLogOutView *logout = [DMLogOutView logoutView];
+    XBTLogOutView *logout = [XBTLogOutView logoutView];
     WeakSelf
     [logout setLogoutBlock:^{
         [weakSelf logOut];

@@ -8,11 +8,11 @@
 
 #import "DMLotOfViewTableView.h"
 #import "DMLotOfViewTableViewCell.h"
-#import "DMMyHongBaoModel.h"
+#import "XBTMyHongBaoModel.h"
 
 @interface DMLotOfViewTableView ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray<DMMyHongBaoModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<XBTMyHongBaoModel *> *dataArray;
 @property (nonatomic, assign) NSInteger page;
 
 @end
@@ -60,7 +60,7 @@
             DMPageModel *pageModel =[DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (model.status == ResultStatusSuccess) {
                 
-                NSMutableArray *arr = [DMMyHongBaoModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTMyHongBaoModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadData(loadMoreData)
             }else if(model.status == 3){
@@ -90,7 +90,7 @@
             DMPageModel *pageModel =[DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (model.status == ResultStatusSuccess) {
                 
-                NSMutableArray *arr = [DMMyHongBaoModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTMyHongBaoModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadMoreData
             }else if(model.status == 3){

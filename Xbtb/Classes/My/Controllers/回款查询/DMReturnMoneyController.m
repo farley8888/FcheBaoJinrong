@@ -7,14 +7,14 @@
 //
 
 #import "DMReturnMoneyController.h"
-#import "DMReturnMoneyTopView.h"
-#import "DMButtonSelectView.h"
-#import "DMSubstitutePaymentView.h"
+#import "XBTReturnMoneyTopView.h"
+#import "XBTButtonSelectView.h"
+#import "XBTSubstitutePaymentView.h"
 
 @interface DMReturnMoneyController ()<UIScrollViewDelegate>
 
 @property(nonatomic,strong)UIScrollView *scrollerView;
-@property(nonatomic,strong)DMButtonSelectView *buttonSelectView;
+@property(nonatomic,strong)XBTButtonSelectView *buttonSelectView;
 //@property (nonatomic, strong) DMSubstitutePaymentView *leftView;
 //@property (nonatomic, strong) DMSubstitutePaymentView *rightView;
 
@@ -43,10 +43,10 @@
 {
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.navigationItem.title = @"回款查询";
-    DMReturnMoneyTopView *topView = [[DMReturnMoneyTopView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, kScreenW, 60)];
+    XBTReturnMoneyTopView *topView = [[XBTReturnMoneyTopView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, kScreenW, 60)];
     [self.view addSubview:topView];
     
-    DMButtonSelectView *buttonSelect = [DMButtonSelectView buttonselectView];
+    XBTButtonSelectView *buttonSelect = [XBTButtonSelectView buttonselectView];
     self.buttonSelectView = buttonSelect;
     buttonSelect.frame = CGRectMake(0, SafeAreaTopHeight+60+15, kScreenW, 60);
     WeakSelf
@@ -69,12 +69,12 @@
     self.scrollerView = scrollerView;
     [self.view addSubview:scrollerView];
     
-    DMSubstitutePaymentView *left = [[DMSubstitutePaymentView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH - SafeAreaTopHeight - 120 - 15 - SafeAreaBottomHeight)];
+    XBTSubstitutePaymentView *left = [[XBTSubstitutePaymentView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH - SafeAreaTopHeight - 120 - 15 - SafeAreaBottomHeight)];
     left.type = 1;
     left.tag = 1600;
     [scrollerView addSubview:left];
     
-    DMSubstitutePaymentView *right = [[DMSubstitutePaymentView alloc]initWithFrame:CGRectMake(kScreenW, 0, kScreenW, kScreenH - SafeAreaTopHeight - 120 - 15 - SafeAreaBottomHeight)];
+    XBTSubstitutePaymentView *right = [[XBTSubstitutePaymentView alloc]initWithFrame:CGRectMake(kScreenW, 0, kScreenW, kScreenH - SafeAreaTopHeight - 120 - 15 - SafeAreaBottomHeight)];
     right.type = 2;
     right.tag = 1601;
     [scrollerView addSubview:right];
@@ -97,7 +97,7 @@
     NSInteger index = (scrollView.contentOffset.x+scrollView.width/2)/scrollView.width;
     self.buttonSelectView.selectIndex = index;
     
-    DMSubstitutePaymentView *tabView = [self.scrollerView viewWithTag:1600 + index];
+    XBTSubstitutePaymentView *tabView = [self.scrollerView viewWithTag:1600 + index];
     if (!tabView.isLoadData) {
         [tabView loadData];
     }
@@ -108,7 +108,7 @@
 {
     [self.scrollerView setContentOffset:CGPointMake(type*self.scrollerView.width, 0) animated:YES];
     
-    DMSubstitutePaymentView *tabView = [self.scrollerView viewWithTag:1600 + type];
+    XBTSubstitutePaymentView *tabView = [self.scrollerView viewWithTag:1600 + type];
     if (!tabView.isLoadData) {
         [tabView loadData];
     }

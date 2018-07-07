@@ -12,7 +12,7 @@
 #import "UserManager.h"
 #import "UIAlertView+Block.h"
 #import "NSUserDefaults+Extension.h"
-#import "DMInvestmentController.h"
+#import "XBTInvestmentController.h"
 
 
 @interface WKWebViewController ()<WKUIDelegate,WKNavigationDelegate,WKScriptMessageHandler>
@@ -139,7 +139,7 @@
 - (void)handleCustomAction:(NSInteger)num
 {
     if (num == 1) {
-        DMInvestmentController *listVC = [DMInvestmentController new];
+        XBTInvestmentController *listVC = [XBTInvestmentController new];
         [self.navigationController pushViewController:listVC animated:YES];
     }
 }

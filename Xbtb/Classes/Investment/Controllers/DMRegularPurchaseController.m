@@ -7,9 +7,9 @@
 //
 
 #import "DMRegularPurchaseController.h"
-#import "DMMyCouponController.h"        //我的优惠券
+#import "XBTMyCouponController.h"        //我的优惠券
 #import "XBTMatch.h"
-#import "DMInputPSWController.h"
+#import "XBTInputPSWController.h"
 #import "XBTJSController.h"
 #import "DMRechargeController.h"        //充值
 
@@ -144,7 +144,7 @@
         [self aletMessage];
         return;
     }
-    DMInputPSWController *inputVC = [[DMInputPSWController alloc]initWithNibName:@"DMInputPSWController" bundle:[NSBundle mainBundle]];
+    XBTInputPSWController *inputVC = [[XBTInputPSWController alloc]initWithNibName:@"DMInputPSWController" bundle:[NSBundle mainBundle]];
     inputVC.payMoneyString = self.moneyTF.text;
     inputVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     WeakSelf
@@ -173,7 +173,7 @@
         [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
-    DMMyCouponController *cpVC = [DMMyCouponController new];
+    XBTMyCouponController *cpVC = [XBTMyCouponController new];
     cpVC.deadlineType = [NSString stringWithFormat:@"%ld",(long)self.regModel.deadlineType];
     cpVC.deadlin = [NSString stringWithFormat:@"%ld",(long)self.regModel.deadline];
     cpVC.moneyAmout = self.moneyTF.text;

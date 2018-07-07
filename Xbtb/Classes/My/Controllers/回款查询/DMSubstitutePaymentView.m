@@ -6,11 +6,11 @@
 //  Copyright © 2018年 apple. All rights reserved.
 //
 
-#import "DMSubstitutePaymentView.h"
-#import "DMSubstitutePaymentCell.h"
-#import "DMReturnMoneyModel.h"
+#import "XBTSubstitutePaymentView.h"
+#import "XBTSubstitutePaymentCell.h"
+#import "XBTReturnMoneyModel.h"
 
-@interface DMSubstitutePaymentView()<UITableViewDelegate,UITableViewDataSource>
+@interface XBTSubstitutePaymentView()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray<DMReturnMoneyModel *> *dataArray;
 @property (nonatomic, strong) UITableView *tableView;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation DMSubstitutePaymentView
+@implementation XBTSubstitutePaymentView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

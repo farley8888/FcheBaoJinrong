@@ -8,7 +8,7 @@
 
 #import "DMMyHongBaoController.h"
 #import "DMLotOfViewScroller.h"
-#import "DMInvestmentController.h"
+#import "XBTInvestmentController.h"
 
 @interface DMMyHongBaoController ()
 
@@ -46,7 +46,7 @@
 
 - (void)nowUse
 {
-    DMInvestmentController *itVC = [DMInvestmentController new];
+    XBTInvestmentController *itVC = [XBTInvestmentController new];
     itVC.isHongbaoJoin = 1;
     [self.navigationController pushViewController:itVC animated:YES];
 }

@@ -7,8 +7,8 @@
 //
 
 #import "DMRecordChildController.h"
-#import "DMRecordChildCell.h"
-#import "DMRecordChildModel.h"
+#import "XBTRecordChildCell.h"
+#import "XBTRecordChildModel.h"
 
 @interface DMRecordChildController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -55,7 +55,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMRecordChildModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTRecordChildModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadData(loadMoreData)
             }else if (stateModel.status == ResultStatusNoData){
@@ -78,7 +78,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMRecordChildModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTRecordChildModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 [weakSelf.dataArray addObjectsFromArray: arr];
                 kSetupMJ_footer_loadMoreData
             }
@@ -100,7 +100,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMRecordChildCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMRecordChildCell" forIndexPath:indexPath];
+    XBTRecordChildCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMRecordChildCell" forIndexPath:indexPath];
     cell.type = self.type;
     cell.cellModel = self.dataArray[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;

@@ -7,13 +7,13 @@
 //
 
 #import "DMTransactionRecordController.h"
-#import "DMSubstitutePaymentCell.h"
-#import "DMTransactionRecordModel.h"
-#import "DMScreenRecordController.h"
+#import "XBTSubstitutePaymentCell.h"
+#import "XBTTransactionRecordModel.h"
+#import "XBTScreenRecordController.h"
 
 @interface DMTransactionRecordController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSMutableArray<DMTransactionRecordModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<XBTTransactionRecordModel *> *dataArray;
 @property (nonatomic, copy)NSString *type;
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, strong) UITableView *tableView;
@@ -58,7 +58,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 
-                NSMutableArray *arr = [DMTransactionRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTTransactionRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 kSetupMJ_footer_loadData(loadMoreData);
                 
@@ -90,7 +90,7 @@
             DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 
-                NSMutableArray *arr = [DMTransactionRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [XBTTransactionRecordModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 [weakSelf.dataArray addObjectsFromArray:arr];
                 kSetupMJ_footer_loadMoreData;
             }else if(stateModel.status == ResultStatusNoData){
@@ -107,7 +107,7 @@
 
 - (void)rightBarButtonClick
 {
-    DMScreenRecordController *srVC = [DMScreenRecordController new];
+    XBTScreenRecordController *srVC = [XBTScreenRecordController new];
     srVC.type = 1;
     WeakSelf
     [srVC setSelectBlock:^(NSString *type) {
@@ -130,7 +130,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMSubstitutePaymentCell" forIndexPath:indexPath];
+    XBTSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMSubstitutePaymentCell" forIndexPath:indexPath];
     cell.cellTransaModel = self.dataArray[indexPath.row];
     return cell;
 }

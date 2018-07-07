@@ -7,10 +7,10 @@
 //
 
 #import "DMWithdrawCashController.h"
-#import "DMWithdrawCashModel.h"
+#import "XBTWithdrawCashModel.h"
 #import "XBTMatch.h"
 #import "UINavigationController+DM.h"
-#import "DMWithdrawCashingController.h"  //提现中
+#import "XBTWithdrawCashingController.h"  //提现中
 
 @interface DMWithdrawCashController ()
 
@@ -158,7 +158,7 @@
 
 - (void)scuessPushVC
 {
-    DMWithdrawCashingController *ingVC = [DMWithdrawCashingController new];
+    XBTWithdrawCashingController *ingVC = [XBTWithdrawCashingController new];
     ingVC.amoutLabel.text = [NSString stringWithFormat:@"%@元",self.amoutTF.text];
     [self.navigationController DM_pushViewController:ingVC animated:YES];
 }

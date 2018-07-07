@@ -7,11 +7,11 @@
 //
 
 #import "DMShareFriendController.h"
-#import "DMShareFriendCell1.h"
-#import "DMShareFriendCell2.h"
-#import "DMShareFriendCell3.h"
+#import "XBTShareFriendCell1.h"
+#import "XBTShareFriendCell2.h"
+#import "XBTShareFriendCell3.h"
 #import <UShareUI/UShareUI.h>
-#import "DMShareCodeController.h"
+#import "XBTShareCodeController.h"
 
 @interface DMShareFriendController ()
 
@@ -83,7 +83,7 @@
 
 - (void)shareCode
 {
-    DMShareCodeController *srVC = [DMShareCodeController new];
+    XBTShareCodeController *srVC = [XBTShareCodeController new];
     srVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self.navigationController presentViewController:srVC animated:YES completion:nil];
 }
@@ -102,10 +102,10 @@
 {
     UITableViewCell *cell = nil;
     if(indexPath.row == 0){
-        DMShareFriendCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell1" forIndexPath:indexPath];
+        XBTShareFriendCell1 *cell1 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell1" forIndexPath:indexPath];
         cell = cell1;
     }else if (indexPath.row == 1){
-        DMShareFriendCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell2" forIndexPath:indexPath];
+        XBTShareFriendCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell2" forIndexPath:indexPath];
         WeakSelf
         [cell2 setShareURLBlock:^{
             [weakSelf showShareUI];
@@ -116,7 +116,7 @@
         
         cell = cell2;
     }else{
-        DMShareFriendCell3 *cell3 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell3" forIndexPath:indexPath];
+        XBTShareFriendCell3 *cell3 = [tableView dequeueReusableCellWithIdentifier:@"DMShareFriendCell3" forIndexPath:indexPath];
         cell3.detiLab.text = self.dataArray[indexPath.row];
         cell = cell3;
     }

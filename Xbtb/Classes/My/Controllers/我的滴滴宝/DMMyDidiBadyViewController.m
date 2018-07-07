@@ -8,13 +8,13 @@
 
 #import "DMMyDidiBadyViewController.h"
 #import "MyHeadView.h"
-#import "DMMyDidiCell.h"
-#import "DMDetialCell.h"
+#import "XBTMyDidiCell.h"
+#import "XBTDetialCell.h"
 #import "DMWithdrawCashController.h"
 #import "DMNavigationBar.h"
 #import "MyModel.h"
-#import "DMBuyDidiBaoController.h"
-#import "DMMyDidiRecordController.h"
+#import "XBTBuyDidiBaoController.h"
+#import "XBTMyDidiRecordController.h"
 
 @interface DMMyDidiBadyViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -67,7 +67,7 @@
 
 - (void)rightButtonClick
 {
-    DMMyDidiRecordController *didiRecVC = [DMMyDidiRecordController new];
+    XBTMyDidiRecordController *didiRecVC = [XBTMyDidiRecordController new];
     [self.navigationController pushViewController:didiRecVC animated:YES];
     
 }
@@ -123,7 +123,7 @@
         wcVC.type = Redeem;
         [self.navigationController pushViewController:wcVC animated:YES];
     }else{
-        DMBuyDidiBaoController *buyVC = [DMBuyDidiBaoController new];
+        XBTBuyDidiBaoController *buyVC = [XBTBuyDidiBaoController new];
         [self.navigationController pushViewController:buyVC animated:YES];
     }
 }
@@ -143,13 +143,13 @@
     WeakSelf
     UITableViewCell *cell = nil;
     if (indexPath.section == 0) {
-        DMMyDidiCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"DMMyDidiCell" forIndexPath:indexPath];
+        XBTMyDidiCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"DMMyDidiCell" forIndexPath:indexPath];
         [cell1 setCellButtonClick:^(NSInteger tag) {
             [weakSelf cellPushViewController:tag];
         }];
         cell = cell1;
     }else{
-        DMDetialCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
+        XBTDetialCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
         cell2.cellDict = self.dataArray[indexPath.row];
         cell = cell2;
     }

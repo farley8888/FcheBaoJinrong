@@ -9,10 +9,10 @@
 #import "DMMainController.h"
 #import "XBTNavigationController.h"
 #import "HomePageController.h"      //首页
-#import "DMInvestmentController.h"  //出借
-#import "DMFindController.h"        //发现
+#import "XBTInvestmentController.h"  //出借
+#import "XBTFindController.h"        //发现
 //#import "MyController.h"            //我的
-#import "DMMyControllerCollection.h"
+#import "XBTMyControllerCollection.h"
 
 @interface DMMainController ()<UITabBarControllerDelegate>
 
@@ -33,13 +33,13 @@
     HomePageController *homeVC = [HomePageController new];
     [self addOneChlildVc:homeVC title:@"首页" imageName:@"shouye" selectedImageName:@"shouye(dianji)"];
 
-    DMInvestmentController *investmentVC = [DMInvestmentController new];
+    XBTInvestmentController *investmentVC = [XBTInvestmentController new];
     [self addOneChlildVc:investmentVC title:@"出借" imageName:@"touzi" selectedImageName:@"touzi(xuanze)"];
 
-    DMFindController *findVC = [DMFindController new];
+    XBTFindController *findVC = [XBTFindController new];
     [self addOneChlildVc:findVC title:@"发现" imageName:@"faxian" selectedImageName:@"faxian(xuanze)"];
     
-    DMMyControllerCollection *myVC =[DMMyControllerCollection new];
+    XBTMyControllerCollection *myVC =[XBTMyControllerCollection new];
     [self addOneChlildVc:myVC title:@"我的" imageName:@"wode" selectedImageName:@"wode(xuanze)"];
 }
 

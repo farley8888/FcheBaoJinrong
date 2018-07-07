@@ -7,9 +7,9 @@
 //
 
 #import "DMLeftView.h"
-#import "DMLeftTabelViewcell.h"
-#import "DMDindModel.h"
-#import "DMWebRechargeController.h"
+#import "XBTLeftTabelViewcell.h"
+#import "XBTDindModel.h"
+#import "XBTWebRechargeController.h"
 #import "WKWebViewController.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
@@ -61,7 +61,7 @@
         [weakSelf.tableView stop];
         [weakSelf.tableView.mj_header endRefreshing];
         if (obj!= nil) {
-            DMDindModel *model = [DMDindModel mj_objectWithKeyValues:obj];
+            XBTDindModel *model = [XBTDindModel mj_objectWithKeyValues:obj];
             DMPageModel *pageModel = model.page;
             weakSelf.dataArray = model.list;
             kSetupMJ_footer_loadData(loadMoreData)
@@ -87,7 +87,7 @@
         [weakSelf.tableView stop];
         [weakSelf.tableView.mj_footer endRefreshing];
         if (obj!= nil) {
-            DMDindModel *model = [DMDindModel mj_objectWithKeyValues:obj];
+            XBTDindModel *model = [XBTDindModel mj_objectWithKeyValues:obj];
             DMPageModel *pageModel = model.page;
             [weakSelf.dataArray addObjectsFromArray: model.list];
             kSetupMJ_footer_loadMoreData
@@ -113,7 +113,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMLeftTabelViewcell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMLeftTabelViewcell" forIndexPath:indexPath];
+    XBTLeftTabelViewcell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMLeftTabelViewcell" forIndexPath:indexPath];
     cell.type = self.type;
     if(self.type == Finish){
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

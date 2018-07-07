@@ -7,10 +7,10 @@
 //
 
 #import "DMDidiDetialController.h"
-#import "DMDidiDetialCell.h"
-#import "DMDetialCell.h"
-#import "DMBuyDidiBaoController.h"
-#import "DMDidiDetialHeadView.h"
+#import "XBTDidiDetialCell.h"
+#import "XBTDetialCell.h"
+#import "XBTBuyDidiBaoController.h"
+#import "XBTDidiDetialHeadView.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 
@@ -67,7 +67,7 @@
     [button setBackgroundColor:kColor(242, 177, 67)];
     [self.view addSubview:button];
     
-    DMDidiDetialHeadView *headView = [DMDidiDetialHeadView headView];
+    XBTDidiDetialHeadView *headView = [XBTDidiDetialHeadView headView];
     headView.frame = CGRectMake(0, 0, kScreenW, 290);
     self.tableView.tableHeaderView = headView ;
     [kNotificationCenter addObserver:self selector:@selector(pushBuyDidiBaoVC) name:kLoginSuccessNotification object:nil];
@@ -85,7 +85,7 @@
 
 - (void)pushBuyDidiBaoVC
 {
-    DMBuyDidiBaoController *buyVC = [DMBuyDidiBaoController new];
+    XBTBuyDidiBaoController *buyVC = [XBTBuyDidiBaoController new];
     [self.navigationController pushViewController:buyVC animated:YES];
 }
 
@@ -102,13 +102,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        DMDidiDetialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMDidiDetialCell" forIndexPath:indexPath];
+        XBTDidiDetialCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMDidiDetialCell" forIndexPath:indexPath];
         cell.titelLabel.text = self.dataArray[indexPath.row][@"title"];
         cell.detialLabel.text = self.dataArray[indexPath.row][@"detial"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else{
-        DMDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
+        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
         detialCell.detialBKView.backgroundColor = kColor(254, 251, 247);
         detialCell.cellDict = self.dataArray[indexPath.row];
         detialCell.selectionStyle = UITableViewCellSelectionStyleNone;
