@@ -1,5 +1,5 @@
 //
-//  DMDidiDetialHeadView.h
+//  XBTDidiDetialHeadView.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMRegularModel.h"
+#import "RegularModel.h"
 
 typedef NS_ENUM(NSInteger,HeadViewType){
     RegularHeadView,
@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger,HeadViewType){
 @property (nonatomic, assign) CGFloat interestRateNumber;
 @property (nonatomic, copy) NSString *minAmout;
 @property (nonatomic, assign) NSInteger lateTime;
-@property (nonatomic, strong) DMRegularModel *regularModel;
+@property (nonatomic, strong) RegularModel *regularModel;
 @property (nonatomic, copy) void(^timerStopBlock)();
 
 +(XBTDidiDetialHeadView  *)headView;

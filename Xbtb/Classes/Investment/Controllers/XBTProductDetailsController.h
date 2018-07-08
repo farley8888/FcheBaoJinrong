@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMRegularModel.h"
+#import "RegularModel.h"
 
 @interface XBTProductDetailsController : UIViewController
 
 @property (nonatomic, copy) NSString *prdID;
 
-@property (nonatomic, strong) DMRegularModel *regModel;
+@property (nonatomic, strong) RegularModel *regModel;
 
 @end

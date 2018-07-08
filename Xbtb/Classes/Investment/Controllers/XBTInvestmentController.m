@@ -7,12 +7,12 @@
 //
 
 #import "XBTInvestmentController.h"
-#import "DMInvestmentCell.h"
-#import "DMHomePageCell.h"
-#import "DMInvestmentModel.h"
-#import "DMSellOutController.h"
-#import "DMDidiDetialController.h"
-#import "DMRegularController.h"
+#import "XBTInvestmentCell.h"
+#import "XBTHomePageCell.h"
+#import "InvestmentModel.h"
+#import "XBTSellOutController.h"
+#import "XBTDidiDetialController.h"
+#import "RegularController.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 #import "WKWebViewController.h"
@@ -21,7 +21,7 @@
 
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, strong) NSMutableArray<Data1 *> *dataArray;
-@property (nonatomic, strong) DMInvestmentModel *dataModel;
+@property (nonatomic, strong) InvestmentModel *dataModel;
 
 @end
 
@@ -68,8 +68,8 @@
 //    self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    UITableView_RegisterFormNib(self.tableView, @"DMInvestmentCell");
-//    UITableView_RegisterFormNib(self.tableView, @"DMHomePageCell");
+    UITableView_RegisterFormNib(self.tableView, @"XBTInvestmentCell");
+//    UITableView_RegisterFormNib(self.tableView, @"XBTHomePageCell");
     WeakSelf
     kSetupRefreshNormalHeader;
 }
@@ -83,7 +83,7 @@
     [YBHttpTool postDataDifference:@"selectNoviceBorrowList" params:params success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj != nil) {
-            DMInvestmentModel *model = [DMInvestmentModel mj_objectWithKeyValues:obj];
+            InvestmentModel *model = [InvestmentModel mj_objectWithKeyValues:obj];
             XBTPageModel *pageModel = model.page;
             if (model.state.status == ResultStatusSuccess) {
                 weakSelf.dataModel = model;
@@ -109,7 +109,7 @@
     [YBHttpTool postDataDifference:@"selectNoviceBorrowList" params:params success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj != nil) {
-            DMInvestmentModel *model = [DMInvestmentModel mj_objectWithKeyValues:obj];
+            InvestmentModel *model = [InvestmentModel mj_objectWithKeyValues:obj];
             XBTPageModel *pageModel = model.page;
             if (model.state.status == ResultStatusSuccess) {
                 weakSelf.dataModel = model;
@@ -134,7 +134,7 @@
 
 - (void)rightBarButtonClick
 {
-    DMSellOutController *soVC = [DMSellOutController new];
+    XBTSellOutController *soVC = [XBTSellOutController new];
     [self.navigationController pushViewController:soVC animated:YES];
 //    WKWebViewController *wkVC = [WKWebViewController new];
 //    wkVC.webViewH = kScreenH - 20;
@@ -157,12 +157,12 @@
 {
 //    UITableViewCell *cell = nil;
 //    if (indexPath.section == 0) {
-//        DMHomePageCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell" forIndexPath:indexPath];
+//        XBTHomePageCell *cell1 = [tableView dequeueReusableCellWithIdentifier:@"XBTHomePageCell" forIndexPath:indexPath];
 ////        cell1.interestRateLabel.text = [NSString stringWithFormat:@"%.1f%%+2%%",(self.dataModel.borrowhqll - 2.0)];
 //        cell1.interestRateLabel.text = [NSString stringWithFormat:@"7.8%%+2%%"];
 //        cell = cell1;
 //    }else{
-        DMInvestmentCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMInvestmentCell" forIndexPath:indexPath];
+        XBTInvestmentCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XBTInvestmentCell" forIndexPath:indexPath];
         cell2.cellData = self.dataArray[indexPath.section];
 //        cell = cell2;
 //    }
@@ -174,11 +174,11 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
 //    if (indexPath.section == 0) {
-//        DMDidiDetialController *didiVC = [DMDidiDetialController new];
+//        XBTDidiDetialController *didiVC = [XBTDidiDetialController new];
 //        [self.navigationController pushViewController:didiVC animated:YES];
 //    }else{
 //        if ([UserManager sharedManager].user.token.length) {
-            DMRegularController *regVC = [DMRegularController new];
+            RegularController *regVC = [RegularController new];
             regVC.titleString = self.dataArray[indexPath.section].borrowTitle;
             regVC.prdID = self.dataArray[indexPath.section].id;
             [self.navigationController pushViewController:regVC animated:YES];

@@ -8,8 +8,8 @@
 
 #import "XBTUserTool.h"
 #import "NSUserDefaults+Extension.h"
-#import "DMAES.h"
-#import "DMDefine.h"
+#import "XBTAES.h"
+#import "XBTDefine.h"
 #import "SelectVCTool.h"
 
 NSString* const CurrentLoginUser = @"CurrentLoginUser";//保存当前登录用户的key
@@ -100,13 +100,13 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
 //对user加密
 + (void)encryptUser:(XBTUser *)user
 {
-    user.password = [DMAES encrypt:user.password password:PASSWORD];
+    user.password = [XBTAES encrypt:user.password password:PASSWORD];
 }
 
 //对user解密
 + (void)decryptUser:(XBTUser *)user
 {
-    user.password = [DMAES decrypt:user.password password:PASSWORD];
+    user.password = [XBTAES decrypt:user.password password:PASSWORD];
 }
 
 

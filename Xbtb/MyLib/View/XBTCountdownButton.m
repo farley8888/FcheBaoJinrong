@@ -7,7 +7,7 @@
 //
 
 #import "XBTCountdownButton.h"
-#import "DMConfig.h"
+#import "XBTConfig.h"
 
 @interface XBTCountdownButton ()
 

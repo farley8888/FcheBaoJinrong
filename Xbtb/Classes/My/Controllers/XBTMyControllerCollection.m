@@ -11,7 +11,7 @@
 #import "MyHeadView.h"
 #import "SecionFooterView.h"
 #import "XBTMyControllerCollectionCell.h"
-#import "DMNavigationBar.h"
+#import "XBTNavigationBar.h"
 
 #import "LonginController.h"
 #import "XBTNavigationController.h"

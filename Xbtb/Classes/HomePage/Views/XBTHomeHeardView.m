@@ -1,5 +1,5 @@
 //
-//  DMHomeHeardView.m
+//  XBTHomeHeardView.m
 //  CheBaoJinRong
 //
 //  Created by ltyj on 2017/12/7.
@@ -57,7 +57,7 @@
 
 +(XBTHomeHeardView *)homeHeardView
 {
-    XBTHomeHeardView *homeheardView = [[UINib nibWithNibName:@"DMHomeHeardView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
+    XBTHomeHeardView *homeheardView = [[UINib nibWithNibName:@"XBTHomeHeardView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
     [homeheardView setupUI];
     [homeheardView setHomeButtonUI];
     return homeheardView;

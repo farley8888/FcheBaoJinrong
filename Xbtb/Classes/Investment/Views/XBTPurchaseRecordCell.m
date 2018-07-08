@@ -1,5 +1,5 @@
 //
-//  DMPurchaseRecordCell.m
+//  XBTPurchaseRecordCell.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.
@@ -7,7 +7,7 @@
 //
 
 #import "XBTPurchaseRecordCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface XBTPurchaseRecordCell ()
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;

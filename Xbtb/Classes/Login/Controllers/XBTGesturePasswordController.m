@@ -13,12 +13,12 @@
 #import "SelectVCTool.h"
 #import "XBTUserTool.h"
 #import "RegisterController.h"
-#import "DMNavigationBar.h"
+#import "XBTNavigationBar.h"
 #import "LonginController.h"
 #import "UIAlertView+Block.h"
 #import "XBTNavigationController.h"
 #import "XBTMainController.h"
-#import "UINavigationController+DM.h"
+#import "UINavigationController+XBT.h"
 #import "XBTUserTool.h"
 
 @interface XBTGesturePasswordController () <DMGestureLockDelegate, UIAlertViewDelegate>

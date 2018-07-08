@@ -7,7 +7,7 @@
 //
 
 #import "XBTRecordChildCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface XBTRecordChildCell ()
 

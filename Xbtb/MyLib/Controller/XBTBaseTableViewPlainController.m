@@ -7,7 +7,7 @@
 //
 
 #import "XBTBaseTableViewPlainController.h"
-#import "DMTableView.h"
+#import "XBTTableView.h"
 
 
 @interface XBTBaseTableViewPlainController ()
@@ -18,7 +18,7 @@
 
 - (void)loadView
 {
-    DMTableView *tableView = [[DMTableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH) style:UITableViewStylePlain];
+    XBTTableView *tableView = [[XBTTableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH) style:UITableViewStylePlain];
     UITableView_AutomaticDimension(tableView, 44);
     tableView.estimatedSectionFooterHeight = 0;
     tableView.estimatedSectionHeaderHeight = 0;

@@ -1,5 +1,5 @@
 //
-//  DMLeftTabelViewcell.m
+//  XBTLeftTabelViewcell.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/14.

@@ -11,7 +11,7 @@
 
 #import "UIView+Extension.h"
 #import "Function.h"
-#import "UIView+DMLoading.h"
+#import "UIView+Loading.h"
 
 #ifdef DEBUG // 调试状态, 打开LOG功能
 #define DMLog(...) NSLog(__VA_ARGS__)

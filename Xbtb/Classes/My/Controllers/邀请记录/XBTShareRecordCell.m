@@ -7,7 +7,7 @@
 //
 
 #import "XBTShareRecordCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface XBTShareRecordCell ()
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;

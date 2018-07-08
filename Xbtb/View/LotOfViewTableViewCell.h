@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "XBTMyHongBaoModel.h"
-#import "DMMyCouponModel.h"
+#import "MyCouponModel.h"
 
 @interface LotOfViewTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) XBTMyHongBaoModel *cellModel;
-@property (nonatomic, strong) DMMyCouponModel *coupModel;
+@property (nonatomic, strong) MyCouponModel *coupModel;
 @property (weak, nonatomic) IBOutlet UILabel *useLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *hongbaoImage;
 

@@ -1,0 +1,30 @@
+//
+//  UIView+GradientColor.m
+//  XYG
+//
+//  Created by ltyj on 2017/12/27.
+//  Copyright © 2017年 Mac. All rights reserved.
+//
+
+#import "UIView+GradientColor.h"
+#import "XBTDefine.h"
+#import "UIView+Extension.h"
+
+@implementation UIView (GradientColor)
+
+- (void)gradientColorTransverse:(BOOL)transverse vertical:(BOOL)vertical width:(CGFloat)width stratColor:(UIColor *)strColor endColor:(UIColor *)endColor
+{
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = @[(id)strColor.CGColor, (id)endColor.CGColor];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(transverse, vertical);
+    if (width == 0) {
+       gradientLayer.frame = CGRectMake(0, 0, kScreenW, self.height);
+    }else{
+        gradientLayer.frame = CGRectMake(0, 0, width, self.height);
+    }
+    gradientLayer.cornerRadius = self.height/2.0;
+    [self.layer insertSublayer:gradientLayer atIndex:0];
+}
+
+@end

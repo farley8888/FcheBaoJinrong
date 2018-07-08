@@ -11,9 +11,9 @@
 #import "XBTHomePageCell2.h"
 #import "XBTHomePageCell4.h"
 #import "XBTHomeHeardView.h"
-#import "DMHomePageModel.h"
-#import "DMDidiDetialController.h"
-#import "DMRegularController.h"
+#import "HomePageModel.h"
+#import "XBTDidiDetialController.h"
+#import "RegularController.h"
 #import "MessageController.h"
 #import "XBTJSViewController.h"
 #import "WKWebViewController.h"
@@ -21,12 +21,12 @@
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 
-#import "UIImage+DMIconFont.h"
+#import "UIImage+XBTIconFont.h"
 #import "CALayer+Transition.h"
 
 @interface HomePageController ()
 
-@property (nonatomic, strong) DMHomePageModel *dataModel;
+@property (nonatomic, strong) HomePageModel *dataModel;
 
 @end
 
@@ -42,9 +42,9 @@
 - (void)setUI
 {
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    UITableView_RegisterFormNib(self.tableView, @"DMHomePageCell3");
-    UITableView_RegisterFormNib(self.tableView, @"DMHomePageCell2");
-    UITableView_RegisterFormNib(self.tableView, @"DMHomePageCell4");
+    UITableView_RegisterFormNib(self.tableView, @"XBTHomePageCell3");
+    UITableView_RegisterFormNib(self.tableView, @"XBTHomePageCell2");
+    UITableView_RegisterFormNib(self.tableView, @"XBTHomePageCell4");
     UITableView_AutomaticDimension(self.tableView, 160);
     WeakSelf
     kSetupRefreshNormalHeader
@@ -85,7 +85,7 @@
     [YBHttpTool postDataDifference:@"index" params:nil success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj != nil) {
-            DMHomePageModel *model = [DMHomePageModel mj_objectWithKeyValues:obj];
+            HomePageModel *model = [HomePageModel mj_objectWithKeyValues:obj];
             if (model.state.status == ResultStatusSuccess) {
 
                 weakSelf.dataModel = model;
@@ -187,7 +187,7 @@
 {
     WeakSelf
     if (indexPath.section == 0) {
-        XBTHomePageCell3 *cell3 =[tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell3" forIndexPath:indexPath];
+        XBTHomePageCell3 *cell3 =[tableView dequeueReusableCellWithIdentifier:@"XBTHomePageCell3" forIndexPath:indexPath];
         [cell3 setMoreButtonClick:^{
             [weakSelf headViewPush];
         }];
@@ -195,11 +195,11 @@
         return cell3;
     }
 //    else if (indexPath.section == (self.dataModel.data2.count +1)){
-//        DMHomePageCell4 *cell4 = [tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell4" forIndexPath:indexPath];
+//        XBTHomePageCell4 *cell4 = [tableView dequeueReusableCellWithIdentifier:@"XBTHomePageCell4" forIndexPath:indexPath];
 //        cell4.selectionStyle = UITableViewCellSelectionStyleNone;
 //        return cell4;
 //    }
-    XBTHomePageCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"DMHomePageCell2" forIndexPath:indexPath];
+    XBTHomePageCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:@"XBTHomePageCell2" forIndexPath:indexPath];
     cell2.cellData = self.dataModel.data2[indexPath.section-1];
     cell2.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell2;
@@ -211,7 +211,7 @@
     if (indexPath.section == 0 || (indexPath.section == self.dataModel.data2.count +1)) {
         return;
     }
-    DMRegularController *regVC = [DMRegularController new];
+    RegularController *regVC = [RegularController new];
     regVC.prdID = self.dataModel.data2[indexPath.section-1].id;
     regVC.titleString = self.dataModel.data2[indexPath.section-1].borrowTitle;
     [self.navigationController pushViewController:regVC animated:YES];

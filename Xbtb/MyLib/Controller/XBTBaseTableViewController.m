@@ -7,7 +7,7 @@
 //
 
 #import "XBTBaseTableViewController.h"
-#import "DMTableView.h"
+#import "XBTTableView.h"
 
 @interface XBTBaseTableViewController ()
 
@@ -23,7 +23,7 @@
 
 - (void)loadView
 {
-    DMTableView *tableView = [[DMTableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH) style:UITableViewStyleGrouped];
+    XBTTableView *tableView = [[XBTTableView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, kScreenH) style:UITableViewStyleGrouped];
     tableView.scrollInvalidRect = self.scrollInvalidRect;
     UITableView_AutomaticDimension(tableView, 44);
     tableView.estimatedSectionFooterHeight = 0;

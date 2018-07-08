@@ -7,7 +7,7 @@
 //
 
 #import "MessageDetialController.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface MessageDetialController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;

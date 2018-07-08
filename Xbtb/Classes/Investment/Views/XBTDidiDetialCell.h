@@ -1,5 +1,5 @@
 //
-//  DMDidiDetialCell.h
+//  XBTDidiDetialCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/22.

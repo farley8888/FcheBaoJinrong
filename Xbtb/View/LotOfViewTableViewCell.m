@@ -7,7 +7,7 @@
 //
 
 #import "LotOfViewTableViewCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface LotOfViewTableViewCell ()
 
@@ -53,7 +53,7 @@
     self.expirationDateLabel.text = [NSString stringWithFormat:@"%@前使用",dateStr];
 }
 
-- (void)setCoupModel:(DMMyCouponModel *)coupModel
+- (void)setCoupModel:(MyCouponModel *)coupModel
 {
     _coupModel = coupModel;
     NSString *couponTypeStr = nil;

@@ -9,7 +9,7 @@
 #import "WithdrawCashController.h"
 #import "XBTWithdrawCashModel.h"
 #import "XBTMatch.h"
-#import "UINavigationController+DM.h"
+#import "UINavigationController+XBT.h"
 #import "XBTWithdrawCashingController.h"  //提现中
 
 @interface WithdrawCashController ()

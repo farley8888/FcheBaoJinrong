@@ -7,7 +7,7 @@
 //
 
 #import "XBTBaseAlertView.h"
-#import "DMDefine.h"
+#import "XBTDefine.h"
 #import "UIView+Extension.h"
 
 @interface XBTBaseAlertView ()

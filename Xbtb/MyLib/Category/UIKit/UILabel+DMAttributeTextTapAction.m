@@ -1,11 +1,11 @@
 //
-//  UILabel+DMAttributeTextTapAction.m
+//  UILabel+AttributeTextTapAction.m
 //
 //  Created by LDM on 16/7/1.
 //  Copyright © 2016年 LDM. All rights reserved.
 //
 
-#import "UILabel+DMAttributeTextTapAction.h"
+#import "UILabel+AttributeTextTapAction.h"
 #import <objc/runtime.h>
 #import <CoreText/CoreText.h>
 #import <Foundation/Foundation.h>

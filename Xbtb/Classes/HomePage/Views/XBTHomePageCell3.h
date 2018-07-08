@@ -1,5 +1,5 @@
 //
-//  DMHomePageCell3.h
+//  XBTHomePageCell3.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/6/25.

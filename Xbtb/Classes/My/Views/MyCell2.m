@@ -8,7 +8,7 @@
 
 #import "MyCell2.h"
 #import "HomeButton.h"
-#import "UIImage+DMIconFont.h"
+#import "UIImage+XBTIconFont.h"
 
 @interface MyCell2 ()
 

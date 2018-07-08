@@ -7,7 +7,7 @@
 //
 
 #import "XBTMyBankCardController.h"
-#import "DMNavigationBar.h"
+#import "XBTNavigationBar.h"
 #import "XBTMyBankCardModel.h"
 
 @interface XBTMyBankCardController ()

@@ -7,8 +7,8 @@
 //
 
 #import "XBTNavigationController.h"
-#import "UIImage+DM.h"
-#import "DMNavigationBar.h"
+#import "UIImage+XBT.h"
+#import "XBTNavigationBar.h"
 
 @interface XBTNavigationController ()
 
@@ -42,15 +42,15 @@
     [self.navigationBar setTranslucent:NO];
     
     // 设置导航栏默认的背景颜色
-    [DMNavigationBar dm_setDefaultNavBarBarTintColor:[UIColor whiteColor]];
+    [XBTNavigationBar dm_setDefaultNavBarBarTintColor:[UIColor whiteColor]];
     // 设置导航栏所有按钮的默认颜色
-    [DMNavigationBar dm_setDefaultNavBarTintColor:[UIColor blackColor]];
+    [XBTNavigationBar dm_setDefaultNavBarTintColor:[UIColor blackColor]];
     // 设置导航栏标题默认颜色
-    [DMNavigationBar dm_setDefaultNavBarTitleColor:[UIColor blackColor]];
+    [XBTNavigationBar dm_setDefaultNavBarTitleColor:[UIColor blackColor]];
     // 统一设置状态栏样式
-    [DMNavigationBar dm_setDefaultStatusBarStyle:UIStatusBarStyleDefault];
+    [XBTNavigationBar dm_setDefaultStatusBarStyle:UIStatusBarStyleDefault];
     // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
-    [DMNavigationBar dm_setDefaultNavBarShadowImageHidden:NO];
+    [XBTNavigationBar dm_setDefaultNavBarShadowImageHidden:NO];
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated

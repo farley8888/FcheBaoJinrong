@@ -8,11 +8,11 @@
 
 #import "XBTMyCouponController.h"
 #import "LotOfViewTableViewCell.h"
-#import "DMMyCouponModel.h"
+#import "MyCouponModel.h"
 
 @interface XBTMyCouponController ()
 
-@property (nonatomic, strong) NSMutableArray<DMMyCouponModel *> *dataArray;
+@property (nonatomic, strong) NSMutableArray<MyCouponModel *> *dataArray;
 @property (nonatomic, assign) NSInteger coupID;
 @property (nonatomic, assign) NSInteger coupType;
 @property (nonatomic, copy) NSString *coupAmout;
@@ -64,7 +64,7 @@
         if (obj!=nil) {
             XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *arr = [DMMyCouponModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                NSMutableArray *arr = [MyCouponModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
                 if (arr.count == 0) {
                     [weakSelf.tableView notData:CGRectMake(0, 0, kScreenW, kScreenH - 64)];
@@ -101,7 +101,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DMMyCouponModel *model = self.dataArray[indexPath.row];
+    MyCouponModel *model = self.dataArray[indexPath.row];
     self.coupAmout = model.couponAmount;
     self.coupID = model.id;
     self.coupType = model.couponType;

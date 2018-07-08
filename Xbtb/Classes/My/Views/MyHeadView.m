@@ -9,9 +9,9 @@
 #import "MyHeadView.h"
 #import "HomeButton.h"
 #import "UIImageView+SD.h"
-#import "UIImage+DMIconFont.h"
+#import "UIImage+XBTIconFont.h"
 #import "MyCell.h"
-#import "UIView+DMGradientColor.h"
+#import "UIView+GradientColor.h"
 //#import "UIImage+Cut.h"
 
 @interface MyHeadView()

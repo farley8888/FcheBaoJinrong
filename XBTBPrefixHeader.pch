@@ -17,7 +17,7 @@
 #import "NSUserDefaults+Extension.h"
 
 #import "UIAlertView+Block.h"
-#import "UIImage+DMIconFont.h"
+#import "UIImage+XBTIconFont.h"
 #import "ResultCodeState.h"
 #import "YBHttpTool.h"
 

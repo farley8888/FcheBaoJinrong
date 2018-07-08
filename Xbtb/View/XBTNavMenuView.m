@@ -7,8 +7,8 @@
 //
 
 #import "XBTNavMenuView.h"
-#import "DMIconFont.h"
-#import "UIImage+DMIconFont.h"
+#import "XBTIconFont.h"
+#import "UIImage+XBTIconFont.h"
 
 #define kDMNavMenuSetButtonW 60
 

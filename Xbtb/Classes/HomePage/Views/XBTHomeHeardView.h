@@ -1,5 +1,5 @@
 //
-//  DMHomeHeardView.h
+//  XBTHomeHeardView.h
 //  CheBaoJinRong
 //
 //  Created by ltyj on 2017/12/7.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMHomePageModel.h"
+#import "HomePageModel.h"
 
 @interface XBTHomeHeardView : UIView
 

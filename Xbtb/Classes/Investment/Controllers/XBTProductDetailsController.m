@@ -7,19 +7,19 @@
 //
 
 #import "XBTProductDetailsController.h"
-#import "DMProductInformationController.h"      //产品信息
-#import "DMLoanMaterialController.h"            //借款资料
-#import "DMPurchaseRecordController.h"          //购买记录
-#import "DMRegularPurchaseController.h"         //购买非滴滴宝
+#import "XBTProductInformationController.h"      //产品信息
+#import "XBTLoanMaterialController.h"            //借款资料
+#import "PurchaseRecordController.h"          //购买记录
+#import "RegularPurchaseController.h"         //购买非滴滴宝
 #import "LotOfViewScrollerTopView.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 
 @interface XBTProductDetailsController ()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) DMProductInformationController *prdInfoVC;
-@property (nonatomic, strong) DMLoanMaterialController *loaMaterVC;
-@property (nonatomic, strong) DMPurchaseRecordController *purchRecordVC;
+@property (nonatomic, strong) XBTProductInformationController *prdInfoVC;
+@property (nonatomic, strong) XBTLoanMaterialController *loaMaterVC;
+@property (nonatomic, strong) PurchaseRecordController *purchRecordVC;
 @property (nonatomic, strong) LotOfViewScrollerTopView *topView;
 @property (nonatomic, strong) UIScrollView *scroller;
 
@@ -33,28 +33,28 @@
     [kNotificationCenter removeObserver:self];
 }
 
-- (DMProductInformationController *)prdInfoVC
+- (XBTProductInformationController *)prdInfoVC
 {
     if (_prdInfoVC == nil) {
-        _prdInfoVC = [DMProductInformationController new];
+        _prdInfoVC = [XBTProductInformationController new];
         _prdInfoVC.prdID = self.prdID;
     }
     return _prdInfoVC;
 }
 
-- (DMLoanMaterialController *)loaMaterVC
+- (XBTLoanMaterialController *)loaMaterVC
 {
     if (_loaMaterVC == nil) {
-        _loaMaterVC = [DMLoanMaterialController new];
+        _loaMaterVC = [XBTLoanMaterialController new];
         _loaMaterVC.prdID = self.prdID;
     }
     return _loaMaterVC;
 }
 
-- (DMPurchaseRecordController *)purchRecordVC
+- (PurchaseRecordController *)purchRecordVC
 {
     if (_purchRecordVC == nil) {
-        _purchRecordVC = [DMPurchaseRecordController new];
+        _purchRecordVC = [PurchaseRecordController new];
         _purchRecordVC.prdID = self.prdID;
         _purchRecordVC.result = self.regModel.borrowStatus;
     }
@@ -154,7 +154,7 @@
 
 - (void)pushVC
 {
-    DMRegularPurchaseController *rpVC = [DMRegularPurchaseController new];
+    RegularPurchaseController *rpVC = [RegularPurchaseController new];
     rpVC.regModel = self.regModel;
     [self.navigationController pushViewController:rpVC animated:YES];
 }
@@ -193,17 +193,17 @@
 {
     
     if (tag == 0) {
-        __kindof DMProductInformationController *vc = self.childViewControllers[tag];
+        __kindof XBTProductInformationController *vc = self.childViewControllers[tag];
         if (!vc.isLoadData) {
             [vc loadData];
         }
     }else if(tag == 1){
-        __kindof DMLoanMaterialController *vc = self.childViewControllers[tag];
+        __kindof XBTLoanMaterialController *vc = self.childViewControllers[tag];
         if (!vc.isLoadData) {
             [vc loadData];
         }
     }else{
-        __kindof DMPurchaseRecordController *vc = self.childViewControllers[tag];
+        __kindof PurchaseRecordController *vc = self.childViewControllers[tag];
         if (!vc.isLoadData) {
             [vc loadData];
         }

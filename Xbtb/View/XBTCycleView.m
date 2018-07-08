@@ -7,7 +7,7 @@
 //
 
 #import "XBTCycleView.h"
-//#import "DMDefine.h"
+//#import "XBTDefine.h"
 
 #define kBannerTimeIntervalDefault 5
 

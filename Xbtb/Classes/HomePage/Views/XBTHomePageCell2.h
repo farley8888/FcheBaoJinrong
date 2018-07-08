@@ -1,5 +1,5 @@
 //
-//  DMHomePageCell2.h
+//  XBTHomePageCell2.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/14.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DMHomePageModel.h"
+#import "HomePageModel.h"
 
 @interface XBTHomePageCell2 : UITableViewCell
 

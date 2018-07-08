@@ -8,10 +8,10 @@
 
 #import "XBTJSController.h"
 
-#import "UINavigationController+DM.h"
+#import "UINavigationController+XBT.h"
 #import "NSUserDefaults+Extension.h"
 #import <WebKit/WebKit.h>
-#import "UIView+DMLoading.h"
+#import "UIView+Loading.h"
 
 #define SafeAreaTopHeight (kScreenH == 812.0 ? 88 : 64)
 #define SafeAreaBottomHeight (kScreenH == 812.0 ? 34 : 0)

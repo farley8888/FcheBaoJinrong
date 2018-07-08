@@ -1,5 +1,5 @@
 //
-//  DMRegularCell.h
+//  XBTRegularCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.

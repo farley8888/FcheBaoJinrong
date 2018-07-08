@@ -1,5 +1,5 @@
 //
-//  DMRegularSectionHeadView.m
+//  XBTRegularSectionHeadView.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.
@@ -12,7 +12,7 @@
 
 +(XBTRegularSectionHeadView  *)headview
 {
-    XBTRegularSectionHeadView *headView = [[UINib nibWithNibName:@"DMRegularSectionHeadView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
+    XBTRegularSectionHeadView *headView = [[UINib nibWithNibName:@"XBTRegularSectionHeadView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
     return headView;
 }
 @end

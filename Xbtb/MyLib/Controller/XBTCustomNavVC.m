@@ -19,11 +19,11 @@
     return UIStatusBarStyleDefault;
 }
 
-- (DMCustomNavigationBar *)customNavBar
+- (XBTCustomNavigationBar *)customNavBar
 {
     if (_customNavBar == nil) {
         WeakSelf
-        _customNavBar = [DMCustomNavigationBar CustomNavigationBar];
+        _customNavBar = [XBTCustomNavigationBar CustomNavigationBar];
         [_customNavBar setOnClickLeftButton:^{
             [weakSelf leftButtonClick];
         }];

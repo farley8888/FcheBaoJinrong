@@ -1,5 +1,5 @@
 //
-//  DMDidiDetialHeadView.m
+//  XBTDidiDetialHeadView.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.
@@ -7,12 +7,12 @@
 //
 
 #import "XBTDidiDetialHeadView.h"
-#import "DMCycleProgressView.h"
-#import "NSDate+DM.h"
+#import "XBTCycleProgressView.h"
+#import "NSDate+XBT.h"
 
 @interface XBTDidiDetialHeadView ()
 
-@property (weak, nonatomic) IBOutlet DMCycleProgressView *progressView;
+@property (weak, nonatomic) IBOutlet XBTCycleProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *interestRate;
 @property (weak, nonatomic) IBOutlet UILabel *amoutLabel;
 @property (weak, nonatomic) IBOutlet UILabel *characteristic;
@@ -29,7 +29,7 @@
 
 + (XBTDidiDetialHeadView *)headView
 {
-    XBTDidiDetialHeadView *headView = [[UINib nibWithNibName:@"DMDidiDetialHeadView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
+    XBTDidiDetialHeadView *headView = [[UINib nibWithNibName:@"XBTDidiDetialHeadView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
     [headView setupUI];
     return headView;
 }
@@ -67,7 +67,7 @@
 //    }
 //}
 
-- (void)setRegularModel:(DMRegularModel *)regularModel
+- (void)setRegularModel:(RegularModel *)regularModel
 {
     _regularModel = regularModel;
     if (regularModel.deadlineType == 1) {

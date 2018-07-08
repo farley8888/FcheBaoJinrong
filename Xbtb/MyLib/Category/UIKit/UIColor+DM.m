@@ -1,12 +1,12 @@
 //
-//  UIColor+DM.m
+//  UIColor+XBT.m
 //  DMUnits
 //
 //  Created by 尚往文化 on 17/6/20.
 //  Copyright © 2017年 DMing. All rights reserved.
 //
 
-#import "UIColor+DM.h"
+#import "UIColor+XBT.h"
 
 @implementation UIColor (DM)
 

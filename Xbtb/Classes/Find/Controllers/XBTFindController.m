@@ -7,13 +7,13 @@
 //
 
 #import "XBTFindController.h"
-#import "DMTopButtonView.h"
-#import "DMLeftView.h"
+#import "XBTTopButtonView.h"
+#import "XBTLeftView.h"
 
 @interface XBTFindController ()<UIScrollViewDelegate>
 
 @property(nonatomic, strong)UIScrollView *scrollerView;
-@property(nonatomic, strong)DMTopButtonView *topButtonView;
+@property(nonatomic, strong)XBTTopButtonView *topButtonView;
 
 @end
 
@@ -29,7 +29,7 @@
 - (void)setUpUI
 {
     DMLog(@"屏幕高度%.2f",kScreenH);
-    DMTopButtonView *topView = [[DMTopButtonView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 50)];
+    XBTTopButtonView *topView = [[XBTTopButtonView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 50)];
     self.topButtonView = topView;
 //    topView.backgroundColor = [UIColor blackColor];
     WeakSelf
@@ -53,12 +53,12 @@
     self.scrollerView = scrollerView;
     [self.view addSubview:scrollerView];
     
-    DMLeftView *left = [[DMLeftView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, CGRectGetHeight(self.scrollerView.frame))];
+    XBTLeftView *left = [[XBTLeftView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, CGRectGetHeight(self.scrollerView.frame))];
     left.type = OnGing;
     left.tag = 2000;
     [scrollerView addSubview:left];
     
-    DMLeftView *right = [[DMLeftView alloc]initWithFrame:CGRectMake(kScreenW, 0, kScreenW, CGRectGetHeight(self.scrollerView.frame))];
+    XBTLeftView *right = [[XBTLeftView alloc]initWithFrame:CGRectMake(kScreenW, 0, kScreenW, CGRectGetHeight(self.scrollerView.frame))];
     right.type = Finish;
     right.tag = 2001;
     [scrollerView addSubview:right];
@@ -81,7 +81,7 @@
 
 - (void)scrolleAndLoadData:(NSInteger)tag
 {
-    __kindof DMLeftView *vc = [self.scrollerView viewWithTag:tag + 2000];
+    __kindof XBTLeftView *vc = [self.scrollerView viewWithTag:tag + 2000];
     if (!vc.isLoadData) {
         [vc loadData];
     }

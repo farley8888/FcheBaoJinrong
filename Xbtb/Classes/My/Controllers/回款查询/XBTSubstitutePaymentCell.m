@@ -7,7 +7,7 @@
 //
 
 #import "XBTSubstitutePaymentCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface XBTSubstitutePaymentCell ()
 

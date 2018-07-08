@@ -14,10 +14,10 @@
 #import "RegisterController.h"
 #import "PasswordRetrievalController.h"
 #import "UIButton+SD.h"
-#import "UIImage+DMIconFont.h"
-#import "UIView+DMGradientColor.h"
-#import "DMNavigationBar.h"
-#import "DMAES.h"
+#import "UIImage+XBTIconFont.h"
+#import "UIView+GradientColor.h"
+#import "XBTNavigationBar.h"
+#import "XBTAES.h"
 
 #define Device [[[UIDevice currentDevice] identifierForVendor] UUIDString]
 

@@ -1,5 +1,5 @@
 //
-//  DMLoanMaterialCell.m
+//  XBTLoanMaterialCell.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DMCustomNavigationBar.h"
+#import "XBTCustomNavigationBar.h"
 
 @interface XBTCustomNavVC : UIViewController
 
-@property (nonatomic, strong) DMCustomNavigationBar *customNavBar;
+@property (nonatomic, strong) XBTCustomNavigationBar *customNavBar;
 - (void)setupNavBar;
 @end

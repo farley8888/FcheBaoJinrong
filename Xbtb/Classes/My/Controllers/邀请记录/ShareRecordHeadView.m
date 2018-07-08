@@ -7,7 +7,7 @@
 //
 
 #import "ShareRecordHeadView.h"
-#import "UIView+DMGradientColor.h"
+#import "UIView+GradientColor.h"
 
 @implementation ShareRecordHeadView
 

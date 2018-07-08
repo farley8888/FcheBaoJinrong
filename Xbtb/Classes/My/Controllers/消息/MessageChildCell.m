@@ -7,7 +7,7 @@
 //
 
 #import "MessageChildCell.h"
-#import "NSDate+DM.h"
+#import "NSDate+XBT.h"
 
 @interface MessageChildCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;

@@ -11,7 +11,7 @@
 #import "XBTMyDidiCell.h"
 #import "XBTDetialCell.h"
 #import "WithdrawCashController.h"
-#import "DMNavigationBar.h"
+#import "XBTNavigationBar.h"
 #import "MyModel.h"
 #import "XBTBuyDidiBaoController.h"
 #import "XBTMyDidiRecordController.h"

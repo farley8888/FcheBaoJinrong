@@ -1,5 +1,5 @@
 //
-//  DMPurchaseRecordCell.h
+//  XBTPurchaseRecordCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/28.
