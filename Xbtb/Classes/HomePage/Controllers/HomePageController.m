@@ -14,8 +14,8 @@
 #import "DMHomePageModel.h"
 #import "DMDidiDetialController.h"
 #import "DMRegularController.h"
-#import "DMMessageController.h"
-#import "DMJSViewController.h"
+#import "MessageController.h"
+#import "XBTJSViewController.h"
 #import "WKWebViewController.h"
 #import "XBTWebRechargeController.h"
 #import "XBTNavigationController.h"
@@ -71,7 +71,7 @@
         [weakSelf homeButtonUrl:tag];
     }];
     [heardView setLoopViewBlock:^{
-        DMMessageController *msVC = [DMMessageController new];
+        MessageController *msVC = [MessageController new];
         msVC.type = 2;
         [weakSelf.navigationController pushViewController:msVC animated:YES];
     }];

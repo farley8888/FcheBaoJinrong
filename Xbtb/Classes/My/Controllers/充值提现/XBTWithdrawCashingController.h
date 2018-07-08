@@ -1,5 +1,5 @@
 //
-//  DMWithdrawCashingController.h
+//  XBTWithdrawCashingController.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/21.

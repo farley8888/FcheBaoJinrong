@@ -10,8 +10,8 @@
 #import "NSUserDefaults+Extension.h"
 #import "LonginController.h"
 #import "XBTNavigationController.h"
-#import "DMMainController.h"
-#import "DMFirstTimeController.h"
+#import "XBTMainController.h"
+#import "XBTFirstTimeController.h"
 
 @implementation SelectVCTool
 
@@ -32,7 +32,7 @@
         
 //            if ([self isLogin]) {
         
-                DMMainController *mainVC = [DMMainController new];
+                XBTMainController *mainVC = [XBTMainController new];
                 window.rootViewController = mainVC;
 //            } else {
 //                DMNavigationController *nav = [[DMNavigationController alloc] initWithRootViewController:[[LonginController alloc] init]];

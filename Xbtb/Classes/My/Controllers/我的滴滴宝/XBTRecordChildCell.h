@@ -1,5 +1,5 @@
 //
-//  DMRecordChildCell.h
+//  XBTRecordChildCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/6/1.

@@ -84,14 +84,14 @@
         kLoadDataHeaderEnd
         if (obj != nil) {
             DMInvestmentModel *model = [DMInvestmentModel mj_objectWithKeyValues:obj];
-            DMPageModel *pageModel = model.page;
+            XBTPageModel *pageModel = model.page;
             if (model.state.status == ResultStatusSuccess) {
                 weakSelf.dataModel = model;
                 weakSelf.dataArray = model.data;
                 kSetupMJ_footer_loadData(loadMoreData);
             }else{
                 if (![model.state.info isEqualToString:@"数据为空"]) {
-                    [MBProgressHUD showSuccess:model.state.info];
+                    [XBTProgressHUD showSuccess:model.state.info];
                 }
             }
         }
@@ -110,14 +110,14 @@
         kLoadDataHeaderEnd
         if (obj != nil) {
             DMInvestmentModel *model = [DMInvestmentModel mj_objectWithKeyValues:obj];
-            DMPageModel *pageModel = model.page;
+            XBTPageModel *pageModel = model.page;
             if (model.state.status == ResultStatusSuccess) {
                 weakSelf.dataModel = model;
                 [weakSelf.dataArray addObjectsFromArray: model.data];
                 kSetupMJ_footer_loadMoreData
             }else{
                 if (![model.state.info isEqualToString:@"数据为空"]) {
-                    [MBProgressHUD showSuccess:model.state.info];
+                    [XBTProgressHUD showSuccess:model.state.info];
                 }
             }
         }

@@ -7,7 +7,7 @@
 //
 
 #import "XBTScreenRecordController.h"
-#import "DMScreenRecordCell.h"
+#import "XBTScreenRecordCell.h"
 
 @interface XBTScreenRecordController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -62,7 +62,7 @@
     collection.backgroundColor = kColor(247, 247, 247);
     collection.delegate = self;
     collection.dataSource = self;
-    [collection registerNib:[UINib nibWithNibName:@"DMScreenRecordCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"DMScreenRecordCell"];
+    [collection registerNib:[UINib nibWithNibName:@"XBTScreenRecordCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"XBTScreenRecordCell"];
     [self.view addSubview:collection];
 }
 
@@ -83,7 +83,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMScreenRecordCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DMScreenRecordCell" forIndexPath:indexPath];
+    XBTScreenRecordCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"XBTScreenRecordCell" forIndexPath:indexPath];
     cell.backgroundColor = kColor(241, 176, 66);
     cell.titleString = self.dataArray[indexPath.row][@"title"];
     return cell;

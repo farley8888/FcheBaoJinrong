@@ -28,8 +28,8 @@
 
 @interface XBTDindModel : NSObject
 
-@property (nonatomic, strong) DMPageModel *page;
-@property (nonatomic, strong) DMStateModel *state;
+@property (nonatomic, strong) XBTPageModel *page;
+@property (nonatomic, strong) XBTStateModel *state;
 @property (nonatomic, strong) NSMutableArray<List *> *list;
 
 @end

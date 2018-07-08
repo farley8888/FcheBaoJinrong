@@ -11,7 +11,7 @@
 
 @interface MyModel : NSObject
 
-@property (nonatomic, strong) DMStateModel *state;
+@property (nonatomic, strong) XBTStateModel *state;
 
 //"userId": 100035,
 @property (nonatomic, assign) CGFloat total1;

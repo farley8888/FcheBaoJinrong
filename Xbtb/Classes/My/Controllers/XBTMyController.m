@@ -12,21 +12,21 @@
 #import "UIImage+DMIconFont.h"
 #import "UIAlertView+Block.h"
 #import "MyModel.h"
-#import "DMSecionFooterView.h"
+#import "SecionFooterView.h"
 #import "DMNavigationBar.h"
 
-#import "DMReturnMoneyController.h"         //回款查询
-#import "DMTransactionRecordController.h"   //交易记录
-#import "DMInvestmentRecordsController.h"   //出借记录
-#import "DMMyDidiBadyViewController.h"      //我的滴滴宝
-#import "DMSettingController.h"             //设置
-#import "DMRechargeController.h"            //充值
-#import "DMWithdrawCashController.h"        //提现
-#import "DMMyHongBaoController.h"           //我的红包
-#import "DMBankCardController.h"            //银行卡绑定
-#import "DMRealNameAuthenticationVController.h"  //实名认证
-#import "DMMessageController.h"             //消息
-#import "DMShareFriendController.h"         //分享好友
+#import "ReturnMoneyController.h"         //回款查询
+#import "TransactionRecordController.h"   //交易记录
+#import "XBTInvestmentRecordsController.h"   //出借记录
+#import "MyDidiBadyViewController.h"      //我的滴滴宝
+#import "SettingController.h"             //设置
+#import "XBTRechargeController.h"            //充值
+#import "WithdrawCashController.h"        //提现
+#import "MyHongBaoController.h"           //我的红包
+#import "XBTBankCardController.h"            //银行卡绑定
+#import "RealNameAuthenticationVController.h"  //实名认证
+#import "MessageController.h"             //消息
+#import "ShareFriendController.h"         //分享好友
 #import "LonginController.h"
 #import "XBTNavigationController.h"
 
@@ -151,7 +151,7 @@
                 if ([model.state.info isEqualToString:@"未登录"]) {
                     [weakSelf loginViewPresend];
                 }else{
-                    [MBProgressHUD showSuccess:model.state.info];
+                    [XBTProgressHUD showSuccess:model.state.info];
                 }
             }
         }
@@ -173,13 +173,13 @@
         [self loginViewPresend];
         return;
     }
-    DMSettingController *stVC = [DMSettingController new];
+    SettingController *stVC = [SettingController new];
     [self.navigationController pushViewController:stVC animated:YES];
 }
 
 - (void)rightButtonClick
 {
-    DMMessageController *msVC = [DMMessageController new];
+    MessageController *msVC = [MessageController new];
     [self.navigationController pushViewController:msVC animated:YES];
 }
 
@@ -203,10 +203,10 @@
         [self alertMessage:singString goString:goString];
     }else{
         if (tag == 1) {
-            DMRechargeController *reVC = [DMRechargeController  new]; //充值
+            XBTRechargeController *reVC = [XBTRechargeController  new]; //充值
             [self pushVC:reVC];
         }else{
-            DMWithdrawCashController *wcVC = [DMWithdrawCashController new];  //提现
+            WithdrawCashController *wcVC = [WithdrawCashController new];  //提现
             [self pushVC:wcVC];
         }
     }
@@ -218,10 +218,10 @@
     UIAlertView *alertview = [UIAlertView alertWithTitle:@"温馨提示" message:singString buttonIndex:^(NSInteger index) {
         if (index == 1) {
             if ([goString isEqualToString:@"去绑卡"]) {
-                DMBankCardController *bcVC = [DMBankCardController new];
+                XBTBankCardController *bcVC = [XBTBankCardController new];
                 [weakSelf pushVC:bcVC];
             }else{
-                DMRealNameAuthenticationVController *raVC = [DMRealNameAuthenticationVController new];
+                RealNameAuthenticationVController *raVC = [RealNameAuthenticationVController new];
                 [weakSelf pushVC:raVC];
             }
         }
@@ -301,25 +301,25 @@
     }
     UIViewController *comVC = nil;
     if(indexPath.row == 0){
-        DMSettingController *raVC = [DMSettingController new];
+        SettingController *raVC = [SettingController new];
         comVC = raVC;
 
     }else if (indexPath.row == 1){
-        DMMyHongBaoController *hbVC = [DMMyHongBaoController new];
+        MyHongBaoController *hbVC = [MyHongBaoController new];
         comVC = hbVC;
     }else if (indexPath.row == 2) {
-        DMReturnMoneyController *returenVC = [DMReturnMoneyController new];
+        ReturnMoneyController *returenVC = [ReturnMoneyController new];
         comVC = returenVC;
     }else if (indexPath.row == 3){
        
-        DMTransactionRecordController *trVC = [DMTransactionRecordController new];
+        TransactionRecordController *trVC = [TransactionRecordController new];
         comVC = trVC;
         
     }else if (indexPath.row == 4){
-        DMInvestmentRecordsController *irVC = [DMInvestmentRecordsController  new];
+        XBTInvestmentRecordsController *irVC = [XBTInvestmentRecordsController  new];
         comVC = irVC;
     }else if (indexPath.row == 5){
-        DMShareFriendController *shareVC = [DMShareFriendController new];
+        ShareFriendController *shareVC = [ShareFriendController new];
         comVC = shareVC;
     }
     [self pushVC:comVC];
@@ -333,7 +333,7 @@
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     if (section == 1) {
-        DMSecionFooterView *sectionView = [DMSecionFooterView sectionFooterView];
+        SecionFooterView *sectionView = [SecionFooterView sectionFooterView];
         WeakSelf
         [sectionView setCallPhone:^{
             [weakSelf callPhoneCode:@"400-0651520"];

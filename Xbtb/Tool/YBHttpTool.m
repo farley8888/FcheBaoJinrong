@@ -10,12 +10,12 @@
 #import "XBTMD5.h"
 #import "UserManager.h"
 #import "Define.h"
-#import "MBProgressHUD+MJ.h"
+#import "XBTProgressHUD+MJ.h"
 #import <objc/runtime.h>
 #import "NSUserDefaults+Extension.h"
 #import "UIAlertView+Block.h"
 #import "XBTNavigationController.h"
-#import "DMUserTool.h"
+#import "XBTUserTool.h"
 #import "XBTWebRechargeController.h"
 //#import <JPUSHService.h>
 
@@ -46,7 +46,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
 + (void)errorHandle:(NSURLSessionDataTask * _Nullable)task error:(NSError * _Nonnull)error failure:(void (^)(NSError *))failure
 {
     
-    [MBProgressHUD hideHUD];
+    [XBTProgressHUD hideHUD];
     DMLog(@"请求出错了------%@", task.originalRequest.URL.absoluteString);
     DMLog(@"请求出错了------%@", error.localizedDescription);
     
@@ -61,7 +61,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
     
     if (statusCode == 401) {//token过期
 
-        [DMUserTool login:[DMUserTool getCurrentLoginUser]];
+        [XBTUserTool login:[XBTUserTool getCurrentLoginUser]];
         
     } else if (statusCode == 0) {//没有网络
 //        UIAlertView *alertView = [UIAlertView alertWithTitle:nil message:@"没有网络！" buttonIndex:^(NSInteger index) {
@@ -69,7 +69,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
 //        } cancelButtonTitle:@"好" otherButtonTitles:nil];
 //        [alertView show];
         if ([UIApplication sharedApplication].windows.count){
-            [MBProgressHUD showError:@"没有网络，请检查网络设置！"];
+            [XBTProgressHUD showError:@"没有网络，请检查网络设置！"];
         }
     } else if (statusCode == 500) {//参数错误
 //        UIAlertView *alertView = [UIAlertView alertWithTitle:nil message:@"参数错误！" buttonIndex:^(NSInteger index) {
@@ -188,12 +188,12 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
             //缓存数据
             NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
             
-            [YBCacheTool cacheForData:data fileName:fileName];
+            [XBTCacheTool cacheForData:data fileName:fileName];
         }else if (([data.message isEqualToString:@"Token已过期"]) || [data.message isEqualToString:@"用户不存在"]){
 //            data.code == ResultStatusTockenExpire && 
             UserManager *userManager = [UserManager sharedManager];
             //自动登录
-            [DMUserTool login:userManager.user];
+            [XBTUserTool login:userManager.user];
         }else{
 //            [MBProgressHUD showSuccess:data.message];®
         }
@@ -243,7 +243,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
 {
     //缓存数据的文件名
     NSString *fileName = [self fileName:url params:params];
-    NSData *data = [YBCacheTool getCacheFileName:fileName];
+    NSData *data = [XBTCacheTool getCacheFileName:fileName];
     
     BOOL result = NO;
     
@@ -266,7 +266,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
             }
         } else if (cacheType == YBCacheTypeReturnCacheDataExpireThenLoad) {//有缓存 判断是否过期了没有 没有就返回缓存
             //判断是否过期
-            if (![YBCacheTool isExpire:fileName]) {
+            if (![XBTCacheTool isExpire:fileName]) {
                 if (success) {
                     success(data);
                 }
@@ -324,7 +324,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
             //缓存数据
             NSData *data = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
 
-            [YBCacheTool cacheForData:data fileName:fileName];
+            [XBTCacheTool cacheForData:data fileName:fileName];
             
 
         }

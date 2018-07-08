@@ -88,7 +88,7 @@
 //    "info": "取值成功",
 //    "status": "0"
 //},
-@property (nonatomic, strong) DMStateModel *state;
+@property (nonatomic, strong) XBTStateModel *state;
 
 //"data2" 首页第二个非滴滴宝
 @property (nonatomic, strong) NSMutableArray<Data1*> *data2;

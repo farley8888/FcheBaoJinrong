@@ -35,7 +35,7 @@
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height) style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
-    UITableView_RegisterFormNib(tableView, @"DMSubstitutePaymentCell");
+    UITableView_RegisterFormNib(tableView, @"XBTSubstitutePaymentCell");
     UITableView_AutomaticDimension(tableView, 100);
     self.tableView = tableView;
     [self addSubview:tableView];
@@ -56,8 +56,8 @@
         [weakSelf.tableView stop];
         [weakSelf.tableView.mj_header endRefreshing];
         if (obj!=nil) {
-            DMStateModel *model = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
-            DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+            XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (model.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [XBTReturnMoneyModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
@@ -87,8 +87,8 @@
         [weakSelf.tableView stop];
         [weakSelf.tableView.mj_header endRefreshing];
         if (obj!=nil) {
-            DMStateModel *model = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
-            DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+            XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (model.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [XBTReturnMoneyModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 [weakSelf.dataArray addObjectsFromArray: arr];
@@ -115,7 +115,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XBTSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMSubstitutePaymentCell" forIndexPath:indexPath];
+    XBTSubstitutePaymentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XBTSubstitutePaymentCell" forIndexPath:indexPath];
     if (self.type == 1) {
         cell.type = SubstitutePaymentCell;
     }else{

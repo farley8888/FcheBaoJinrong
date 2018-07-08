@@ -59,7 +59,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     UITableView_RegisterFormNib(tableView, @"DMRegularCell");
-    UITableView_RegisterFormNib(tableView, @"DMDetialCell");
+    UITableView_RegisterFormNib(tableView, @"XBTDetialCell");
     UITableView_AutomaticDimension(tableView, 100);
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView = tableView;
@@ -110,7 +110,7 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"queryBorrowDetail" params:@{@"id":self.prdID} success:^(id  _Nullable obj) {
         if (obj!=nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 
                 DMRegularModel *regMoel = [DMRegularModel mj_objectWithKeyValues:obj[@"tBorrowModel"]];
@@ -179,7 +179,7 @@
 {
     UITableViewCell *cell = nil;
     if (indexPath.row != 5) {
-        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
+        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"XBTDetialCell" forIndexPath:indexPath];
         detialCell.detialBKView.backgroundColor = kColor(254, 251, 247);
         detialCell.titleStrig = self.titleArray[indexPath.row];
         detialCell.detialString = self.deltialArray[indexPath.row];

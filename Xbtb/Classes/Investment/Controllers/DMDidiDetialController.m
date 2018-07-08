@@ -52,7 +52,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     UITableView_RegisterFormNib(tableView, @"DMDidiDetialCell");
-    UITableView_RegisterFormNib(tableView, @"DMDetialCell");
+    UITableView_RegisterFormNib(tableView, @"XBTDetialCell");
     UITableView_AutomaticDimension(tableView, 100);
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    self.view.backgroundColor = [UIColor redColor];
@@ -108,7 +108,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else{
-        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"DMDetialCell" forIndexPath:indexPath];
+        XBTDetialCell *detialCell = [tableView dequeueReusableCellWithIdentifier:@"XBTDetialCell" forIndexPath:indexPath];
         detialCell.detialBKView.backgroundColor = kColor(254, 251, 247);
         detialCell.cellDict = self.dataArray[indexPath.row];
         detialCell.selectionStyle = UITableViewCellSelectionStyleNone;

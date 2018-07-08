@@ -9,7 +9,7 @@
 #import "RegisterController.h"
 #import "XBTMatch.h"
 #import "XBTCountdownButton.h"
-#import "MQVerCodeImageView.h"
+#import "VerCodeImageView.h"
 #import "XBTJSController.h"
 
 
@@ -34,7 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *agreeButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollerView;
 
-@property (nonatomic, strong) MQVerCodeImageView *imageView;
+@property (nonatomic, strong) VerCodeImageView *imageView;
 
 @end
 
@@ -49,7 +49,7 @@
     [self.loginTF addTarget:self action:@selector(recommendCodeTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
     [self.recommendCode addTarget:self action:@selector(recommendCodeTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
     
-    MQVerCodeImageView *imageView = [[MQVerCodeImageView alloc]initWithFrame:self.verificationCodeImageView.bounds];
+    VerCodeImageView *imageView = [[VerCodeImageView alloc]initWithFrame:self.verificationCodeImageView.bounds];
     imageView.isRotation = NO;
     self.imageView = imageView;
 
@@ -94,11 +94,11 @@
 - (IBAction)getButtonClick:(XBTCountdownButton *)sender {
     
     if (![XBTMatch isPhoneNum:self.phoneNumberTF.text]) {
-        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     if (self.verificationCodeTF.text.length == 0) {
-        [MBProgressHUD showSuccess:@"请输入正确的图片验证码"];
+        [XBTProgressHUD showSuccess:@"请输入正确的图片验证码"];
         return;
     }
     [self sendVerifCode];
@@ -122,7 +122,7 @@
                 btn.timeCount = 60;
                 [btn start];
             }else{
-                [MBProgressHUD showSuccess:obj[@"info"]];
+                [XBTProgressHUD showSuccess:obj[@"info"]];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -134,13 +134,13 @@
 - (void)verificationPhoneCanUse:(NSString *)phoneNum
 {
     if (![XBTMatch isPhoneNum:phoneNum]) {
-        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     [YBHttpTool postDataDifference:@"verificationNewUserPhone" params:@{@"userPhone":phoneNum} success:^(id  _Nullable obj) {
         if (obj!=nil) {
             if ([obj[@"state"][@"status"] integerValue] != ResultStatusSuccess) {
-                [MBProgressHUD showSuccess:obj[@"state"][@"info"]];
+                [XBTProgressHUD showSuccess:obj[@"state"][@"info"]];
             }
             DMLog(@"是否可用--%@",obj[@"state"][@"info"]);
         }
@@ -157,7 +157,7 @@
             if ([obj[@"state"][@"status"] integerValue] == ResultStatusSuccess) {
                 DMLog(@"推荐码：%@",obj[@"info"]);
             }else{
-                [MBProgressHUD showSuccess:obj[@"info"]];
+                [XBTProgressHUD showSuccess:obj[@"info"]];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -175,8 +175,8 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"regist" params:params success:^(id  _Nullable obj) {
         if (obj!= nil) {
-            DMStateModel *model = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
-            [MBProgressHUD showSuccess:model.info];
+            XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
+            [XBTProgressHUD showSuccess:model.info];
             if (model.status == ResultStatusSuccess) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
@@ -219,7 +219,7 @@
         DMLog(@"可以发送请求");
         [self registUser];
     }else{
-        [MBProgressHUD showSuccess:title];
+        [XBTProgressHUD showSuccess:title];
     }
 }
 - (IBAction)xieyiButtonClick:(id)sender {

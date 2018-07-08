@@ -7,16 +7,16 @@
 //
 
 #import "XBTShareRecordController.h"
-#import "DMShareRecordCell.h"
-#import "DMShareRecordSectionView.h"
-#import "DMShareRecordHeadView.h"
-#import "DMShareRecordModel.h"
+#import "XBTShareRecordCell.h"
+#import "ShareRecordSectionView.h"
+#import "ShareRecordHeadView.h"
+#import "XBTShareRecordModel.h"
 
 @interface XBTShareRecordController ()
 
 @property (nonatomic, assign) NSInteger page;
-@property (nonatomic, strong) DMShareRecordModel *dataModel;
-@property (nonatomic, strong) DMShareRecordHeadView *headView;
+@property (nonatomic, strong) XBTShareRecordModel *dataModel;
+@property (nonatomic, strong) ShareRecordHeadView *headView;
     
 @end
 
@@ -36,7 +36,7 @@
     self.navigationItem.title = @"邀请记录";
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    UITableView_RegisterFormNib(self.tableView, @"DMShareRecordCell");
+    UITableView_RegisterFormNib(self.tableView, @"XBTShareRecordCell");
     UITableView_AutomaticDimension(self.tableView, 100);
 }
 
@@ -44,7 +44,7 @@
 {
     CGFloat score = 305/168.0;
     CGFloat head_H = kScreenW / score;
-    DMShareRecordHeadView *headview = [DMShareRecordHeadView shareRecordHeadView];
+    ShareRecordHeadView *headview = [ShareRecordHeadView shareRecordHeadView];
     headview.frame = CGRectMake(0, 0, kScreenW, head_H);
     self.headView = headview;
     self.tableView.tableHeaderView = headview;
@@ -60,10 +60,10 @@
     [YBHttpTool postDataDifference:@"selectReferee" params:params success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj!= nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                DMShareRecordModel *model = [DMShareRecordModel mj_objectWithKeyValues:obj];
-                DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+                XBTShareRecordModel *model = [XBTShareRecordModel mj_objectWithKeyValues:obj];
+                XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
                 weakSelf.dataModel = model;
                 
                 weakSelf.headView.totalMoneyLabel.text = model.sumtjjl;
@@ -86,10 +86,10 @@
     [YBHttpTool postDataDifference:@"selectReferee" params:params success:^(id  _Nullable obj) {
         kloadDataFooterEnd
         if (obj!= nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                DMShareRecordModel *model = [DMShareRecordModel mj_objectWithKeyValues:obj];
-                DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+                XBTShareRecordModel *model = [XBTShareRecordModel mj_objectWithKeyValues:obj];
+                XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
                 [weakSelf.dataModel.data addObjectsFromArray:model.data];
                 kSetupMJ_footer_loadMoreData;
                     
@@ -114,7 +114,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMShareRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMShareRecordCell" forIndexPath:indexPath];
+    XBTShareRecordCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XBTShareRecordCell" forIndexPath:indexPath];
     cell.cellModel = self.dataModel.data[indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -122,7 +122,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return [DMShareRecordSectionView shareRecordSectionView];
+    return [ShareRecordSectionView shareRecordSectionView];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

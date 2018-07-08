@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DMHomePageModel.h"
-#import "DMPageModel.h"
+#import "XBTPageModel.h"
 
 //@interface DMDataModel : NSObject
 /** 年化利率 **/
@@ -40,9 +40,9 @@
 @interface DMInvestmentModel : NSObject
 //"borrowhqll": "7.8", 利率
 @property (nonatomic, assign) CGFloat borrowhqll;
-@property (nonatomic, strong) DMStateModel *state;
+@property (nonatomic, strong) XBTStateModel *state;
 
 @property (nonatomic, strong)NSMutableArray<Data1 *> *data;
-@property (nonatomic, strong) DMPageModel *page;
+@property (nonatomic, strong) XBTPageModel *page;
 
 @end

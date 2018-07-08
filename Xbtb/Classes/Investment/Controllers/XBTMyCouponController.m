@@ -7,7 +7,7 @@
 //
 
 #import "XBTMyCouponController.h"
-#import "DMLotOfViewTableViewCell.h"
+#import "LotOfViewTableViewCell.h"
 #import "DMMyCouponModel.h"
 
 @interface XBTMyCouponController ()
@@ -44,7 +44,7 @@
 - (void)setUI
 {
     self.navigationItem.title = @"我的卡券";
-    UITableView_RegisterFormNib(self.tableView, @"DMLotOfViewTableViewCell");
+    UITableView_RegisterFormNib(self.tableView, @"LotOfViewTableViewCell");
     UITableView_AutomaticDimension(self.tableView, 120);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     WeakSelf
@@ -62,7 +62,7 @@
     [YBHttpTool postDataDifference:@"ajaxgetuseryhq" params:params success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj!=nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [DMMyCouponModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
@@ -72,7 +72,7 @@
                 [weakSelf.tableView reloadData];
                 
             }else{
-                [MBProgressHUD showSuccess:stateModel.info];
+                [XBTProgressHUD showSuccess:stateModel.info];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -92,7 +92,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DMLotOfViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DMLotOfViewTableViewCell" forIndexPath:indexPath];
+    LotOfViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LotOfViewTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.coupModel = self.dataArray[indexPath.row];
     return cell;

@@ -1,5 +1,5 @@
 //
-//  DMChangeLonginPWController.m
+//  XBTChangeLonginPWController.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/16.
@@ -39,17 +39,17 @@
 - (void)verificationInformation
 {
     if (self.oldPassWordTF.text.length == 0) {
-        [MBProgressHUD showSuccess:@"请输入原密码"];
+        [XBTProgressHUD showSuccess:@"请输入原密码"];
         return;
     }
     
     if (self.nPassWordTextF.text.length == 0) {
-        [MBProgressHUD showSuccess:@"请输入新密码"];
+        [XBTProgressHUD showSuccess:@"请输入新密码"];
         return;
     }
     
     if (![self.nPassWordTextF.text isEqualToString: self.repeatPSTF.text]) {
-        [MBProgressHUD showSuccess:@"两次密码不一致，请重新输入"];
+        [XBTProgressHUD showSuccess:@"两次密码不一致，请重新输入"];
         return;
     }
     
@@ -63,7 +63,7 @@
 - (void)changeTransactionPSW
 {
     if (self.oldPassWordTF.text.length != 6 || self.nPassWordTextF.text.length !=6) {
-        [MBProgressHUD showSuccess:@"请输入6位交易密码"];
+        [XBTProgressHUD showSuccess:@"请输入6位交易密码"];
         return;
     }
     
@@ -74,12 +74,12 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"setUserPayPwd" params:params success:^(id  _Nullable obj) {
         if (obj!=nil) {
-            DMStateModel *sate = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *sate = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (sate.status == ResultStatusSuccess) {
-                [MBProgressHUD showSuccess:sate.info];
+                [XBTProgressHUD showSuccess:sate.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }else{
-                [MBProgressHUD showSuccess:sate.info];
+                [XBTProgressHUD showSuccess:sate.info];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -96,7 +96,7 @@
 //    }
     
     if (self.oldPassWordTF.text.length > 16 || self.nPassWordTextF.text.length >16 || self.oldPassWordTF.text.length < 6 || self.nPassWordTextF.text.length < 6) {
-        [MBProgressHUD showSuccess:@"请输入6~16位登录密码"];
+        [XBTProgressHUD showSuccess:@"请输入6~16位登录密码"];
         return;
     }
     NSDictionary *params = @{@"oldPass":self.oldPassWordTF.text,
@@ -105,12 +105,12 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"updateUserPass" params:params success:^(id  _Nullable obj) {
         if (obj!= nil) {
-            DMStateModel *sate = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *sate = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (sate.status == ResultStatusSuccess) {
-                [MBProgressHUD showSuccess:sate.info];
+                [XBTProgressHUD showSuccess:sate.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }else{
-                [MBProgressHUD showSuccess:sate.info];
+                [XBTProgressHUD showSuccess:sate.info];
             }
         }
     } failure:^(NSError * _Nullable error) {

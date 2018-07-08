@@ -1,5 +1,5 @@
 //
-//  DMShareCodeController.h
+//  XBTShareCodeController.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/6/8.

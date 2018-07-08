@@ -55,7 +55,7 @@
     [YBHttpTool postDataDifference:@"queryBorrowIntroduce" params:@{@"id":self.prdID} success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj!= nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 XBTProductInformationModel *model = [XBTProductInformationModel mj_objectWithKeyValues:obj[@"data"]];
                 weakSelf.detialArray = @[model.introductionInfos,model.riskControlInfos,model.collateralInfos,model.guaranteetype];

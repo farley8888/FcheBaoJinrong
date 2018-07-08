@@ -10,7 +10,7 @@
 #import "MyModel.h"
 #import "MyHeadView.h"
 #import "DMSecionFooterView.h"
-#import "DMMyControllerCollectionCell.h"
+#import "XBTMyControllerCollectionCell.h"
 #import "DMNavigationBar.h"
 
 #import "LonginController.h"

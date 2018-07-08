@@ -31,14 +31,14 @@
 }
 - (IBAction)sendCodeButtonClick:(XBTCountdownButton *)sender {
     if (![XBTMatch isPhoneNum:self.phoneTF.text]) {
-        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     sender.enabled = NO;
     [YBHttpTool postDataDifference:@"getPhoneCode2" params:@{@"cellPhone":self.phoneTF.text} success:^(id  _Nullable obj) {
         if (obj!= nil) {
             sender.enabled = YES;
-            [MBProgressHUD showSuccess:obj[@"state"][@"info"]];
+            [XBTProgressHUD showSuccess:obj[@"state"][@"info"]];
             if ([obj[@"state"][@"status"] isEqualToString:@"y"] ) {
                 sender.timeCount = 60;
                 [sender start];
@@ -72,7 +72,7 @@
         DMLog(@"可以发送请求");
         [self changePassWord];
     }else{
-        [MBProgressHUD showSuccess:title];
+        [XBTProgressHUD showSuccess:title];
     }
 }
 
@@ -85,9 +85,9 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"updateforGetPass" params:params success:^(id  _Nullable obj) {
         if (obj!= nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                [MBProgressHUD showSuccess:stateModel.info];
+                [XBTProgressHUD showSuccess:stateModel.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
         }
@@ -100,7 +100,7 @@
 - (void)verificationPhoneNumber:(NSString *)phoneNumber
 {
     if (![XBTMatch isPhoneNum:phoneNumber]) {
-        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     WeakSelf
@@ -111,7 +111,7 @@
                 weakSelf.getCodeButton.userInteractionEnabled = YES;
                 [weakSelf.getCodeButton setTitleColor:kColor(236, 128, 57) forState:UIControlStateNormal];
             }else{
-                [MBProgressHUD showSuccess:@"请检查手机号码是否正确及注册"];
+                [XBTProgressHUD showSuccess:@"请检查手机号码是否正确及注册"];
                 weakSelf.getCodeButton.userInteractionEnabled = NO;
                 [weakSelf.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
             }

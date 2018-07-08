@@ -1,5 +1,5 @@
 //
-//  DMSettingCell.h
+//  XBTSettingCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/17.

@@ -1,5 +1,5 @@
 //
-//  DMSubstitutePaymentCell.h
+//  XBTSubstitutePaymentCell.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/15.

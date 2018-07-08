@@ -55,7 +55,7 @@
     [YBHttpTool postDataDifference:@"queryBorrowData" params:@{@"id":self.prdID} success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj!=nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [XBTLoanMateriaModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;

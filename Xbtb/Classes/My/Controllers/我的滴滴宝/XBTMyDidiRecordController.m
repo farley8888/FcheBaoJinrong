@@ -7,14 +7,14 @@
 //
 
 #import "XBTMyDidiRecordController.h"
-#import "DMLotOfViewScrollerTopView.h"
-#import "DMRecordChildController.h"
+#import "LotOfViewScrollerTopView.h"
+#import "RecordChildController.h"
 
 @interface XBTMyDidiRecordController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scroller;
-@property (nonatomic, strong) DMLotOfViewScrollerTopView *topView;
-@property (nonatomic, strong) DMRecordChildController *recordVC;
+@property (nonatomic, strong) LotOfViewScrollerTopView *topView;
+@property (nonatomic, strong) RecordChildController *recordVC;
 
 @end
 
@@ -44,7 +44,7 @@
 {
     self.navigationItem.title = @"记录";
     self.view.backgroundColor = [UIColor whiteColor];
-    DMLotOfViewScrollerTopView *topView = [[DMLotOfViewScrollerTopView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, kScreenW  , 60)];
+    LotOfViewScrollerTopView *topView = [[LotOfViewScrollerTopView alloc]initWithFrame:CGRectMake(0, SafeAreaTopHeight, kScreenW  , 60)];
     topView.titleArr = @[@"存入",@"赎回"];
     WeakSelf
     [topView setButtonClickBlock:^(NSInteger tag) {
@@ -57,13 +57,13 @@
 - (void)setController
 {
     [self.view addSubview: self.scroller];
-    DMRecordChildController *recVC = [DMRecordChildController new];
+    RecordChildController *recVC = [RecordChildController new];
     recVC.type = 1; 
     [self addChildViewController:recVC];
     [self.scroller  addSubview:recVC.view];
     recVC.view.frame = CGRectMake(0, 0, kScreenW, self.scroller.height);
     
-    DMRecordChildController *recVC2 = [DMRecordChildController new];
+    RecordChildController *recVC2 = [RecordChildController new];
     recVC2.type = 2; 
     [self addChildViewController:recVC2];
     [self.scroller addSubview:recVC2.view];
@@ -85,7 +85,7 @@
 
 - (void)scrolleAndLoadData:(NSInteger)tag
 {
-    __kindof DMRecordChildController *vc = self.childViewControllers[tag];
+    __kindof RecordChildController *vc = self.childViewControllers[tag];
     if (!vc.isLoadData) {
         [vc loadData];
     }

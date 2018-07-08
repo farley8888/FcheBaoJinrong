@@ -1,5 +1,5 @@
 //
-//  DMWebRechargeController.m
+//  XBTWebRechargeController.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/21.
@@ -9,7 +9,7 @@
 #import "XBTWebRechargeController.h"
 #import "WKDelegateController.h"
 #import "XBTInvestmentController.h"
-#import "DMTransactionRecordController.h"
+#import "TransactionRecordController.h"
 #import <WebKit/WebKit.h>
 #import "UIAlertView+Block.h"
 
@@ -119,7 +119,7 @@
         [self pushGetGiftPost:urlstr];
     }else if (num == 3){
 
-        DMTransactionRecordController  *transactionVC = [DMTransactionRecordController new];
+        TransactionRecordController  *transactionVC = [TransactionRecordController new];
         [self.navigationController pushViewController:transactionVC animated:YES];
     }
 }

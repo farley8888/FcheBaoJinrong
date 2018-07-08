@@ -1,5 +1,5 @@
 //
-//  DMMyBankCardController.h
+//  XBTMyBankCardController.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/19.

@@ -8,7 +8,7 @@
 
 #import "LonginController.h"
 #import "NSUserDefaults+Extension.h"
-#import "DMUserTool.h"
+#import "XBTUserTool.h"
 #import "XBTMatch.h"
 #import "SelectVCTool.h"
 #import "RegisterController.h"
@@ -70,7 +70,7 @@
     
     [self.phoneTF addTarget:self action:@selector(phoneTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
     [self.passwordTF addTarget:self action:@selector(phoneTextFieldChange:) forControlEvents:UIControlEventEditingChanged];
-    XBTUser *userDisk = [DMUserTool getCurrentLoginUser];
+    XBTUser *userDisk = [XBTUserTool getCurrentLoginUser];
     if (userDisk.userName != 0) {
         self.phoneTF.text = userDisk.userName;
     }
@@ -99,32 +99,32 @@
     NSString *phone = self.phoneTF.text;
     NSString *password = self.passwordTF.text;
     if (![XBTMatch isPhoneNum:phone]) {
-        [MBProgressHUD showError:@"请输入正确的手机号码"];
+        [XBTProgressHUD showError:@"请输入正确的手机号码"];
         return;
     }
     if (password.length == 0) {
-        [MBProgressHUD showSuccess:@"请输入密码"];
+        [XBTProgressHUD showSuccess:@"请输入密码"];
         return;
     }
 
     NSDictionary *params = @{@"userName":phone,
                              @"pwd":password,
                              };
-    [MBProgressHUD showMessage:@"登录中..."];
+    [XBTProgressHUD showMessage:@"登录中..."];
     WeakSelf
     [YBHttpTool postDataDifference:@"login" params:params success:^(id  _Nullable obj) {
-        [MBProgressHUD hideHUD];
+        [XBTProgressHUD hideHUD];
         if (obj != nil) {
-            DMStateModel *model = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             
             if (model.status == ResultStatusSuccess) {
-                [MBProgressHUD showSuccess:@"登录成功"];
+                [XBTProgressHUD showSuccess:@"登录成功"];
                 XBTUser *user = [XBTUser mj_objectWithKeyValues:obj];
                 user.password = password;
                 UserManager *userManager = [UserManager sharedManager];
                 userManager.user = user;
                 //把user保存到本地
-                [DMUserTool saveUser:user];
+                [XBTUserTool saveUser:user];
                 //把登录记录保存到数据库中
                 //[[YBDataBaseTool shareInstance] insertUser:user];
                 [weakSelf dismissViewControllerAnimated:YES completion:^{
@@ -134,11 +134,11 @@
                     [SelectVCTool selectVC];
                 }
             }else{
-               [MBProgressHUD showSuccess:model.info];
+               [XBTProgressHUD showSuccess:model.info];
             }
         }
     } failure:^(NSError * _Nullable error) {
-        [MBProgressHUD hideHUD];
+        [XBTProgressHUD hideHUD];
     }];
 }
 

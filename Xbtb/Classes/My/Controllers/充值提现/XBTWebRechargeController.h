@@ -1,5 +1,5 @@
 //
-//  DMWebRechargeController.h
+//  XBTWebRechargeController.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/21.

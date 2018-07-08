@@ -10,7 +10,7 @@
 #import "SelectVCTool.h"
 #import "XBTGesturePasswordController.h"
 #import "XBTNavigationController.h"
-#import "DMUserTool.h"
+#import "XBTUserTool.h"
 #import <UMCommon/UMCommon.h> //友盟
 #import <UMShare/UMShare.h>
 #import <UMAnalytics/MobClick.h>
@@ -100,11 +100,11 @@
 
 - (void)getGesStringAndOpen
 {
-    [UserManager sharedManager].user = [DMUserTool getCurrentLoginUser];
+    [UserManager sharedManager].user = [XBTUserTool getCurrentLoginUser];
     [UserManager sharedManager].gesString = [NSUserDefaults getObjectForKey:GesturesPassword];
     [UserManager sharedManager].isOpenGes = self.isGes;
     if(!self.isGes){
-        [DMUserTool login:[UserManager sharedManager].user];
+        [XBTUserTool login:[UserManager sharedManager].user];
     }
 }
 

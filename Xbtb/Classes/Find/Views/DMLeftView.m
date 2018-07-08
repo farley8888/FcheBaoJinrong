@@ -62,7 +62,7 @@
         [weakSelf.tableView.mj_header endRefreshing];
         if (obj!= nil) {
             XBTDindModel *model = [XBTDindModel mj_objectWithKeyValues:obj];
-            DMPageModel *pageModel = model.page;
+            XBTPageModel *pageModel = model.page;
             weakSelf.dataArray = model.list;
             kSetupMJ_footer_loadData(loadMoreData)
             if (model.list.count == 0) {
@@ -88,7 +88,7 @@
         [weakSelf.tableView.mj_footer endRefreshing];
         if (obj!= nil) {
             XBTDindModel *model = [XBTDindModel mj_objectWithKeyValues:obj];
-            DMPageModel *pageModel = model.page;
+            XBTPageModel *pageModel = model.page;
             [weakSelf.dataArray addObjectsFromArray: model.list];
             kSetupMJ_footer_loadMoreData
             if (model.list.count == 0) {

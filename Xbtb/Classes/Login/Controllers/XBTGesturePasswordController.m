@@ -7,19 +7,19 @@
 //
 
 #import "XBTGesturePasswordController.h"
-#import "DMGestureLockViewController.h"
-#import "DMGestureLockView.h"
-#import "DMGestureLockIndicator.h"
+#import "GestureLockViewController.h"
+#import "GestureLockView.h"
+#import "GestureLockIndicator.h"
 #import "SelectVCTool.h"
-#import "DMUserTool.h"
+#import "XBTUserTool.h"
 #import "RegisterController.h"
 #import "DMNavigationBar.h"
 #import "LonginController.h"
 #import "UIAlertView+Block.h"
 #import "XBTNavigationController.h"
-#import "DMMainController.h"
+#import "XBTMainController.h"
 #import "UINavigationController+DM.h"
-#import "DMUserTool.h"
+#import "XBTUserTool.h"
 
 @interface XBTGesturePasswordController () <DMGestureLockDelegate, UIAlertViewDelegate>
 // 手势状态栏提示label
@@ -27,8 +27,8 @@
 //// 其他账户登录按钮
 //@property (weak, nonatomic) UIButton *otherAcountBtn;
 
-@property (strong, nonatomic) DMGestureLockView *gestureLockView;
-@property (strong, nonatomic) DMGestureLockIndicator *gestureLockIndicator;
+@property (strong, nonatomic) GestureLockView *gestureLockView;
+@property (strong, nonatomic) GestureLockIndicator *gestureLockIndicator;
 @property (nonatomic, strong) UIImageView *topImageView;
 @property (nonatomic) DMUnlockType unlockType;
 
@@ -91,7 +91,7 @@
     self.statusLabel = statusLabel;
     
     // 九宫格 手势密码页面
-    DMGestureLockView *gestureLockView = [[DMGestureLockView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(statusLabel.frame)+5, kScreenW *0.8, kScreenW *0.8)];
+    GestureLockView *gestureLockView = [[GestureLockView alloc]initWithFrame:CGRectMake(0,CGRectGetMaxY(statusLabel.frame)+5, kScreenW *0.8, kScreenW *0.8)];
     gestureLockView.centerX = self.view.centerX;
     gestureLockView.delegate = self;
     [self.view addSubview:gestureLockView];
@@ -160,10 +160,10 @@
 - (void)validateGesturesPassword:(NSMutableString *)gesturesPassword {
     
     static NSInteger errorCount = 5;
-    DMLog(@"手势密码：%@",[DMGestureLockViewController gesturesPassword]);
-    if ([gesturesPassword isEqualToString:[DMGestureLockViewController gesturesPassword]]) {
+    DMLog(@"手势密码：%@",[GestureLockViewController gesturesPassword]);
+    if ([gesturesPassword isEqualToString:[GestureLockViewController gesturesPassword]]) {
         errorCount = 5;
-        [DMUserTool login:[DMUserTool getCurrentLoginUser]];  //自动登录
+        [XBTUserTool login:[XBTUserTool getCurrentLoginUser]];  //自动登录
     } else {
         if (errorCount - 1 == 0) { // 你已经输错五次了！ 退出重新登陆！
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"手势密码已失效" message:@"请重新登陆" delegate:self cancelButtonTitle:nil otherButtonTitles:@"重新登陆", nil];
@@ -209,7 +209,7 @@
 
 #pragma mark - DMgestureLockViewDelegate
 
-- (void)gestureLockView:(DMGestureLockView *)lockView drawRectFinished:(NSMutableString *)gesturePassword {
+- (void)gestureLockView:(GestureLockView *)lockView drawRectFinished:(NSMutableString *)gesturePassword {
     
     [self validateGesturesPassword:gesturePassword];
 }

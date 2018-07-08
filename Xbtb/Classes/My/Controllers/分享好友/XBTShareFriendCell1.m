@@ -1,5 +1,5 @@
 //
-//  DMShareFriendCell1.m
+//  XBTShareFriendCell1.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/6/7.

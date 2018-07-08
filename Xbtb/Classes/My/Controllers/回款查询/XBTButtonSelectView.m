@@ -1,5 +1,5 @@
 //
-//  DMButtonSelectView.m
+//  XBTButtonSelectView.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/15.
@@ -19,7 +19,7 @@
 
 + (XBTButtonSelectView *)buttonselectView
 {
-    XBTButtonSelectView *view = [[UINib nibWithNibName:@"DMButtonSelectView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
+    XBTButtonSelectView *view = [[UINib nibWithNibName:@"XBTButtonSelectView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
     [view setUI];
     return view;
 }

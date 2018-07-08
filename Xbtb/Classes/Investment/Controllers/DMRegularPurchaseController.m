@@ -11,7 +11,7 @@
 #import "XBTMatch.h"
 #import "XBTInputPSWController.h"
 #import "XBTJSController.h"
-#import "DMRechargeController.h"        //充值
+#import "XBTRechargeController.h"        //充值
 
 @interface DMRegularPurchaseController ()
 /**  标题  **/
@@ -100,7 +100,7 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"didiPurchaseInfo" params:nil success:^(id  _Nullable obj) {
         if (obj!=nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 weakSelf.balanceLabel.text = [NSString stringWithFormat:@"%@元",obj[@"usermoney"]];
                 weakSelf.canuseMoney = [obj[@"usermoney"] floatValue];
@@ -128,9 +128,9 @@
 
 - (BOOL)canPost
 {
-    if (![XBTMatch isMoney:self.moneyTF.text]) {[MBProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
-    if ([self.moneyTF.text floatValue] < 100) {[MBProgressHUD showSuccess:@"最小投资金额为100元"]; return NO;};
-    if (self.agreeButton.selected == NO) {[MBProgressHUD showSuccess:@"请勾选服务协议"]; return NO;}
+    if (![XBTMatch isMoney:self.moneyTF.text]) {[XBTProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
+    if ([self.moneyTF.text floatValue] < 100) {[XBTProgressHUD showSuccess:@"最小投资金额为100元"]; return NO;};
+    if (self.agreeButton.selected == NO) {[XBTProgressHUD showSuccess:@"请勾选服务协议"]; return NO;}
     return YES;
 }
 
@@ -170,7 +170,7 @@
 - (IBAction)selectCouponButtonclick:(id)sender {
     
     if (![XBTMatch isMoney:self.moneyTF.text]) {
-        [MBProgressHUD showSuccess:@"请输入正确的金额"];
+        [XBTProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
     XBTMyCouponController *cpVC = [XBTMyCouponController new];
@@ -206,11 +206,11 @@
     [YBHttpTool postDataDifference:@"bfpay/investAjaxBorrow" params:params success:^(id  _Nullable obj) {
         if (obj!=nil) {
             DMLog(@"投资结果：%@",obj[@"info"]);
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
-            [MBProgressHUD showSuccess:stateModel.info];
+            [XBTProgressHUD showSuccess:stateModel.info];
         }
     } failure:^(NSError * _Nullable error) {
         
@@ -225,7 +225,7 @@
     WeakSelf
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"去充值" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        DMRechargeController *repVC = [DMRechargeController new];
+        XBTRechargeController *repVC = [XBTRechargeController new];
         [weakSelf.navigationController pushViewController:repVC animated:YES];
         
     }];
@@ -238,7 +238,7 @@
 - (void)textFieldEditing:(UITextField *)tf
 {
     if (![XBTMatch isMoney:tf.text] && tf.text.length > 0) {
-        [MBProgressHUD showSuccess:@"请检查输入金额"];
+        [XBTProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }
     

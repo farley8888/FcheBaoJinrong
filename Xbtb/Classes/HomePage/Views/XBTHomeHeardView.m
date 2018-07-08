@@ -11,8 +11,8 @@
 #import "NewPagedFlowView.h"
 #import "PGIndexBannerSubiew.h"
 #import "UIImageView+SD.h"
-#import "DMLoopView.h"
-#import "DMMessageController.h"
+#import "LoopView.h"
+#import "MessageController.h"
 
 #define kBanner_H (kScreenW - 30) / (670.0/330.0)
 
@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topBanner_H;
 /**  搭载四个按钮和loopView的背景view  **/
 @property (weak, nonatomic) IBOutlet UIView *rdView;
-@property (weak, nonatomic) IBOutlet DMLoopView *loopView;
+@property (weak, nonatomic) IBOutlet LoopView *loopView;
 @property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 /**

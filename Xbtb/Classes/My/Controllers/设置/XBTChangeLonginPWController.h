@@ -1,5 +1,5 @@
 //
-//  DMChangeLonginPWController.h
+//  XBTChangeLonginPWController.h
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/16.

@@ -7,7 +7,7 @@
 //
 
 #import "XBTFilterView.h"
-#import "DMFilterViewCell.h"
+#import "XBTFilterViewCell.h"
 
 @interface XBTFilterView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -35,7 +35,7 @@
     UICollectionView *collection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, self.height * 0.7, self.width, self.height * 0.3)collectionViewLayout:layout];
     collection.delegate = self;
     collection.dataSource = self;
-    [collection registerNib:[UINib nibWithNibName:@"DMFilterViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"DMFilterViewCell"];
+    [collection registerNib:[UINib nibWithNibName:@"XBTFilterViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"XBTFilterViewCell"];
 //    [collection  registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     
     [self addSubview:collection];
@@ -53,7 +53,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DMFilterViewCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"XBTFilterViewCell" forIndexPath:indexPath];
     
     return cell;
 }

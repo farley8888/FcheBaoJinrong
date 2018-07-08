@@ -1,5 +1,5 @@
 //
-//  DMMyBankCardController.m
+//  XBTMyBankCardController.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/19.
@@ -8,7 +8,7 @@
 
 #import "XBTMyBankCardController.h"
 #import "DMNavigationBar.h"
-#import "DMMyBankCardModel.h"
+#import "XBTMyBankCardModel.h"
 
 @interface XBTMyBankCardController ()
 @property (weak, nonatomic) IBOutlet UIView *bkView;
@@ -47,10 +47,10 @@
     WeakSelf
     [YBHttpTool postDataDifference:@"selectBankCard" params:nil success:^(id  _Nullable obj) {
         if (obj!= nil) {
-            DMStateModel *stateModel = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                NSMutableArray *modelArray = [DMMyBankCardModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
-                DMMyBankCardModel *model = [modelArray firstObject];
+                NSMutableArray *modelArray = [XBTMyBankCardModel mj_objectArrayWithKeyValuesArray:obj[@"data"]];
+                XBTMyBankCardModel *model = [modelArray firstObject];
                 weakSelf.bankName.text = model.bankName;
                 NSString *cardNum = [model.bankCardNo stringByReplacingCharactersInRange:NSMakeRange(4, model.bankCardNo.length - 8) withString:@" **** **** **** "];
                 weakSelf.bankNumber.text = cardNum;

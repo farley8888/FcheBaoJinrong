@@ -11,7 +11,7 @@
 #import "DMLoanMaterialController.h"            //借款资料
 #import "DMPurchaseRecordController.h"          //购买记录
 #import "DMRegularPurchaseController.h"         //购买非滴滴宝
-#import "DMLotOfViewScrollerTopView.h"
+#import "LotOfViewScrollerTopView.h"
 #import "XBTNavigationController.h"
 #import "LonginController.h"
 
@@ -20,7 +20,7 @@
 @property (nonatomic, strong) DMProductInformationController *prdInfoVC;
 @property (nonatomic, strong) DMLoanMaterialController *loaMaterVC;
 @property (nonatomic, strong) DMPurchaseRecordController *purchRecordVC;
-@property (nonatomic, strong) DMLotOfViewScrollerTopView *topView;
+@property (nonatomic, strong) LotOfViewScrollerTopView *topView;
 @property (nonatomic, strong) UIScrollView *scroller;
 
 @end
@@ -87,7 +87,7 @@
 {
     self.navigationItem.title = @"产品介绍";
     self.view.backgroundColor = [UIColor whiteColor];
-    DMLotOfViewScrollerTopView *topView = [[DMLotOfViewScrollerTopView alloc]initWithFrame:CGRectMake(0, 0, kScreenW  , 60)];
+    LotOfViewScrollerTopView *topView = [[LotOfViewScrollerTopView alloc]initWithFrame:CGRectMake(0, 0, kScreenW  , 60)];
     topView.titleArr = @[@"产品信息",@"借款材料",@"购买记录"];
     WeakSelf
     [topView setButtonClickBlock:^(NSInteger tag) {

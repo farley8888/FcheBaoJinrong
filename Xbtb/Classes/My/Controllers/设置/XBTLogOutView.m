@@ -1,5 +1,5 @@
 //
-//  DMLogOutView.m
+//  XBTLogOutView.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/16.
@@ -13,7 +13,7 @@
 
 + (XBTLogOutView *)logoutView
 {
-    XBTLogOutView *view = [[UINib nibWithNibName:@"DMLogOutView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
+    XBTLogOutView *view = [[UINib nibWithNibName:@"XBTLogOutView" bundle:nil]instantiateWithOwner:self options:nil].lastObject;
     return view;
 }
 - (IBAction)logOutButtonClick:(id)sender {

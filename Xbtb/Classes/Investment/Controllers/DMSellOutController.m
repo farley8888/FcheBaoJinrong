@@ -57,8 +57,8 @@
     [YBHttpTool postDataDifference:@"selectNoviceBorrowList2" params:params success:^(id  _Nullable obj) {
         kLoadDataHeaderEnd
         if (obj != nil) {
-            DMStateModel *state = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
-            DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+            XBTStateModel *state = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (state.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [Data1 mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 weakSelf.dataArray = arr;
@@ -81,8 +81,8 @@
     [YBHttpTool postDataDifference:@"selectNoviceBorrowList2" params:params success:^(id  _Nullable obj) {
         kloadDataFooterEnd
         if (obj != nil) {
-            DMStateModel *state = [DMStateModel mj_objectWithKeyValues:obj[@"state"]];
-            DMPageModel *pageModel = [DMPageModel mj_objectWithKeyValues:obj[@"page"]];
+            XBTStateModel *state = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
+            XBTPageModel *pageModel = [XBTPageModel mj_objectWithKeyValues:obj[@"page"]];
             if (state.status == ResultStatusSuccess) {
                 NSMutableArray *arr = [Data1 mj_objectArrayWithKeyValuesArray:obj[@"data"]];
                 [weakSelf.dataArray addObjectsFromArray: arr];

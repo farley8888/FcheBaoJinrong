@@ -1,5 +1,5 @@
 //
-//  DMDetialCell.m
+//  XBTDetialCell.m
 //  CheBaoJinRong
 //
 //  Created by apple on 2018/5/15.

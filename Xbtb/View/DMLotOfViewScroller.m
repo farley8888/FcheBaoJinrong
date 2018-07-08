@@ -6,18 +6,18 @@
 //  Copyright © 2018年 apple. All rights reserved.
 //
 
-#import "DMLotOfViewScroller.h"
+#import "XBTLotOfViewScroller.h"
 #import "DMLotOfViewScrollerTopView.h"
-#import "DMLotOfViewTableView.h"
+#import "XBTLotOfViewTableView.h"
 
-@interface DMLotOfViewScroller ()<UIScrollViewDelegate>
+@interface XBTLotOfViewScroller ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollerView;
 @property (nonatomic, strong) DMLotOfViewScrollerTopView *topView;
 
 @end
 
-@implementation DMLotOfViewScroller
+@implementation XBTLotOfViewScroller
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
