@@ -39,17 +39,17 @@
 - (void)verificationInformation
 {
     if (self.oldPassWordTF.text.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入原密码"];
+        [MBProgressHUD showSuccess:@"请输入原密码"];
         return;
     }
     
     if (self.nPassWordTextF.text.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入新密码"];
+        [MBProgressHUD showSuccess:@"请输入新密码"];
         return;
     }
     
     if (![self.nPassWordTextF.text isEqualToString: self.repeatPSTF.text]) {
-        [XBTProgressHUD showSuccess:@"两次密码不一致，请重新输入"];
+        [MBProgressHUD showSuccess:@"两次密码不一致，请重新输入"];
         return;
     }
     
@@ -63,7 +63,7 @@
 - (void)changeTransactionPSW
 {
     if (self.oldPassWordTF.text.length != 6 || self.nPassWordTextF.text.length !=6) {
-        [XBTProgressHUD showSuccess:@"请输入6位交易密码"];
+        [MBProgressHUD showSuccess:@"请输入6位交易密码"];
         return;
     }
     
@@ -76,10 +76,10 @@
         if (obj!=nil) {
             XBTStateModel *sate = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (sate.status == ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:sate.info];
+                [MBProgressHUD showSuccess:sate.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }else{
-                [XBTProgressHUD showSuccess:sate.info];
+                [MBProgressHUD showSuccess:sate.info];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -96,7 +96,7 @@
 //    }
     
     if (self.oldPassWordTF.text.length > 16 || self.nPassWordTextF.text.length >16 || self.oldPassWordTF.text.length < 6 || self.nPassWordTextF.text.length < 6) {
-        [XBTProgressHUD showSuccess:@"请输入6~16位登录密码"];
+        [MBProgressHUD showSuccess:@"请输入6~16位登录密码"];
         return;
     }
     NSDictionary *params = @{@"oldPass":self.oldPassWordTF.text,
@@ -107,10 +107,10 @@
         if (obj!= nil) {
             XBTStateModel *sate = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (sate.status == ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:sate.info];
+                [MBProgressHUD showSuccess:sate.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }else{
-                [XBTProgressHUD showSuccess:sate.info];
+                [MBProgressHUD showSuccess:sate.info];
             }
         }
     } failure:^(NSError * _Nullable error) {

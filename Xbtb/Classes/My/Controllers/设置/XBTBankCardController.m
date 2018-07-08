@@ -45,19 +45,19 @@
 - (void)verificationInformation
 {
     if (self.cardTextF.text.length < 16) {
-        [XBTProgressHUD showSuccess:@"请输入正确的银行卡号"];
+        [MBProgressHUD showSuccess:@"请输入正确的银行卡号"];
         return;
     }
     if (![XBTMatch isPhoneNum:self.phoneTextF.text]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     if (self.cityTF.text.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入所属市/县"];
+        [MBProgressHUD showSuccess:@"请输入所属市/县"];
         return;
     }
     if (self.subbranchTF.text.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入开户行名称"];
+        [MBProgressHUD showSuccess:@"请输入开户行名称"];
         return;
     }
     
@@ -82,7 +82,7 @@
                 [XBTUserTool saveUser:[UserManager sharedManager].user];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
-            [XBTProgressHUD showSuccess:model.info];
+            [MBProgressHUD showSuccess:model.info];
         }
     } failure:^(NSError * _Nullable error) {
         

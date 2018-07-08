@@ -268,7 +268,7 @@
 - (void)showMessage:(NSString *)message
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [XBTProgressHUD showSuccess:message];
+        [MBProgressHUD showSuccess:message];
     });
 }
 

@@ -91,7 +91,7 @@
                 kSetupMJ_footer_loadData(loadMoreData);
             }else{
                 if (![model.state.info isEqualToString:@"数据为空"]) {
-                    [XBTProgressHUD showSuccess:model.state.info];
+                    [MBProgressHUD showSuccess:model.state.info];
                 }
             }
         }
@@ -117,7 +117,7 @@
                 kSetupMJ_footer_loadMoreData
             }else{
                 if (![model.state.info isEqualToString:@"数据为空"]) {
-                    [XBTProgressHUD showSuccess:model.state.info];
+                    [MBProgressHUD showSuccess:model.state.info];
                 }
             }
         }

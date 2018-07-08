@@ -91,11 +91,11 @@
 - (IBAction)rechargeVuttonClick:(UIButton *)sender {
     
     if (![XBTMatch isMoney:self.rechargeTF.text]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的金额"];
+        [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
     if ([self.rechargeTF.text floatValue] < 100) {
-        [XBTProgressHUD showSuccess:@"最小充值金额为100元"];
+        [MBProgressHUD showSuccess:@"最小充值金额为100元"];
         return;
     }
     

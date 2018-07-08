@@ -128,9 +128,9 @@
 
 - (BOOL)canPost
 {
-    if (![XBTMatch isMoney:self.moneyTF.text]) {[XBTProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
-    if ([self.moneyTF.text floatValue] < 100) {[XBTProgressHUD showSuccess:@"最小投资金额为100元"]; return NO;};
-    if (self.agreeButton.selected == NO) {[XBTProgressHUD showSuccess:@"请勾选服务协议"]; return NO;}
+    if (![XBTMatch isMoney:self.moneyTF.text]) {[MBProgressHUD showSuccess:@"请检查输入金额"]; return NO;};
+    if ([self.moneyTF.text floatValue] < 100) {[MBProgressHUD showSuccess:@"最小投资金额为100元"]; return NO;};
+    if (self.agreeButton.selected == NO) {[MBProgressHUD showSuccess:@"请勾选服务协议"]; return NO;}
     return YES;
 }
 
@@ -170,7 +170,7 @@
 - (IBAction)selectCouponButtonclick:(id)sender {
     
     if (![XBTMatch isMoney:self.moneyTF.text]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的金额"];
+        [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
     XBTMyCouponController *cpVC = [XBTMyCouponController new];
@@ -210,7 +210,7 @@
             if (stateModel.status == ResultStatusSuccess) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
-            [XBTProgressHUD showSuccess:stateModel.info];
+            [MBProgressHUD showSuccess:stateModel.info];
         }
     } failure:^(NSError * _Nullable error) {
         
@@ -238,7 +238,7 @@
 - (void)textFieldEditing:(UITextField *)tf
 {
     if (![XBTMatch isMoney:tf.text] && tf.text.length > 0) {
-        [XBTProgressHUD showSuccess:@"请检查输入金额"];
+        [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }
     

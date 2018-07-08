@@ -10,7 +10,7 @@
 #import "XBTMD5.h"
 #import "UserManager.h"
 #import "Define.h"
-#import "XBTProgressHUD+MJ.h"
+#import "MBProgressHUD+MJ.h"
 #import <objc/runtime.h>
 #import "NSUserDefaults+Extension.h"
 #import "UIAlertView+Block.h"
@@ -46,7 +46,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
 + (void)errorHandle:(NSURLSessionDataTask * _Nullable)task error:(NSError * _Nonnull)error failure:(void (^)(NSError *))failure
 {
     
-    [XBTProgressHUD hideHUD];
+    [MBProgressHUD hideHUD];
     DMLog(@"请求出错了------%@", task.originalRequest.URL.absoluteString);
     DMLog(@"请求出错了------%@", error.localizedDescription);
     
@@ -69,7 +69,7 @@ static char *NSErrorStatusCodeKey = "NSErrorStatusCodeKey";
 //        } cancelButtonTitle:@"好" otherButtonTitles:nil];
 //        [alertView show];
         if ([UIApplication sharedApplication].windows.count){
-            [XBTProgressHUD showError:@"没有网络，请检查网络设置！"];
+            [MBProgressHUD showError:@"没有网络，请检查网络设置！"];
         }
     } else if (statusCode == 500) {//参数错误
 //        UIAlertView *alertView = [UIAlertView alertWithTitle:nil message:@"参数错误！" buttonIndex:^(NSInteger index) {

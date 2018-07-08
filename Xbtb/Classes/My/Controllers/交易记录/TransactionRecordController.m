@@ -68,7 +68,7 @@
                 [weakSelf.tableView notData:CGRectMake(0, 0, kScreenW, kScreenH - SafeAreaTopHeight)];
                 
             }else{
-               [XBTProgressHUD showSuccess:stateModel.info];
+               [MBProgressHUD showSuccess:stateModel.info];
             }
 
         }
@@ -97,7 +97,7 @@
                 [weakSelf.tableView notData:CGRectMake(0, 0, kScreenW, kScreenH - SafeAreaTopHeight)];
                 
             }else{
-                [XBTProgressHUD showSuccess:stateModel.info];
+                [MBProgressHUD showSuccess:stateModel.info];
             }
         }
     } failure:^(NSError * _Nullable error) {

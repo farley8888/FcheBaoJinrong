@@ -99,22 +99,22 @@
     }
     
     if (self.nameTextF.text.length == 0 || self.nameTextF.text.length == 1 ) {
-        [XBTProgressHUD showSuccess:str];
+        [MBProgressHUD showSuccess:str];
         return;
     }
     if (self.type != TransactionPassWord) {
         if (self.cardTextF.text.length != 18) {
-            [XBTProgressHUD showSuccess:str1];
+            [MBProgressHUD showSuccess:str1];
             return;
         }
     }else{
         if (self.nameTextF.text.length != 6 || self.cardTextF.text.length != 6) {
-            [XBTProgressHUD showSuccess:@"请输入6位交易密码"];
+            [MBProgressHUD showSuccess:@"请输入6位交易密码"];
             return;
         }
         
         if(self.nameTextF.text != self.cardTextF.text){
-            [XBTProgressHUD showSuccess:str1];
+            [MBProgressHUD showSuccess:str1];
             return;
         }
     }
@@ -135,7 +135,7 @@
     [YBHttpTool postDataDifference:@"setUserPayPwd" params:params success:^(id  _Nullable obj) {
         if (obj!=nil) {
             XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
-            [XBTProgressHUD showSuccess:stateModel.info];
+            [MBProgressHUD showSuccess:stateModel.info];
             if (stateModel.status == ResultStatusSuccess) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
@@ -162,7 +162,7 @@
                 
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
-                [XBTProgressHUD showSuccess:obj[@"info"]];
+                [MBProgressHUD showSuccess:obj[@"info"]];
         }
     } failure:^(NSError * _Nullable error) {
         

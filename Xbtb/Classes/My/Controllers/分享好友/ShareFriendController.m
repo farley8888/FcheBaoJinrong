@@ -74,9 +74,9 @@
     [[UMSocialManager defaultManager] shareToPlatform:platformType messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
         if (error) {
             UMSocialLogInfo(@"************Share fail with error %@*********",error);
-            [XBTProgressHUD showSuccess:@"分享失败"];
+            [MBProgressHUD showSuccess:@"分享失败"];
         }else{
-            [XBTProgressHUD showSuccess:@"分享成功"];
+            [MBProgressHUD showSuccess:@"分享成功"];
         }
     }];
 }

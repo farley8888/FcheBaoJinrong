@@ -151,7 +151,7 @@
                 if ([model.state.info isEqualToString:@"未登录"]) {
                     [weakSelf loginViewPresend];
                 }else{
-                    [XBTProgressHUD showSuccess:model.state.info];
+                    [MBProgressHUD showSuccess:model.state.info];
                 }
             }
         }

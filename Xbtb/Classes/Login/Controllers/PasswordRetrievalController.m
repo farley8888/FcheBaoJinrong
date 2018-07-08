@@ -31,14 +31,14 @@
 }
 - (IBAction)sendCodeButtonClick:(XBTCountdownButton *)sender {
     if (![XBTMatch isPhoneNum:self.phoneTF.text]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     sender.enabled = NO;
     [YBHttpTool postDataDifference:@"getPhoneCode2" params:@{@"cellPhone":self.phoneTF.text} success:^(id  _Nullable obj) {
         if (obj!= nil) {
             sender.enabled = YES;
-            [XBTProgressHUD showSuccess:obj[@"state"][@"info"]];
+            [MBProgressHUD showSuccess:obj[@"state"][@"info"]];
             if ([obj[@"state"][@"status"] isEqualToString:@"y"] ) {
                 sender.timeCount = 60;
                 [sender start];
@@ -72,7 +72,7 @@
         DMLog(@"可以发送请求");
         [self changePassWord];
     }else{
-        [XBTProgressHUD showSuccess:title];
+        [MBProgressHUD showSuccess:title];
     }
 }
 
@@ -87,7 +87,7 @@
         if (obj!= nil) {
             XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             if (stateModel.status == ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:stateModel.info];
+                [MBProgressHUD showSuccess:stateModel.info];
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
         }
@@ -100,7 +100,7 @@
 - (void)verificationPhoneNumber:(NSString *)phoneNumber
 {
     if (![XBTMatch isPhoneNum:phoneNumber]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     WeakSelf
@@ -111,7 +111,7 @@
                 weakSelf.getCodeButton.userInteractionEnabled = YES;
                 [weakSelf.getCodeButton setTitleColor:kColor(236, 128, 57) forState:UIControlStateNormal];
             }else{
-                [XBTProgressHUD showSuccess:@"请检查手机号码是否正确及注册"];
+                [MBProgressHUD showSuccess:@"请检查手机号码是否正确及注册"];
                 weakSelf.getCodeButton.userInteractionEnabled = NO;
                 [weakSelf.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
             }

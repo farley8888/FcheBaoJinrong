@@ -92,11 +92,11 @@
 - (IBAction)applyWithdrawCash:(UIButton *)sender {
 
     if (![XBTMatch isMoney:self.amoutTF.text] ) {
-        [XBTProgressHUD showSuccess:@"请输入正确的金额"];
+        [MBProgressHUD showSuccess:@"请输入正确的金额"];
         return;
     }
     if (![XBTMatch isInteger:self.pwTF.text]) {
-        [XBTProgressHUD showSuccess:@"请检查交易密码"];
+        [MBProgressHUD showSuccess:@"请检查交易密码"];
         return;
     }
     if (self.type == WithdrawCash) {
@@ -147,7 +147,7 @@
     [YBHttpTool postDataDifference:@"tongLianUserWithdraw" params:params success:^(id  _Nullable obj) {
         if (obj!=nil) {
             XBTStateModel *stateModel = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
-            [XBTProgressHUD showSuccess:stateModel.info];
+            [MBProgressHUD showSuccess:stateModel.info];
             if (stateModel.status == ResultStatusSuccess) {
                 [weakSelf scuessPushVC];
             }

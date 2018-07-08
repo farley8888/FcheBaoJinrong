@@ -61,7 +61,7 @@
                 [weakSelf.tableView reloadData];
                 [weakSelf.tableView notData:weakSelf.tableView.frame];
             }else{
-                [XBTProgressHUD showSuccess:stateModel.info];
+                [MBProgressHUD showSuccess:stateModel.info];
             }
         }
     } failure:^(NSError * _Nullable error) {

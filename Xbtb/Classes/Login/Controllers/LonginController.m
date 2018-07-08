@@ -99,26 +99,26 @@
     NSString *phone = self.phoneTF.text;
     NSString *password = self.passwordTF.text;
     if (![XBTMatch isPhoneNum:phone]) {
-        [XBTProgressHUD showError:@"请输入正确的手机号码"];
+        [MBProgressHUD showError:@"请输入正确的手机号码"];
         return;
     }
     if (password.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入密码"];
+        [MBProgressHUD showSuccess:@"请输入密码"];
         return;
     }
 
     NSDictionary *params = @{@"userName":phone,
                              @"pwd":password,
                              };
-    [XBTProgressHUD showMessage:@"登录中..."];
+    [MBProgressHUD showMessage:@"登录中..."];
     WeakSelf
     [YBHttpTool postDataDifference:@"login" params:params success:^(id  _Nullable obj) {
-        [XBTProgressHUD hideHUD];
+        [MBProgressHUD hideHUD];
         if (obj != nil) {
             XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             
             if (model.status == ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:@"登录成功"];
+                [MBProgressHUD showSuccess:@"登录成功"];
                 XBTUser *user = [XBTUser mj_objectWithKeyValues:obj];
                 user.password = password;
                 UserManager *userManager = [UserManager sharedManager];
@@ -134,11 +134,11 @@
                     [SelectVCTool selectVC];
                 }
             }else{
-               [XBTProgressHUD showSuccess:model.info];
+               [MBProgressHUD showSuccess:model.info];
             }
         }
     } failure:^(NSError * _Nullable error) {
-        [XBTProgressHUD hideHUD];
+        [MBProgressHUD hideHUD];
     }];
 }
 

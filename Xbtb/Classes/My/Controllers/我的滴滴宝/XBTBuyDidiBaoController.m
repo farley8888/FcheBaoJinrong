@@ -43,7 +43,7 @@
 - (void)textFieldEditing:(UITextField *)tf
 {
     if (![XBTMatch isMoney:tf.text]) {
-        [XBTProgressHUD showSuccess:@"请检查输入金额"];
+        [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }
     
@@ -79,15 +79,15 @@
 - (IBAction)sureInvestmentClick:(UIButton *)sender {
     
     if (![XBTMatch isMoney:self.moneyTF.text]) {
-        [XBTProgressHUD showSuccess:@"请检查输入金额"];
+        [MBProgressHUD showSuccess:@"请检查输入金额"];
         return;
     }
     if ([self.moneyTF.text floatValue] < 100) {
-        [XBTProgressHUD showSuccess:@"最小投资金额为100"];
+        [MBProgressHUD showSuccess:@"最小投资金额为100"];
         return;
     }
     if (!self.isAgree) {
-        [XBTProgressHUD showSuccess:@"请勾选服务协议"];
+        [MBProgressHUD showSuccess:@"请勾选服务协议"];
         return;
     }
     if ([self.moneyTF.text floatValue] > self.canuseMoney) {
@@ -143,7 +143,7 @@
     [YBHttpTool postDataDifference:@"applicationForm" params:params success:^(id  _Nullable obj) {
         if (obj!=nil) {
             XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
-            [XBTProgressHUD showSuccess:model.info];
+            [MBProgressHUD showSuccess:model.info];
             if ([model.info isEqualToString:@"出借成功"]) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }

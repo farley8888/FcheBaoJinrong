@@ -94,11 +94,11 @@
 - (IBAction)getButtonClick:(XBTCountdownButton *)sender {
     
     if (![XBTMatch isPhoneNum:self.phoneNumberTF.text]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     if (self.verificationCodeTF.text.length == 0) {
-        [XBTProgressHUD showSuccess:@"请输入正确的图片验证码"];
+        [MBProgressHUD showSuccess:@"请输入正确的图片验证码"];
         return;
     }
     [self sendVerifCode];
@@ -122,7 +122,7 @@
                 btn.timeCount = 60;
                 [btn start];
             }else{
-                [XBTProgressHUD showSuccess:obj[@"info"]];
+                [MBProgressHUD showSuccess:obj[@"info"]];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -134,13 +134,13 @@
 - (void)verificationPhoneCanUse:(NSString *)phoneNum
 {
     if (![XBTMatch isPhoneNum:phoneNum]) {
-        [XBTProgressHUD showSuccess:@"请输入正确的手机号码"];
+        [MBProgressHUD showSuccess:@"请输入正确的手机号码"];
         return;
     }
     [YBHttpTool postDataDifference:@"verificationNewUserPhone" params:@{@"userPhone":phoneNum} success:^(id  _Nullable obj) {
         if (obj!=nil) {
             if ([obj[@"state"][@"status"] integerValue] != ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:obj[@"state"][@"info"]];
+                [MBProgressHUD showSuccess:obj[@"state"][@"info"]];
             }
             DMLog(@"是否可用--%@",obj[@"state"][@"info"]);
         }
@@ -157,7 +157,7 @@
             if ([obj[@"state"][@"status"] integerValue] == ResultStatusSuccess) {
                 DMLog(@"推荐码：%@",obj[@"info"]);
             }else{
-                [XBTProgressHUD showSuccess:obj[@"info"]];
+                [MBProgressHUD showSuccess:obj[@"info"]];
             }
         }
     } failure:^(NSError * _Nullable error) {
@@ -176,7 +176,7 @@
     [YBHttpTool postDataDifference:@"regist" params:params success:^(id  _Nullable obj) {
         if (obj!= nil) {
             XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
-            [XBTProgressHUD showSuccess:model.info];
+            [MBProgressHUD showSuccess:model.info];
             if (model.status == ResultStatusSuccess) {
                 [weakSelf.navigationController popViewControllerAnimated:YES];
             }
@@ -219,7 +219,7 @@
         DMLog(@"可以发送请求");
         [self registUser];
     }else{
-        [XBTProgressHUD showSuccess:title];
+        [MBProgressHUD showSuccess:title];
     }
 }
 - (IBAction)xieyiButtonClick:(id)sender {

@@ -28,12 +28,12 @@ NSString* const PASSWORD = @"jd8123&&%sd23921hdasd";//对用户密码加密的�
                              };
     DMWeakSelf
     [YBHttpTool postDataDifference:@"login" params:params success:^(id  _Nullable obj) {
-        [XBTProgressHUD hideHUD];
+        [MBProgressHUD hideHUD];
         if (obj != nil) {
             XBTStateModel *model = [XBTStateModel mj_objectWithKeyValues:obj[@"state"]];
             
             if (model.status == ResultStatusSuccess) {
-                [XBTProgressHUD showSuccess:@"登录成功"];
+                [MBProgressHUD showSuccess:@"登录成功"];
                 XBTUser *userModel = [XBTUser mj_objectWithKeyValues:obj];
                 UserManager *userManager = [UserManager sharedManager];
                 userManager.user = userModel;

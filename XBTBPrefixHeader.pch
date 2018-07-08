@@ -13,7 +13,7 @@
 #import "XBTStateModel.h"
 #import "XBTPageModel.h"
 #import "UserManager.h"
-#import "XBTProgressHUD+MJ.h"
+#import "MBProgressHUD+MJ.h"
 #import "NSUserDefaults+Extension.h"
 
 #import "UIAlertView+Block.h"

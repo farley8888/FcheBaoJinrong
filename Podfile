@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'CheBaoJinRong' do
+target 'Xbtb' do
   
   pod 'AFNetworking'
   pod 'SDWebImage'
@@ -23,5 +23,6 @@ target 'CheBaoJinRong' do
   pod 'UMCShare/Social/ReducedSina'
   #统计
   pod 'UMCAnalytics'
-  
+#  source 'https://git.coding.net/hging/Specs.git'
+
 end

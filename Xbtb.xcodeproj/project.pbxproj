@@ -411,6 +411,7 @@
 		18F94F6A20AE675100882B6E /* HomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F94F6920AE675100882B6E /* HomePageModel.m */; };
 		18F94F7320AE81E200882B6E /* InvestmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F94F7220AE81E200882B6E /* InvestmentModel.m */; };
 		18F94F7620AE83F000882B6E /* XBTPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F94F7520AE83F000882B6E /* XBTPageModel.m */; };
+		6199DD0C9EC455786259F039 /* Pods_Xbtb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B842C883ED113235E3F830B0 /* Pods_Xbtb.framework */; };
 		8D0317B92045060000AA44CB /* PasswordRetrievalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0317A1204505FF00AA44CB /* PasswordRetrievalController.xib */; };
 		8D0317BB2045060000AA44CB /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0317A4204505FF00AA44CB /* RegisterController.xib */; };
 		8D0317BC2045060000AA44CB /* PasswordRetrievalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0317A6204505FF00AA44CB /* PasswordRetrievalController.m */; };
@@ -446,13 +447,12 @@
 		8DEB0E6B1FD91E0A002271CD /* XBTFirstTimeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E6A1FD91E0A002271CD /* XBTFirstTimeController.m */; };
 		8DEB0E6E1FD92683002271CD /* XBTHomeHeardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E6D1FD92683002271CD /* XBTHomeHeardView.m */; };
 		8DEB0E701FD92690002271CD /* XBTHomeHeardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEB0E6F1FD92690002271CD /* XBTHomeHeardView.xib */; };
-		8DEB0E831FD93155002271CD /* XBTProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E811FD93155002271CD /* XBTProgressHUD+MJ.m */; };
+		8DEB0E831FD93155002271CD /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E811FD93155002271CD /* MBProgressHUD+MJ.m */; };
 		8DEB0E861FD93287002271CD /* UIImageView+SD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E851FD93287002271CD /* UIImageView+SD.m */; };
 		8DEB0E891FD93337002271CD /* UIImage+ReMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E881FD93337002271CD /* UIImage+ReMake.m */; };
 		8DEB0E8C1FD93381002271CD /* UIButton+SD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0E8B1FD93381002271CD /* UIButton+SD.m */; };
 		8DEB0EA11FD94D1E002271CD /* PGIndexBannerSubiew.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0EA01FD94D1E002271CD /* PGIndexBannerSubiew.m */; };
 		8DEB0EA41FD94D24002271CD /* NewPagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB0EA21FD94D24002271CD /* NewPagedFlowView.m */; };
-		C7E702066CFE10D755E79582 /* Pods_CheBaoJinRong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6150FEBAC46599AA770160AF /* Pods_CheBaoJinRong.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1182,9 +1182,9 @@
 		18F94F7220AE81E200882B6E /* InvestmentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvestmentModel.m; sourceTree = "<group>"; };
 		18F94F7420AE83F000882B6E /* XBTPageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBTPageModel.h; sourceTree = "<group>"; };
 		18F94F7520AE83F000882B6E /* XBTPageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBTPageModel.m; sourceTree = "<group>"; };
-		6150FEBAC46599AA770160AF /* Pods_CheBaoJinRong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CheBaoJinRong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		654927EA99F353CED6558250 /* Pods-CheBaoJinRong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheBaoJinRong.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong.release.xcconfig"; sourceTree = "<group>"; };
 		688BE0C0BC10F237AE5282DA /* libPods-LanHUaJi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LanHUaJi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D92C7A4C5506112520BE360 /* Pods-Xbtb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbtb.release.xcconfig"; path = "Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb.release.xcconfig"; sourceTree = "<group>"; };
+		85DAB6211D22A9E63F2B88E8 /* Pods-Xbtb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xbtb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0317A1204505FF00AA44CB /* PasswordRetrievalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordRetrievalController.xib; sourceTree = "<group>"; };
 		8D0317A4204505FF00AA44CB /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		8D0317A5204505FF00AA44CB /* LonginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LonginController.h; sourceTree = "<group>"; };
@@ -1247,8 +1247,8 @@
 		8DEB0E6C1FD92683002271CD /* XBTHomeHeardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBTHomeHeardView.h; sourceTree = "<group>"; };
 		8DEB0E6D1FD92683002271CD /* XBTHomeHeardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBTHomeHeardView.m; sourceTree = "<group>"; };
 		8DEB0E6F1FD92690002271CD /* XBTHomeHeardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XBTHomeHeardView.xib; sourceTree = "<group>"; };
-		8DEB0E811FD93155002271CD /* XBTProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XBTProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		8DEB0E821FD93155002271CD /* XBTProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XBTProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		8DEB0E811FD93155002271CD /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		8DEB0E821FD93155002271CD /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		8DEB0E841FD93287002271CD /* UIImageView+SD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SD.h"; sourceTree = "<group>"; };
 		8DEB0E851FD93287002271CD /* UIImageView+SD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SD.m"; sourceTree = "<group>"; };
 		8DEB0E871FD93337002271CD /* UIImage+ReMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ReMake.h"; sourceTree = "<group>"; };
@@ -1259,7 +1259,7 @@
 		8DEB0EA01FD94D1E002271CD /* PGIndexBannerSubiew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGIndexBannerSubiew.m; sourceTree = "<group>"; };
 		8DEB0EA21FD94D24002271CD /* NewPagedFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPagedFlowView.m; sourceTree = "<group>"; };
 		8DEB0EA31FD94D24002271CD /* NewPagedFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPagedFlowView.h; sourceTree = "<group>"; };
-		D58EC64B6C48A779EFAB9EDD /* Pods-CheBaoJinRong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheBaoJinRong.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong.debug.xcconfig"; sourceTree = "<group>"; };
+		B842C883ED113235E3F830B0 /* Pods_Xbtb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xbtb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1274,7 +1274,7 @@
 				180AB5EE20C694A100C60992 /* libz.tbd in Frameworks */,
 				180AB5EC20C6948A00C60992 /* SystemConfiguration.framework in Frameworks */,
 				180AB5EA20C6947F00C60992 /* CoreTelephony.framework in Frameworks */,
-				C7E702066CFE10D755E79582 /* Pods_CheBaoJinRong.framework in Frameworks */,
+				6199DD0C9EC455786259F039 /* Pods_Xbtb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2675,7 +2675,7 @@
 				180AB5EB20C6948900C60992 /* SystemConfiguration.framework */,
 				180AB5E920C6947F00C60992 /* CoreTelephony.framework */,
 				688BE0C0BC10F237AE5282DA /* libPods-LanHUaJi.a */,
-				6150FEBAC46599AA770160AF /* Pods_CheBaoJinRong.framework */,
+				B842C883ED113235E3F830B0 /* Pods_Xbtb.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2719,8 +2719,8 @@
 				8DEB0E881FD93337002271CD /* UIImage+ReMake.m */,
 				8DEB0E841FD93287002271CD /* UIImageView+SD.h */,
 				8DEB0E851FD93287002271CD /* UIImageView+SD.m */,
-				8DEB0E821FD93155002271CD /* XBTProgressHUD+MJ.h */,
-				8DEB0E811FD93155002271CD /* XBTProgressHUD+MJ.m */,
+				8DEB0E821FD93155002271CD /* MBProgressHUD+MJ.h */,
+				8DEB0E811FD93155002271CD /* MBProgressHUD+MJ.m */,
 				8DEB0E391FD91448002271CD /* SelectVCTool.h */,
 				8DEB0E3A1FD91448002271CD /* SelectVCTool.m */,
 				8D0317C9204507DD00AA44CB /* UIView+GradientColor.h */,
@@ -2941,8 +2941,8 @@
 		EC973BE021EEBD3646BDACFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D58EC64B6C48A779EFAB9EDD /* Pods-CheBaoJinRong.debug.xcconfig */,
-				654927EA99F353CED6558250 /* Pods-CheBaoJinRong.release.xcconfig */,
+				85DAB6211D22A9E63F2B88E8 /* Pods-Xbtb.debug.xcconfig */,
+				7D92C7A4C5506112520BE360 /* Pods-Xbtb.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2958,8 +2958,8 @@
 				8DEB0D341FD91210002271CD /* Sources */,
 				8DEB0D351FD91210002271CD /* Frameworks */,
 				8DEB0D361FD91210002271CD /* Resources */,
-				246BA7421B4CD485C14AE3CD /* [CP] Copy Pods Resources */,
-				85D3F04D0D5736FAEEC20D53 /* [CP] Embed Pods Frameworks */,
+				2CC301DF7B901F72CE0B84AE /* [CP] Embed Pods Frameworks */,
+				8E87AAD88A79D5AC2AC036D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2976,7 +2976,7 @@
 		8DEB0D301FD91210002271CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DM;
+				CLASSPREFIX = XBT;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
@@ -3120,31 +3120,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		246BA7421B4CD485C14AE3CD /* [CP] Copy Pods Resources */ = {
+		2CC301DF7B901F72CE0B84AE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong-resources.sh",
-				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		85D3F04D0D5736FAEEC20D53 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
@@ -3169,7 +3151,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheBaoJinRong/Pods-CheBaoJinRong-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E87AAD88A79D5AC2AC036D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb-resources.sh",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Xbtb/Pods-Xbtb-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7C14ED92E0C855D811BE285 /* [CP] Check Pods Manifest.lock */ = {
@@ -3183,7 +3183,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CheBaoJinRong-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Xbtb-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3340,7 +3340,7 @@
 				1814E5F020E863D100287145 /* FAccountRecord.m in Sources */,
 				1814E59A20E863D100287145 /* IQKeyboardManager.m in Sources */,
 				8D0317CB204507DD00AA44CB /* UIView+GradientColor.m in Sources */,
-				8DEB0E831FD93155002271CD /* XBTProgressHUD+MJ.m in Sources */,
+				8DEB0E831FD93155002271CD /* MBProgressHUD+MJ.m in Sources */,
 				18ED99D620B3B29A000CE9EB /* XBTBauDidiBaoCell.m in Sources */,
 				1814E54820E863D100287145 /* FAddSubTypeController.m in Sources */,
 				18132F1020BBAEC7002C16FB /* RegularModel.m in Sources */,
@@ -3671,7 +3671,7 @@
 		};
 		8DEB0D4F1FD91210002271CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D58EC64B6C48A779EFAB9EDD /* Pods-CheBaoJinRong.debug.xcconfig */;
+			baseConfigurationReference = 85DAB6211D22A9E63F2B88E8 /* Pods-Xbtb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -3703,7 +3703,7 @@
 		};
 		8DEB0D501FD91210002271CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 654927EA99F353CED6558250 /* Pods-CheBaoJinRong.release.xcconfig */;
+			baseConfigurationReference = 7D92C7A4C5506112520BE360 /* Pods-Xbtb.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
