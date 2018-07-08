@@ -263,7 +263,7 @@ static NSString * const reuseIdentifier = @"FMineCell";
     todayExpandseRecordView.hidden = YES;
     //    ViewBorderRadius(todayExpandseRecordView, 0, .7, [UIColor ys_grayLine]);
     
-    //    UIButton *torecordBtn = [UIButton buttonWithFrame:RECT(50, todayExpandseRecordView.maxY + 20, MSWIDTH-100, 37) backgroundColor:NavgationColor title:@"记一笔" titleColor:AJWhiteColor titleFont:15 target:self action:@selector(addRecordBtnClick:) superview:recentlyRecordView];
+    //    UIButton *torecordBtn = [UIButton buttonWithFrame:RECT(50, todayExpandseRecordView.maxY + 20, MSWIDTH-100, 37) backgroundColor:NavgationColor title:@"录一笔" titleColor:AJWhiteColor titleFont:15 target:self action:@selector(addRecordBtnClick:) superview:recentlyRecordView];
     //    ViewRadius(torecordBtn, 3);
     //
     recentlyRecordView.height = todayExpandseRecordView.maxY + 20;

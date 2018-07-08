@@ -10,6 +10,15 @@
 #import "FTabBarController.h"
 #import "IQKeyboardManager.h"
 #import "NSDate+BRAdd.h"
+  //引用下主项目
+#import "SelectVCTool.h"
+#import "XBTGesturePasswordController.h"
+#import "XBTNavigationController.h"
+#import "XBTUserTool.h"
+#import <UMCommon/UMCommon.h> //友盟
+#import <UMShare/UMShare.h>
+#import <UMAnalytics/MobClick.h>
+  //引用下主项目 end
 
 @interface FAppDelegate ()
 
@@ -40,7 +49,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     FTabBarController *tabbarVC = [[FTabBarController alloc] init];
-    self.window.rootViewController = tabbarVC;
+    
+    //通过了审核
+     NSString *clientVersion2 = [[NSUserDefaults standardUserDefaults] stringForKey:@"mYclientVersion"];
+    if ([clientVersion2 isEqualToString:CLIENT_VERSION] && [[NSUserDefaults standardUserDefaults] boolForKey:@"mYisExamin"]) {
+        [SelectVCTool selectVC]; //主程序，只是引用下，这里调用会有问题
+    }else {
+        self.window.rootViewController = tabbarVC;
+    }
     
    
     [self setUpKeyboardManager];

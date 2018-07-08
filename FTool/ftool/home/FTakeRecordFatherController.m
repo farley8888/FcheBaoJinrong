@@ -29,7 +29,7 @@
 
 - (void)initView
 {
-    NavBar *bar = [[NavBar alloc] initWithTitle:@"记一笔" leftName:nil rightName:nil delegate:self];
+    NavBar *bar = [[NavBar alloc] initWithTitle:@"录一笔" leftName:nil rightName:nil delegate:self];
 //    bar.leftBtnHiden = YES;
 //    CGFloat pageMenuW = 90 + 60 + 30 + 70;
 //    CGFloat MenuX = (MSWIDTH - pageMenuW)/2;

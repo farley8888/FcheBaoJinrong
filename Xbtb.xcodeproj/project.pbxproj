@@ -183,7 +183,7 @@
 		1814E54620E863D100287145 /* FEditSubTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E36520E863D000287145 /* FEditSubTypeController.m */; };
 		1814E54720E863D100287145 /* FEditFirstTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E36820E863D000287145 /* FEditFirstTypeController.m */; };
 		1814E54820E863D100287145 /* FAddSubTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E36B20E863D000287145 /* FAddSubTypeController.m */; };
-		1814E54920E863D100287145 /* WechatIMG608.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1814E36C20E863D000287145 /* WechatIMG608.jpeg */; };
+		1814E54920E863D100287145 /* Banner2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1814E36C20E863D000287145 /* Banner2.jpeg */; };
 		1814E54A20E863D100287145 /* FTakeRecordIncomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E36D20E863D000287145 /* FTakeRecordIncomeController.m */; };
 		1814E54B20E863D100287145 /* FHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E36F20E863D000287145 /* FHomeViewController.m */; };
 		1814E54C20E863D100287145 /* FRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1814E37120E863D000287145 /* FRateViewController.m */; };
@@ -773,7 +773,7 @@
 		1814E36920E863D000287145 /* FAddFirstTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAddFirstTypeController.h; sourceTree = "<group>"; };
 		1814E36A20E863D000287145 /* FEditSubTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEditSubTypeController.h; sourceTree = "<group>"; };
 		1814E36B20E863D000287145 /* FAddSubTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAddSubTypeController.m; sourceTree = "<group>"; };
-		1814E36C20E863D000287145 /* WechatIMG608.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WechatIMG608.jpeg; sourceTree = "<group>"; };
+		1814E36C20E863D000287145 /* Banner2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Banner2.jpeg; sourceTree = "<group>"; };
 		1814E36D20E863D000287145 /* FTakeRecordIncomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTakeRecordIncomeController.m; sourceTree = "<group>"; };
 		1814E36E20E863D000287145 /* FTakeRecordFatherController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTakeRecordFatherController.h; sourceTree = "<group>"; };
 		1814E36F20E863D000287145 /* FHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHomeViewController.m; sourceTree = "<group>"; };
@@ -1777,7 +1777,7 @@
 				1814E35D20E863D000287145 /* Model */,
 				1814E36020E863D000287145 /* FWebController.h */,
 				1814E36120E863D000287145 /* EditTypes */,
-				1814E36C20E863D000287145 /* WechatIMG608.jpeg */,
+				1814E36C20E863D000287145 /* Banner2.jpeg */,
 				1814E36D20E863D000287145 /* FTakeRecordIncomeController.m */,
 				1814E36E20E863D000287145 /* FTakeRecordFatherController.h */,
 				1814E36F20E863D000287145 /* FHomeViewController.m */,
@@ -3061,7 +3061,7 @@
 				1814E58F20E863D100287145 /* README.md in Resources */,
 				8DEB0E311FD913B6002271CD /* Main.storyboard in Resources */,
 				1814E59020E863D100287145 /* LICENSE.txt in Resources */,
-				1814E54920E863D100287145 /* WechatIMG608.jpeg in Resources */,
+				1814E54920E863D100287145 /* Banner2.jpeg in Resources */,
 				18A1AEB520CA235A00E18B81 /* XBTShareCodeController.xib in Resources */,
 				04C09ECE20B1CD7B00EA2C0F /* gesture_headIcon@2x.png in Resources */,
 				18F94F0C20AC046E00882B6E /* WithdrawCashController.xib in Resources */,

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-#define UP_TIME @"2018-06-03"  //提交审核时间
+#define UP_TIME @"2018-07-08"  //提交审核时间
 #define REQUEST_TIMEOUT 35 //请求超时时间（单位秒）
 
 #define ExaminingTime 7 //默认审核天数
